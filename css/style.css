@@ -222,7 +222,7 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 32px;
+  gap: 16px;
 }
 .nav-links li { display: inline-flex; align-items: center; }
 .nav-links li a {
@@ -231,7 +231,14 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   color: var(--sub);
   transition: color 0.2s;
 }
-.nav-links li a:hover { color: var(--text); }
+.nav-links li a:not(.btn) {
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+.nav-links li a:not(.btn):hover {
+  color: var(--text);
+  background: rgba(255,255,255,.70);
+}
 
 .nav-toggle {
   display: none;

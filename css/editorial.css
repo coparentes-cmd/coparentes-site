@@ -172,7 +172,7 @@ h3 {
 }
 
 .nav-links {
-  gap: 28px;
+  gap: 16px;
 }
 
 .nav-links li a {
@@ -182,6 +182,10 @@ h3 {
 
 .nav-links li a:hover {
   color: var(--text);
+}
+
+.nav-links li a:not(.btn):hover {
+  background: rgba(255,255,255,0.86);
 }
 
 .btn {
