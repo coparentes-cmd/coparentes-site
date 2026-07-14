@@ -293,6 +293,62 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(rippleStyle);
 
+  /* ---- COOKIE SETTINGS FLOATING BUTTON: remove injected control ---- */
+  const cookieSettingsPatterns = [
+    'ustawianie cookies',
+    'ustawienia cookies',
+    'ustawienia plików cookie',
+    'cookie settings',
+    'cookie preferences',
+    'cookie-einstellungen',
+    'configuración de cookies',
+    'paramètres des cookies',
+  ];
+  const cookieSettingsSelectors = [
+    '#ot-sdk-btn-floating',
+    '#ot-sdk-btn',
+    '.ot-sdk-show-settings',
+    '.cky-btn-revisit',
+    '.cc-revoke',
+    '.cookie-settings',
+    '.cookie-preferences',
+    '[aria-label*="cookie" i]',
+    '[title*="cookie" i]',
+  ];
+
+  const matchesCookieSettingsText = (el) => {
+    const value = [
+      el.textContent,
+      el.getAttribute('aria-label'),
+      el.getAttribute('title'),
+      el.getAttribute('id'),
+      el.className,
+    ].join(' ').toLowerCase();
+
+    return cookieSettingsPatterns.some(pattern => value.includes(pattern));
+  };
+
+  const isFloatingControl = (el) => {
+    const style = window.getComputedStyle(el);
+    return style.position === 'fixed' || style.position === 'sticky';
+  };
+
+  const removeCookieSettingsButtons = () => {
+    const candidates = [
+      ...document.querySelectorAll('button, a, [role="button"], ' + cookieSettingsSelectors.join(', ')),
+    ];
+
+    candidates.forEach(el => {
+      if (matchesCookieSettingsText(el) && isFloatingControl(el)) {
+        el.remove();
+      }
+    });
+  };
+
+  removeCookieSettingsButtons();
+  const cookieSettingsObserver = new MutationObserver(removeCookieSettingsButtons);
+  cookieSettingsObserver.observe(document.body, { childList: true, subtree: true });
+
   /* ---- SCROLL PROGRESS BAR ---- */
   const progressBar = document.createElement('div');
   progressBar.style.cssText = `
