@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animate hamburger
     const spans = navToggle.querySelectorAll('span');
     const isOpen = navLinks.classList.contains('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
     if (isOpen) {
       spans[0].style.transform = 'translateY(7px) rotate(45deg)';
       spans[1].style.opacity   = '0';
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
       const spans = navToggle.querySelectorAll('span');
       spans[0].style.transform = '';
       spans[1].style.opacity   = '';
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (!navbar.contains(e.target)) {
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
       const spans = navToggle.querySelectorAll('span');
       spans[0].style.transform = '';
       spans[1].style.opacity   = '';
@@ -93,7 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- SMOOTH SCROLL ---- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const navH = parseInt(getComputedStyle(document.documentElement)

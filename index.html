@@ -19,8 +19,8 @@
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo logo-lockup"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <a href="index.html" class="logo logo-lockup" aria-label="Coparentes"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
@@ -29,18 +29,17 @@
         <li><a href="#opinie">Opinie</a></li>
         <li>
           <div class="lang-switcher" id="langSwitcher">
-            <button class="lang-btn">
-              <span class="lang-flag">🇵🇱</span>
+            <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Zmień język">
+              <span class="lang-flag flag-pl" aria-hidden="true">PL</span>
               <span class="lang-label">PL</span>
-              <i class="fas fa-chevron-down lang-arrow"></i>
+              <i class="fas fa-chevron-down lang-arrow" aria-hidden="true"></i>
             </button>
             <div class="lang-dropdown">
-              <a class="lang-option active" href="index.html"><span class="lf">🇵🇱</span><span class="ln">Polski</span><span class="lc">PL</span></a>
-              <a class="lang-option" href="en/index.html"><span class="lf">🇬🇧</span><span class="ln">English</span><span class="lc">EN</span></a>
-              <a class="lang-option" href="de/index.html"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span><span class="lc">DE</span></a>
-              <a class="lang-option" href="es/index.html"><span class="lf">🇪🇸</span><span class="ln">Español</span><span class="lc">ES</span></a>
-              <a class="lang-option" href="fr/index.html"><span class="lf">🇫🇷</span><span class="ln">Français</span><span class="lc">FR</span></a>
-              <a class="lang-option" href="zh/index.html"><span class="lf">🇨🇳</span><span class="ln">中文</span><span class="lc">ZH</span></a>
+              <a class="lang-option active" href="index.html"><span class="lf flag-pl" aria-hidden="true">PL</span><span class="ln">Polski</span><span class="lc">PL</span></a>
+              <a class="lang-option" href="en/index.html"><span class="lf flag-en" aria-hidden="true">EN</span><span class="ln">English</span><span class="lc">EN</span></a>
+              <a class="lang-option" href="de/index.html"><span class="lf flag-de" aria-hidden="true">DE</span><span class="ln">Deutsch</span><span class="lc">DE</span></a>
+              <a class="lang-option" href="es/index.html"><span class="lf flag-es" aria-hidden="true">ES</span><span class="ln">Español</span><span class="lc">ES</span></a>
+              <a class="lang-option" href="fr/index.html"><span class="lf flag-fr" aria-hidden="true">FR</span><span class="ln">Français</span><span class="lc">FR</span></a>
             </div>
           </div>
         </li>
@@ -71,14 +70,14 @@
           </a>
           <div class="store-buttons">
             <a href="#" class="store-btn">
-              <i class="fab fa-apple"></i>
+              <span class="store-icon store-icon-apple" aria-hidden="true"></span>
               <span>
                 <small>Pobierz z</small>
                 App Store
               </span>
             </a>
             <a href="#" class="store-btn">
-              <i class="fab fa-google-play"></i>
+              <span class="store-icon store-icon-play" aria-hidden="true"></span>
               <span>
                 <small>Pobierz z</small>
                 Google Play
@@ -597,6 +596,7 @@
   <!-- ========== SECTION 11 – FINAL CTA ========== -->
   <section class="final-cta" id="pobierz">
     <div class="container final-inner fade-in">
+      <p class="final-eyebrow">Pobierz aplikację</p>
       <h2 class="final-headline">
         Nie musi być łatwo.<br />
         Może być <span class="highlight-white">spokojniej.</span>
@@ -610,14 +610,14 @@
       </a>
       <div class="final-stores">
         <a href="#" class="store-btn store-btn-dark">
-          <i class="fab fa-apple"></i>
+          <span class="store-icon store-icon-apple" aria-hidden="true"></span>
           <span>
             <small>Pobierz z</small>
             App Store
           </span>
         </a>
         <a href="#" class="store-btn store-btn-dark">
-          <i class="fab fa-google-play"></i>
+          <span class="store-icon store-icon-play" aria-hidden="true"></span>
           <span>
             <small>Pobierz z</small>
             Google Play

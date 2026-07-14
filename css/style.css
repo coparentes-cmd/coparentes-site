@@ -114,16 +114,44 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
 .store-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
+  gap: 12px;
+  min-height: 54px;
+  padding: 10px 18px 10px 12px;
   background: var(--text);
   color: #fff;
-  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
   font-size: 0.88rem;
+  text-align: left;
   transition: var(--transition);
 }
-.store-btn i { font-size: 1.4rem; }
-.store-btn span { display: flex; flex-direction: column; line-height: 1.3; }
+.store-icon {
+  --store-icon: none;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #fff;
+  background: rgba(255,255,255,.12);
+}
+.store-icon::before {
+  content: '';
+  width: 19px;
+  height: 19px;
+  background: currentColor;
+  -webkit-mask: var(--store-icon) center / contain no-repeat;
+  mask: var(--store-icon) center / contain no-repeat;
+}
+.store-icon-apple {
+  --store-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.4 13.1c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.8 1.1 9.1.8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.2-2.5 1.2-2.6 0-.1-2.5-1-2.5-3.3zM14.2 6.2c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.3-.6.7-1 1.7-.9 2.8 1 .1 2-.5 2.6-1.2z'/%3E%3C/svg%3E");
+}
+.store-icon-play {
+  --store-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.5 3.3c-.3.2-.5.6-.5 1.1v15.2c0 .5.2.9.5 1.1l8.7-8.7-8.7-8.7zM14.4 10.8l2.2-2.2L6.3 2.7l8.1 8.1zM16.6 15.4l3.1-1.8c.9-.5.9-1.7 0-2.2l-3.1-1.8-2.6 2.6 2.6 2.6zM6.3 21.3l10.3-5.9-2.2-2.2-8.1 8.1z'/%3E%3C/svg%3E");
+}
+.store-btn span:not(.store-icon) { display: flex; flex-direction: column; line-height: 1.3; }
 .store-btn small { font-size: 0.72rem; opacity: 0.75; }
 .store-btn:hover { background: #333; transform: translateY(-2px); }
 
@@ -169,6 +197,7 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   height: 100%;
 }
 
@@ -176,6 +205,7 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--text);
@@ -191,8 +221,10 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
 .nav-links {
   display: flex;
   align-items: center;
+  margin-left: auto;
   gap: 32px;
 }
+.nav-links li { display: inline-flex; align-items: center; }
 .nav-links li a {
   font-size: 0.92rem;
   font-weight: 500;
@@ -213,6 +245,11 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   background: var(--text);
   border-radius: 2px;
   transition: var(--transition);
+}
+.logo-image {
+  width: auto;
+  height: 32px;
+  max-width: 180px;
 }
 
 /* ============================================
@@ -1221,7 +1258,28 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
 }
 
-.final-inner { position: relative; z-index: 2; }
+.final-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  padding: 64px 32px;
+  border-radius: var(--radius-lg);
+}
+
+.final-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  color: rgba(255,255,255,.86);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
 .final-headline {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
@@ -1245,8 +1303,12 @@ h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 28px;
   flex-wrap: wrap;
+}
+.final-stores .store-btn {
+  min-width: 190px;
+  justify-content: flex-start;
 }
 .final-note {
   margin-top: 28px;
