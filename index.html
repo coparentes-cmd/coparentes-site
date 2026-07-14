@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>coparentes – spokojne rodzicielstwo po rozstaniu</title>
+  <meta name="description" content="Pomagamy rodzicom po rozstaniu spokojnie ogarniać życie dziecka — bez niepotrzebnych konfliktów. Pobierz aplikację coparentes na iOS i Android." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lang.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/editorial.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo logo-lockup"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#jak-dziala">Jak działa</a></li>
+        <li><a href="#dla-kogo">Dla kogo</a></li>
+        <li><a href="#opinie">Opinie</a></li>
+        <li>
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn">
+              <span class="lang-flag">🇵🇱</span>
+              <span class="lang-label">PL</span>
+              <i class="fas fa-chevron-down lang-arrow"></i>
+            </button>
+            <div class="lang-dropdown">
+              <a class="lang-option active" href="index.html"><span class="lf">🇵🇱</span><span class="ln">Polski</span><span class="lc">PL</span></a>
+              <a class="lang-option" href="en/index.html"><span class="lf">🇬🇧</span><span class="ln">English</span><span class="lc">EN</span></a>
+              <a class="lang-option" href="de/index.html"><span class="lf">🇩🇪</span><span class="ln">Deutsch</span><span class="lc">DE</span></a>
+              <a class="lang-option" href="es/index.html"><span class="lf">🇪🇸</span><span class="ln">Español</span><span class="lc">ES</span></a>
+              <a class="lang-option" href="fr/index.html"><span class="lf">🇫🇷</span><span class="ln">Français</span><span class="lc">FR</span></a>
+              <a class="lang-option" href="zh/index.html"><span class="lf">🇨🇳</span><span class="ln">中文</span><span class="lc">ZH</span></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#pobierz" class="btn btn-primary btn-sm">Pobierz</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== SECTION 1 – HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text fade-in">
+        <div class="badge">🌱 Spokojne rodzicielstwo</div>
+        <h1 class="headline">
+          To trudne.<br />
+          Dlatego to<br />
+          <span class="highlight">upraszczamy.</span>
+        </h1>
+        <p class="subheadline">
+          Pomagamy rodzicom po rozstaniu spokojnie ogarniać życie dziecka — bez niepotrzebnych konfliktów.
+        </p>
+        <div class="hero-cta">
+          <a href="#pobierz" class="btn btn-primary btn-lg">
+            <i class="fas fa-heart"></i>
+            Zacznij od dziś
+          </a>
+          <div class="store-buttons">
+            <a href="#" class="store-btn">
+              <i class="fab fa-apple"></i>
+              <span>
+                <small>Pobierz z</small>
+                App Store
+              </span>
+            </a>
+            <a href="#" class="store-btn">
+              <i class="fab fa-google-play"></i>
+              <span>
+                <small>Pobierz z</small>
+                Google Play
+              </span>
+            </a>
+          </div>
+        </div>
+        <p class="hero-note">
+          <i class="fas fa-shield-alt"></i>
+          Bezpłatne. Bez rejestracji kart.
+        </p>
+      </div>
+      <div class="hero-visual fade-in-delay">
+        <div class="phone-mockups">
+          <div class="phone phone-left">
+            <div class="phone-screen screen-chat">
+              <div class="screen-header">
+                <div class="screen-avatar">A</div>
+                <span>Anna</span>
+              </div>
+              <div class="chat-messages">
+                <div class="msg msg-in">Kiedy odbierasz Zosię?</div>
+                <div class="msg msg-out">W piątek o 16:00 👍</div>
+                <div class="msg msg-in">Ok, dzięki 😊</div>
+                <div class="msg calm-suggestion">
+                  <i class="fas fa-leaf"></i>
+                  Spokojny ton zachowany
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone phone-center">
+            <div class="phone-screen screen-calendar">
+              <div class="screen-title">Kwiecień 2025</div>
+              <div class="cal-grid">
+                <div class="cal-day">Pn</div>
+                <div class="cal-day">Wt</div>
+                <div class="cal-day">Śr</div>
+                <div class="cal-day">Cz</div>
+                <div class="cal-day">Pt</div>
+                <div class="cal-day">So</div>
+                <div class="cal-day">Nd</div>
+                <div class="cal-num">1</div>
+                <div class="cal-num">2</div>
+                <div class="cal-num cal-mom">3</div>
+                <div class="cal-num cal-mom">4</div>
+                <div class="cal-num cal-dad">5</div>
+                <div class="cal-num cal-dad">6</div>
+                <div class="cal-num">7</div>
+                <div class="cal-num cal-event">8<span>🏥</span></div>
+                <div class="cal-num">9</div>
+                <div class="cal-num cal-mom">10</div>
+                <div class="cal-num cal-mom">11</div>
+                <div class="cal-num cal-dad">12</div>
+                <div class="cal-num cal-dad">13</div>
+                <div class="cal-num">14</div>
+              </div>
+              <div class="cal-legend">
+                <span class="leg-mom">Mama</span>
+                <span class="leg-dad">Tata</span>
+              </div>
+            </div>
+          </div>
+          <div class="phone phone-right">
+            <div class="phone-screen screen-finance">
+              <div class="screen-title">Rozliczenia</div>
+              <div class="finance-item">
+                <div class="fi-icon">🏫</div>
+                <div class="fi-info">
+                  <span>Zajęcia Zosi</span>
+                  <small>15 kwi</small>
+                </div>
+                <div class="fi-amount green">+120 zł</div>
+              </div>
+              <div class="finance-item">
+                <div class="fi-icon">💊</div>
+                <div class="fi-info">
+                  <span>Lekarz</span>
+                  <small>18 kwi</small>
+                </div>
+                <div class="fi-amount green">+80 zł</div>
+              </div>
+              <div class="finance-divider"></div>
+              <div class="balance-row">
+                <span>Bilans</span>
+                <strong class="balance-num">200 zł</strong>
+              </div>
+              <div class="balance-note">Wszystko jasne ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F9FAFB"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2 – EMOTIONAL ========== -->
+  <section class="emotional" id="dla-kogo">
+    <div class="container emotional-inner fade-in">
+      <div class="emotional-quote">
+        <p class="eq-large">Rozstanie zmienia wszystko.</p>
+        <p class="eq-large eq-accent">Ale nie zmienia tego, że nadal jesteście rodzicami.</p>
+        <div class="eq-divider"></div>
+        <p class="eq-medium">I to właśnie jest najtrudniejsze.</p>
+        <p class="eq-regular">
+          Nie chodzi o to, żeby było idealnie.<br />
+          Chodzi o to, żeby było <strong>spokojniej.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3 – CO ROBI COPARENTES ========== -->
+  <section class="features" id="jak-dziala">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">Jak to działa</p>
+        <h2>Trzy rzeczy, które<br /><span class="highlight">naprawdę pomagają</span></h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feat-icon feat-icon-green">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Spokojniejsze rozmowy</h3>
+          <p>Pomaga Wam mówić tak, żeby się rozumieć.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feat-icon feat-icon-blue">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Jasny plan</h3>
+          <p>Każdy wie, co i kiedy — bez chaosu.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feat-icon feat-icon-green">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Uczciwe rozliczenia</h3>
+          <p>Bez liczenia i bez pretensji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4 – KOMUNIKACJA ========== -->
+  <section class="comm-section" id="komunikacja">
+    <div class="container comm-inner">
+      <div class="comm-text fade-in">
+        <p class="section-label">Komunikacja</p>
+        <h2>Czasem najtrudniejsze<br />jest <span class="highlight">jedno zdanie.</span></h2>
+        <p class="body-text">
+          Dlatego pomagamy je napisać spokojniej.
+        </p>
+        <div class="comm-points">
+          <div class="comm-point">
+            <span class="cp-arrow">→</span>
+            <span>Zamiast eskalacji — rozmowa.</span>
+          </div>
+          <div class="comm-point">
+            <span class="cp-arrow">→</span>
+            <span>Zamiast emocji — zrozumienie.</span>
+          </div>
+        </div>
+      </div>
+      <div class="comm-mockup fade-in-delay">
+        <div class="message-comparison">
+          <div class="msg-card msg-sharp">
+            <div class="msg-label">
+              <i class="fas fa-exclamation-triangle"></i>
+              Przed
+            </div>
+            <div class="msg-bubble bubble-sharp">
+              Znowu się spóźniasz! Zawsze to samo, nie możesz się ogarnąć?!
+            </div>
+          </div>
+          <div class="msg-transform">
+            <div class="transform-arrow">
+              <i class="fas fa-leaf"></i>
+              coparentes podpowiada
+            </div>
+          </div>
+          <div class="msg-card msg-calm">
+            <div class="msg-label">
+              <i class="fas fa-check-circle"></i>
+              Po
+            </div>
+            <div class="msg-bubble bubble-calm">
+              Hej, czy możesz mi powiedzieć, o której planowo odbierzesz Zosię? Chciałbym dobrze zaplanować jej czas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5 – PLAN DNIA ========== -->
+  <section class="calendar-section" id="plan">
+    <div class="container cal-inner">
+      <div class="cal-mockup fade-in">
+        <div class="big-calendar">
+          <div class="bc-header">
+            <div class="bc-month">Kwiecień 2025</div>
+            <div class="bc-nav">
+              <button><i class="fas fa-chevron-left"></i></button>
+              <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="bc-grid">
+            <div class="bc-weekday">Pon</div>
+            <div class="bc-weekday">Wt</div>
+            <div class="bc-weekday">Śr</div>
+            <div class="bc-weekday">Czw</div>
+            <div class="bc-weekday">Pt</div>
+            <div class="bc-weekday">Sob</div>
+            <div class="bc-weekday">Nd</div>
+            <div class="bc-day"></div>
+            <div class="bc-day bc-mom">1<div class="bc-tag">Mama</div></div>
+            <div class="bc-day bc-mom">2</div>
+            <div class="bc-day bc-dad">3<div class="bc-tag">Tata</div></div>
+            <div class="bc-day bc-dad">4</div>
+            <div class="bc-day bc-dad">5</div>
+            <div class="bc-day bc-event">6<div class="bc-tag bc-tag-event">🏫 Szkoła</div></div>
+            <div class="bc-day bc-mom">7</div>
+            <div class="bc-day bc-mom">8</div>
+            <div class="bc-day bc-event">9<div class="bc-tag bc-tag-event">🏥 Lekarz</div></div>
+            <div class="bc-day bc-dad">10</div>
+            <div class="bc-day bc-dad">11</div>
+            <div class="bc-day bc-dad">12</div>
+            <div class="bc-day bc-mom">13</div>
+            <div class="bc-day bc-mom">14</div>
+            <div class="bc-day bc-mom">15</div>
+            <div class="bc-day bc-event">16<div class="bc-tag bc-tag-event">🎂 Urodziny</div></div>
+            <div class="bc-day bc-dad">17</div>
+            <div class="bc-day bc-dad">18</div>
+            <div class="bc-day bc-dad">19</div>
+          </div>
+          <div class="bc-legend">
+            <span class="bcl-mom"><span></span> Mama</span>
+            <span class="bcl-dad"><span></span> Tata</span>
+            <span class="bcl-event"><span></span> Wydarzenie</span>
+          </div>
+        </div>
+      </div>
+      <div class="cal-text fade-in-delay">
+        <p class="section-label">Planowanie</p>
+        <h2>Każdy wie,<br /><span class="highlight">co i kiedy.</span></h2>
+        <p class="body-text">
+          Szkoła, lekarz, weekendy — wszystko jasne dla obu stron.
+        </p>
+        <p class="body-text mt-sm">
+          Bez dzwonienia. Bez chaosu.
+        </p>
+        <div class="cal-benefits">
+          <div class="cb-item">
+            <i class="fas fa-check"></i>
+            <span>Wspólny kalendarz dla całej rodziny</span>
+          </div>
+          <div class="cb-item">
+            <i class="fas fa-check"></i>
+            <span>Powiadomienia o zmianach</span>
+          </div>
+          <div class="cb-item">
+            <i class="fas fa-check"></i>
+            <span>Wszystko w jednym miejscu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6 – FINANSE ========== -->
+  <section class="finance-section" id="finanse">
+    <div class="container fin-inner">
+      <div class="fin-text fade-in">
+        <p class="section-label">Rozliczenia</p>
+        <h2>Pieniądze nie muszą<br />być powodem <span class="highlight">kłótni.</span></h2>
+        <p class="body-text">
+          Dodajesz wydatek.<br />
+          Widzicie wszystko jasno.
+        </p>
+        <p class="body-text mt-sm fin-accent">
+          Bez pretensji.
+        </p>
+      </div>
+      <div class="fin-mockup fade-in-delay">
+        <div class="fin-card">
+          <div class="fin-card-header">
+            <span>📋 Wydatki — Kwiecień</span>
+            <span class="fin-month">2025</span>
+          </div>
+          <div class="fin-list">
+            <div class="fin-row">
+              <div class="fin-icon-wrap">🏫</div>
+              <div class="fin-details">
+                <span class="fin-name">Zajęcia plastyczne</span>
+                <span class="fin-date">10 kwi · Mama</span>
+              </div>
+              <div class="fin-val green">+120 zł</div>
+            </div>
+            <div class="fin-row">
+              <div class="fin-icon-wrap">💊</div>
+              <div class="fin-details">
+                <span class="fin-name">Wizyta u lekarza</span>
+                <span class="fin-date">15 kwi · Tata</span>
+              </div>
+              <div class="fin-val green">+80 zł</div>
+            </div>
+            <div class="fin-row">
+              <div class="fin-icon-wrap">📚</div>
+              <div class="fin-details">
+                <span class="fin-name">Książki szkolne</span>
+                <span class="fin-date">18 kwi · Mama</span>
+              </div>
+              <div class="fin-val green">+65 zł</div>
+            </div>
+            <div class="fin-row">
+              <div class="fin-icon-wrap">🏊</div>
+              <div class="fin-details">
+                <span class="fin-name">Basen</span>
+                <span class="fin-date">22 kwi · Tata</span>
+              </div>
+              <div class="fin-val green">+45 zł</div>
+            </div>
+          </div>
+          <div class="fin-total">
+            <div class="fin-total-row">
+              <span>Razem wydatki</span>
+              <strong>310 zł</strong>
+            </div>
+            <div class="fin-split">
+              <div class="fin-split-item">
+                <span class="split-dot dot-mom"></span>
+                <span>Mama wpłaciła</span>
+                <strong>185 zł</strong>
+              </div>
+              <div class="fin-split-item">
+                <span class="split-dot dot-dad"></span>
+                <span>Tata wpłacił</span>
+                <strong>125 zł</strong>
+              </div>
+            </div>
+            <div class="fin-status">✅ Wszystko widoczne. Bez pretensji.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7 – DZIECKO ========== -->
+  <section class="child-section" id="dziecko">
+    <div class="container child-inner fade-in">
+      <div class="child-icon">🌱</div>
+      <h2 class="child-headline">Dziecko<br />potrzebuje <span class="highlight">spokoju.</span></h2>
+      <div class="child-text-blocks">
+        <p>Nie musi widzieć konfliktu.</p>
+        <p>Nie musi być pośrodku.</p>
+        <div class="child-divider"></div>
+        <p class="child-closing">
+          Może mieć dwa domy —<br />
+          i <strong>jeden spokojny świat.</strong>
+        </p>
+      </div>
+      <div class="child-homes">
+        <div class="home-card">
+          <div class="home-emoji">🏡</div>
+          <span>Dom Mamy</span>
+        </div>
+        <div class="home-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="home-child">
+          <div class="child-avatar">👧</div>
+          <span>Zosia</span>
+        </div>
+        <div class="home-heart">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="home-card">
+          <div class="home-emoji">🏠</div>
+          <span>Dom Taty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 8 – DELIKATNE AI ========== -->
+  <section class="ai-section" id="ai">
+    <div class="container ai-inner fade-in">
+      <div class="ai-badge">
+        <i class="fas fa-leaf"></i>
+        Inteligentne wsparcie
+      </div>
+      <h2>coparentes podpowiada,<br />kiedy warto napisać <span class="highlight">inaczej.</span></h2>
+      <p class="ai-body">
+        Pomaga spojrzeć spokojniej.
+      </p>
+      <div class="ai-feature-row">
+        <div class="ai-feat">
+          <div class="ai-feat-icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <p>Czasem wystarczy mała zmiana,<br />żeby uniknąć dużej kłótni.</p>
+        </div>
+        <div class="ai-feat">
+          <div class="ai-feat-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <p>Widzisz, jak Twoje słowa<br />mogą zostać odebrane.</p>
+        </div>
+        <div class="ai-feat">
+          <div class="ai-feat-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <p>Propozycje, które łagodzą<br />zamiast zaostrzać.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 9 – OPINIE ========== -->
+  <section class="reviews-section" id="opinie">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">Opinie użytkowników</p>
+        <h2>Co mówią<br /><span class="highlight">rodzice?</span></h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">„W końcu przestaliśmy się kłócić o drobiazgi. Aplikacja zmusiła nas do mówienia po ludzku."</p>
+          <div class="review-author">
+            <div class="author-avatar av-a">A</div>
+            <div class="author-info">
+              <strong>Anna</strong>
+              <span>mama, Warszawa</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card review-card-featured fade-in">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">„To pierwszy raz, kiedy coś naprawdę działa. Mamy spokój, a dzieci widzą, że działamy razem."</p>
+          <div class="review-author">
+            <div class="author-avatar av-m">M</div>
+            <div class="author-info">
+              <strong>Michał</strong>
+              <span>tata, Kraków</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">„Kalendarz uratował nam weekendy. Każdy wie, co i kiedy. Koniec z chaosem i ostatnią chwilą."</p>
+          <div class="review-author">
+            <div class="author-avatar av-k">K</div>
+            <div class="author-info">
+              <strong>Karolina</strong>
+              <span>mama, Gdańsk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 10 – APP PREVIEW ========== -->
+  <section class="preview-section" id="preview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">Jedna aplikacja</p>
+        <h2>Dla całej<br /><span class="highlight">rodziny</span></h2>
+      </div>
+      <div class="preview-grid">
+        <div class="preview-card fade-in">
+          <div class="preview-emoji">👩</div>
+          <h3>Dla mamy</h3>
+          <p>Masz wszystko pod ręką. Wydatki, kalendarz, wiadomości — w jednym miejscu.</p>
+          <ul class="preview-list">
+            <li><i class="fas fa-check"></i> Wspólny kalendarz</li>
+            <li><i class="fas fa-check"></i> Rozliczenia wydatków</li>
+            <li><i class="fas fa-check"></i> Spokojna komunikacja</li>
+          </ul>
+        </div>
+        <div class="preview-card preview-card-center fade-in">
+          <div class="preview-emoji">👨</div>
+          <h3>Dla taty</h3>
+          <p>Wiesz, co jest ważne. Masz pełen obraz sytuacji bez pytania o wszystko.</p>
+          <ul class="preview-list">
+            <li><i class="fas fa-check"></i> Plan opieki</li>
+            <li><i class="fas fa-check"></i> Ważne informacje</li>
+            <li><i class="fas fa-check"></i> Bez niedomówień</li>
+          </ul>
+        </div>
+        <div class="preview-card fade-in">
+          <div class="preview-emoji">👧</div>
+          <h3>Dla dziecka</h3>
+          <p>Wie, co się dzieje. Ma spokój i poczucie bezpieczeństwa w obu domach.</p>
+          <ul class="preview-list">
+            <li><i class="fas fa-check"></i> Spokojni rodzice</li>
+            <li><i class="fas fa-check"></i> Jasny plan</li>
+            <li><i class="fas fa-check"></i> Jeden spokojny świat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 11 – FINAL CTA ========== -->
+  <section class="final-cta" id="pobierz">
+    <div class="container final-inner fade-in">
+      <h2 class="final-headline">
+        Nie musi być łatwo.<br />
+        Może być <span class="highlight-white">spokojniej.</span>
+      </h2>
+      <p class="final-sub">
+        Dołącz do tysięcy rodziców, którzy już wybrali spokój.
+      </p>
+      <a href="#" class="btn btn-white btn-xl">
+        <i class="fas fa-heart"></i>
+        Zacznij od dziś
+      </a>
+      <div class="final-stores">
+        <a href="#" class="store-btn store-btn-dark">
+          <i class="fab fa-apple"></i>
+          <span>
+            <small>Pobierz z</small>
+            App Store
+          </span>
+        </a>
+        <a href="#" class="store-btn store-btn-dark">
+          <i class="fab fa-google-play"></i>
+          <span>
+            <small>Pobierz z</small>
+            Google Play
+          </span>
+        </a>
+      </div>
+      <p class="final-note">Bezpłatne. Bez reklam. Bez kompromisów.</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo logo-light logo-lockup"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
+          <p>Spokojne rodzicielstwo po rozstaniu.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Aplikacja</h4>
+          <ul>
+            <li><a href="#jak-dziala">Jak działa</a></li>
+            <li><a href="#dla-kogo">Dla kogo</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#pobierz">Pobierz</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Prawne</h4>
+          <ul>
+            <li><a href="#">Polityka prywatności</a></li>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">RODO</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hello@coparentes.pl">hello@coparentes.pl</a></li>
+            <li><a href="#">Pomoc</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 coparentes. Wszelkie prawa zastrzeżone.</p>
+        <p>Zrobione z <i class="fas fa-heart" style="color:#5FBF8F"></i> dla rodzin.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
+</body>
+</html>

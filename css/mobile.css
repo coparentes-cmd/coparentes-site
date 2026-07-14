@@ -1,0 +1,413 @@
+/* ============================================
+   COPARENTES – MOBILE FIXES
+   Dedicated mobile overrides
+   ============================================ */
+
+/* ============================================
+   HERO MOBILE – kompletna przebudowa
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* ---- NAVBAR MOBILE ---- */
+  :root { --nav-h: 60px; }
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: rgba(255,255,255,.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 20px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0,0,0,.10);
+    z-index: 999;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links li a:not(.btn):not(.lang-btn) {
+    padding: 13px 24px;
+    display: block;
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+  /* Ostatni li (Pobierz) z paddingiem */
+  .nav-links > li:last-child {
+    padding: 12px 24px 0;
+  }
+  .nav-links > li:last-child .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+  }
+
+  /* Mobile: zachowaj oryginalne tło z prezentacji, ale dopasuj kadr */
+  .hero::before {
+    display: block;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    min-width: 430px;
+    height: 340px;
+    transform: translateX(-50%);
+    background: url('../assets/ppt-bg/slide1-bg.png') center top / cover no-repeat;
+  }
+  .hero::after {
+    display: block;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(248,250,252,.04) 0%, rgba(248,250,252,.14) 34%, rgba(248,250,252,.92) 76%, rgba(248,250,252,.98) 100%);
+  }
+
+  /* Hero section – czyste białe tło */
+  .hero {
+    background: #fff;
+    padding-top: calc(var(--nav-h) + 28px);
+    overflow: visible;
+  }
+
+  /* Grid → jednocolumnowy, tekst na górze */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 0;
+    align-items: stretch;
+  }
+
+  /* Tekst hero */
+  .hero-text {
+    order: 1;
+    padding: 0 0 28px 0;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.95rem, 7.5vw, 2.5rem);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+    margin-bottom: 24px;
+    max-width: 100%;
+    line-height: 1.65;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .hero-cta .btn-lg {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 15px 20px;
+    border-radius: 14px;
+  }
+
+  .store-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    flex-wrap: unset;
+  }
+
+  .store-btn {
+    padding: 9px 12px;
+    font-size: 0.78rem;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  .store-btn i { font-size: 1.1rem; }
+  .store-btn small { font-size: 0.63rem; }
+
+  .hero-note {
+    font-size: 0.76rem;
+    color: #bbb;
+    margin-top: 4px;
+  }
+
+  /* ---- VISUAL – telefon ---- */
+  .hero-visual {
+    order: 2;
+    /* Miękki gradient tła dla sekcji wizualnej */
+    background: linear-gradient(180deg, rgba(244,251,248,.88) 0%, rgba(241,245,249,.96) 100%);
+    border-radius: 28px 28px 0 0;
+    margin: 0 -20px;
+    padding: 28px 20px 0;
+    overflow: hidden;
+  }
+
+  /* Kontener mockupów – flex wyśrodkowany */
+  .phone-mockups {
+    position: relative;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* Ukryj boczne telefony */
+  .phone-left,
+  .phone-right {
+    display: none !important;
+  }
+
+  /* Środkowy telefon – wyjmij z absolute, wyśrodkuj */
+  .phone-center {
+    position: relative !important;
+    left: unset !important;
+    bottom: unset !important;
+    transform: none !important;
+    width: 220px !important;
+    height: 280px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 48px rgba(30,58,138,.14) !important;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  .phone-center .phone-screen {
+    padding: 16px 14px;
+  }
+
+  /* Kalendarz w telefonie */
+  .screen-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .cal-grid { gap: 3px; margin-bottom: 8px; }
+  .cal-day  { font-size: 0.6rem; padding: 2px 0; }
+  .cal-num  { font-size: 0.66rem; padding: 5px 2px; border-radius: 5px; }
+  .cal-num.cal-event span { font-size: 0.52rem; }
+  .cal-legend { font-size: 0.66rem; gap: 10px; margin-top: 6px; }
+
+  /* Ukryj hero wave na mobile */
+  .hero-wave { display: none; }
+
+  /* ---- SEKCJA EMOTIONAL ---- */
+  .emotional { padding: 60px 0; }
+  .eq-large { font-size: 1.3rem; line-height: 1.4; }
+  .eq-accent { color: var(--green); }
+  .eq-medium { font-size: 1rem; }
+  .eq-regular { font-size: 0.95rem; }
+
+  /* ---- FEATURES ---- */
+  .features { padding: 60px 0; }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .feature-card {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .feat-icon { width: 48px; height: 48px; font-size: 1.2rem; margin-bottom: 18px; }
+  .feature-card h3 { margin-bottom: 10px; }
+  .section-header { margin-bottom: 36px; }
+
+  /* ---- KOMUNIKACJA ---- */
+  .comm-section { padding: 60px 0; }
+  .comm-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .comm-text { order: 1; }
+  .comm-mockup { order: 2; }
+  .message-comparison { gap: 12px; }
+  .msg-card { padding: 16px 18px; }
+  .msg-bubble { font-size: 0.88rem; line-height: 1.55; }
+
+  /* ---- KALENDARZ SEKCJA ---- */
+  .calendar-section { padding: 60px 0; }
+  .cal-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .cal-text  { order: 1; }
+  .cal-mockup { order: 2; }
+  .big-calendar { padding: 18px; border-radius: 20px; }
+  .bc-grid { gap: 3px; }
+  .bc-weekday { font-size: 0.64rem; padding: 4px 0; }
+  .bc-day {
+    font-size: 0.7rem;
+    padding: 5px 2px;
+    min-height: 34px;
+    border-radius: 7px;
+    gap: 1px;
+  }
+  .bc-tag { font-size: 0.5rem; padding: 1px 3px; }
+  .bc-tag-event { font-size: 0.5rem; }
+  .bc-legend { font-size: 0.75rem; gap: 14px; padding-top: 10px; }
+  .cal-benefits { margin-top: 24px; gap: 12px; }
+  .cb-item { font-size: 0.95rem; }
+
+  /* ---- FINANSE ---- */
+  .finance-section { padding: 60px 0; }
+  .fin-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .fin-text  { order: 1; }
+  .fin-mockup { order: 2; }
+  .fin-card-header { font-size: 0.85rem; padding: 16px 18px; }
+  .fin-list { padding: 4px 18px; }
+  .fin-row { padding: 12px 0; gap: 10px; }
+  .fin-name { font-size: 0.85rem; }
+  .fin-date { font-size: 0.74rem; }
+  .fin-val { font-size: 0.9rem; }
+  .fin-total { padding: 16px 18px; }
+  .fin-total-row { font-size: 0.95rem; margin-bottom: 12px; }
+  .fin-split-item { font-size: 0.82rem; }
+  .fin-status { font-size: 0.82rem; }
+
+  /* ---- DZIECKO ---- */
+  .child-section { padding: 72px 0; }
+  .child-icon { font-size: 2.4rem; }
+  .child-headline { font-size: 1.8rem; }
+  .child-text-blocks { font-size: 1rem; gap: 10px; margin-bottom: 40px; }
+  .child-closing { font-size: 1.1rem; }
+  .child-homes {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .home-card { padding: 14px 20px; min-width: 110px; }
+  .home-emoji { font-size: 1.7rem; margin-bottom: 6px; }
+  .home-card span { font-size: 0.8rem; }
+  .home-heart { font-size: 1rem; }
+
+  /* ---- AI ---- */
+  .ai-section { padding: 60px 0; }
+  .ai-inner { max-width: 100%; }
+  .ai-feature-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .ai-feat { padding: 24px 20px; }
+  .ai-feat-icon { width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 12px; }
+  .ai-feat p { font-size: 0.9rem; }
+
+  /* ---- OPINIE ---- */
+  .reviews-section { padding: 60px 0; }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .review-card { padding: 26px 22px; }
+  .review-card-featured { transform: none; box-shadow: 0 8px 32px rgba(0,200,150,.12); }
+  .review-text { font-size: 0.95rem; }
+
+  /* ---- APP PREVIEW ---- */
+  .preview-section { padding: 60px 0; }
+  .preview-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .preview-card { padding: 26px 22px; }
+  .preview-card-center { transform: none; }
+  .preview-emoji { font-size: 2.2rem; margin-bottom: 12px; }
+
+  /* ---- FINAL CTA ---- */
+  .final-cta { padding: 72px 0; }
+  .final-headline { font-size: clamp(1.7rem, 6vw, 2.2rem); margin-bottom: 16px; }
+  .final-sub { font-size: 1rem; margin-bottom: 36px; }
+  .btn-xl {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 16px 24px;
+  }
+  .final-stores {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .final-note { font-size: 0.82rem; margin-top: 20px; }
+
+  /* ---- FOOTER ---- */
+  .footer { padding: 52px 0 28px; }
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .footer-brand p { max-width: 100%; }
+  .footer-links-group h4 { margin-bottom: 14px; }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 24px;
+  }
+
+  /* ---- NAV LANG SWITCHER na mobile ---- */
+  .nav-links .lang-switcher {
+    margin: 0 24px;
+    width: calc(100% - 48px);
+  }
+  .nav-links .lang-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  .lang-label { display: inline !important; }
+  .nav-links .lang-dropdown {
+    position: relative;
+    top: 8px;
+    box-shadow: var(--shadow-sm);
+    border-radius: 12px;
+    width: 100%;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE (≤430px)
+   ============================================ */
+@media (max-width: 430px) {
+  .container { padding: 0 16px; }
+
+  .hero-text h1 { font-size: 1.8rem; }
+
+  .phone-center {
+    width: 200px !important;
+    height: 258px !important;
+  }
+
+  /* Store buttons pełna szerokość na bardzo małych */
+  .store-buttons {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .store-btn { justify-content: flex-start; }
+
+  .hero-visual {
+    margin: 0 -16px;
+    border-radius: 24px 24px 0 0;
+    padding: 24px 16px 0;
+  }
+
+  .final-stores { flex-direction: column; align-items: center; }
+  .final-stores .store-btn { width: 100%; max-width: 260px; justify-content: center; }
+
+  h2 { font-size: 1.45rem; }
+  .section-header { margin-bottom: 28px; }
+}
