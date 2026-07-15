@@ -1,16 +1,16 @@
 <svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dom taty">
   <defs>
-    <linearGradient id="dad-house" x1="18" y1="16" x2="74" y2="76" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2795FF"/>
+    <linearGradient id="dad-fill" x1="46" y1="6" x2="46" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2491FF"/>
       <stop offset="1" stop-color="#0080FF"/>
     </linearGradient>
-    <linearGradient id="dad-accent" x1="27" y1="31" x2="64" y2="68" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#17D4AA"/>
-      <stop offset="1" stop-color="#00C896"/>
+    <linearGradient id="dad-window" x1="58" y1="46" x2="68" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7D72"/>
+      <stop offset="1" stop-color="#FF6B68"/>
     </linearGradient>
   </defs>
-  <path d="M46 13L18 34V71H74V34L46 13Z" fill="#fff" stroke="url(#dad-house)" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M34 71V52C34 45.4 39.4 40 46 40C52.6 40 58 45.4 58 52V71" stroke="url(#dad-accent)" stroke-width="6" stroke-linecap="round"/>
-  <path d="M29 34C33.7 28.9 39.2 26.3 46 26.3C52.8 26.3 58.3 28.9 63 34" stroke="#FF6B68" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="63" cy="53" r="4" fill="#0080FF"/>
+  <path d="M14 28L46 6L78 28V76H14V28Z" fill="url(#dad-fill)"/>
+  <path d="M34 76V58C34 51.4 39.4 46 46 46C52.6 46 58 51.4 58 58V76" fill="#fff" fill-opacity="0.95"/>
+  <rect x="56" y="44" width="14" height="14" rx="4" fill="#fff" fill-opacity="0.95"/>
+  <circle cx="63" cy="51" r="4.5" fill="url(#dad-window)"/>
 </svg>

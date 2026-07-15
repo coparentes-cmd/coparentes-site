@@ -1,18 +1,21 @@
 <svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Domy rodziny">
   <defs>
-    <linearGradient id="family-left" x1="8" y1="18" x2="52" y2="73" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#17D4AA"/>
+    <linearGradient id="family-left" x1="22" y1="18" x2="22" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1DD6AE"/>
       <stop offset="1" stop-color="#00C896"/>
     </linearGradient>
-    <linearGradient id="family-right" x1="40" y1="14" x2="84" y2="73" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#B43CCA"/>
-      <stop offset="1" stop-color="#0080FF"/>
+    <linearGradient id="family-right" x1="70" y1="12" x2="70" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B239C9"/>
+      <stop offset="1" stop-color="#9C27B0"/>
+    </linearGradient>
+    <linearGradient id="family-heart" x1="40" y1="46" x2="52" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7D72"/>
+      <stop offset="1" stop-color="#FF6B68"/>
     </linearGradient>
   </defs>
-  <path d="M31 18L10 35V72H52V35L31 18Z" fill="#fff" stroke="url(#family-left)" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M61 14L40 32V72H82V32L61 14Z" fill="#fff" stroke="url(#family-right)" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M22 72V56C22 51 26 47 31 47C36 47 40 51 40 56V72" stroke="#0080FF" stroke-width="5" stroke-linecap="round"/>
-  <path d="M52 72V55C52 50 56 46 61 46C66 46 70 50 70 55V72" stroke="#FF6B68" stroke-width="5" stroke-linecap="round"/>
-  <path d="M22 35C24.6 32.4 27.6 31 31 31C34.4 31 37.4 32.4 40 35" stroke="#9C27B0" stroke-width="4.5" stroke-linecap="round"/>
-  <path d="M52 32C54.6 29.4 57.6 28 61 28C64.4 28 67.4 29.4 70 32" stroke="#00C896" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M4 32L22 18L40 32V74H4V32Z" fill="url(#family-left)"/>
+  <path d="M12 74V62C12 58.7 14.7 56 18 56C21.3 56 24 58.7 24 62V74" fill="#fff" fill-opacity="0.95"/>
+  <path d="M52 28L70 12L88 28V74H52V28Z" fill="url(#family-right)"/>
+  <path d="M60 74V61C60 57.7 62.7 55 66 55C69.3 55 72 57.7 72 61V74" fill="#fff" fill-opacity="0.95"/>
+  <path d="M46 48C48.5 44.2 52.8 43.6 55 46.4C56.6 48.4 56.2 50.8 54.4 52.8L46 60.5L37.6 52.8C35.8 50.8 35.4 48.4 37 46.4C39.2 43.6 43.5 44.2 46 48Z" fill="url(#family-heart)"/>
 </svg>
