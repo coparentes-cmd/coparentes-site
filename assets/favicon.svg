@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Coparentes">
+  <path d="M6 27.5L24 11v25H6V27.5Z" fill="#69D1AC"/>
+  <path d="M24 11L42 27.5V36H24V11Z" fill="#7EE0C1"/>
+  <path d="M22 19L40 4l18 16v29H22V19Z" fill="#6EA3FF"/>
+  <path d="M20 29.5 34 17l14 12.5V50H20V29.5Z" fill="#FF8F7D"/>
+  <path d="M34 27.2c2.9-4.1 9.2-3.2 10.7 1.4 1.1 3.4-1.1 6.8-4.2 8.9L34 42l-6.5-4.5c-3.1-2.1-5.3-5.5-4.2-8.9 1.5-4.6 7.8-5.5 10.7-1.4Z" fill="#FFD46D"/>
+</svg>
