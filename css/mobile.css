@@ -240,6 +240,12 @@
     max-width: 100%;
   }
 
+  .cta-store-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
   .hero {
     padding-bottom: 52px;
   }
