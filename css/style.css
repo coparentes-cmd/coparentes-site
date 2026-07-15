@@ -17,6 +17,9 @@
   --radius-md: 20px;
   --container: 1180px;
   --header-h: 88px;
+  --navy-soft: #152a52;
+  --navy: #0f183d;
+  --navy-deep: #0a183d;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -862,7 +865,7 @@ blockquote {
 .cta-content p { margin-top: 18px; color: rgba(255,255,255,0.92); }
 
 .site-footer {
-  background: linear-gradient(180deg, #1d1d22 0%, #15161b 100%);
+  background: linear-gradient(180deg, var(--navy-soft) 0%, var(--navy-deep) 100%);
   color: #fff;
 }
 .footer-top {
