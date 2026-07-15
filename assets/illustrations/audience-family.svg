@@ -1,1 +1,18 @@
-<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 34L30 16L54 34V78H6V34Z" stroke="#00C896" stroke-width="6" stroke-linejoin="round"/><path d="M38 34L62 16L86 34V78H38V34Z" stroke="#9C27B0" stroke-width="6" stroke-linejoin="round"/></svg>
+<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Domy rodziny">
+  <defs>
+    <linearGradient id="family-left" x1="8" y1="18" x2="52" y2="73" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17D4AA"/>
+      <stop offset="1" stop-color="#00C896"/>
+    </linearGradient>
+    <linearGradient id="family-right" x1="40" y1="14" x2="84" y2="73" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B43CCA"/>
+      <stop offset="1" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M31 18L10 35V72H52V35L31 18Z" fill="#fff" stroke="url(#family-left)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M61 14L40 32V72H82V32L61 14Z" fill="#fff" stroke="url(#family-right)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M22 72V56C22 51 26 47 31 47C36 47 40 51 40 56V72" stroke="#0080FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M52 72V55C52 50 56 46 61 46C66 46 70 50 70 55V72" stroke="#FF6B68" stroke-width="5" stroke-linecap="round"/>
+  <path d="M22 35C24.6 32.4 27.6 31 31 31C34.4 31 37.4 32.4 40 35" stroke="#9C27B0" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M52 32C54.6 29.4 57.6 28 61 28C64.4 28 67.4 29.4 70 32" stroke="#00C896" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

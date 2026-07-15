@@ -1,1 +1,16 @@
-<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="am" x1="46" y1="0" x2="46" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#FF8078"/><stop offset="1" stop-color="#FF6B68"/></linearGradient></defs><path d="M8 28L46 0L84 28V84H8V28Z" fill="url(#am)"/></svg>
+<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dom mamy">
+  <defs>
+    <linearGradient id="mom-house" x1="18" y1="16" x2="74" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8078"/>
+      <stop offset="1" stop-color="#FF6B68"/>
+    </linearGradient>
+    <linearGradient id="mom-accent" x1="27" y1="31" x2="64" y2="68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00C896"/>
+      <stop offset="1" stop-color="#0080FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 13L18 34V71H74V34L46 13Z" fill="#fff" stroke="url(#mom-house)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M34 71V52C34 45.4 39.4 40 46 40C52.6 40 58 45.4 58 52V71" stroke="url(#mom-accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M29 34C33.7 28.9 39.2 26.3 46 26.3C52.8 26.3 58.3 28.9 63 34" stroke="#9C27B0" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="63" cy="53" r="4" fill="#FF6B68"/>
+</svg>
