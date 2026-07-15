@@ -159,12 +159,28 @@
     padding-top: 8px;
   }
 
-  .nav-cta .btn {
-    width: 100%;
-    display: flex;
+  .nav-list .nav-cta .btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 0 22px;
+    min-height: 48px;
     text-align: center;
+  }
+
+  .store-badge,
+  .cta-store-row .store-badge {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .store-badge span {
+    text-align: center;
+  }
+
+  .store-logo-link {
+    justify-content: center;
   }
 
   .hero {
