@@ -8,14 +8,9 @@
       <stop stop-color="#B239C9"/>
       <stop offset="1" stop-color="#9C27B0"/>
     </linearGradient>
-    <linearGradient id="family-heart" x1="40" y1="46" x2="52" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF7D72"/>
-      <stop offset="1" stop-color="#FF6B68"/>
-    </linearGradient>
   </defs>
   <path d="M4 32L22 18L40 32V74H4V32Z" fill="url(#family-left)"/>
   <path d="M12 74V62C12 58.7 14.7 56 18 56C21.3 56 24 58.7 24 62V74" fill="#fff" fill-opacity="0.95"/>
   <path d="M52 28L70 12L88 28V74H52V28Z" fill="url(#family-right)"/>
   <path d="M60 74V61C60 57.7 62.7 55 66 55C69.3 55 72 57.7 72 61V74" fill="#fff" fill-opacity="0.95"/>
-  <path d="M46 48C48.5 44.2 52.8 43.6 55 46.4C56.6 48.4 56.2 50.8 54.4 52.8L46 60.5L37.6 52.8C35.8 50.8 35.4 48.4 37 46.4C39.2 43.6 43.5 44.2 46 48Z" fill="url(#family-heart)"/>
 </svg>
