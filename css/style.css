@@ -747,6 +747,7 @@ button { font: inherit; }
 }
 
 .follow-up {
+  display: none; /* temporarily hidden */
   position: relative;
   padding-top: 68px;
   padding-bottom: 72px;
