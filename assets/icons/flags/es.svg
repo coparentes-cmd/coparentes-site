@@ -1,1 +1,15 @@
-<svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="18" rx="3" fill="#C81D25"/><rect y="4.5" width="24" height="9" fill="#F6C445"/><rect x="0.5" y="0.5" width="23" height="17" rx="2.5" stroke="rgba(17,17,17,0.08)"/></svg>
+<svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="España">
+  <defs>
+    <clipPath id="flag-es-clip"><rect width="24" height="18" rx="3"/></clipPath>
+  </defs>
+  <g clip-path="url(#flag-es-clip)">
+    <path fill="#AA151B" d="M0 0h24v18H0z"/>
+    <path fill="#F1BF00" d="M0 4.5h24v9H0z"/>
+    <path fill="#C60B1E" d="M6.1 6.2h3.2v4.1c0 1-.7 1.8-1.6 1.8S6.1 11.3 6.1 10.3V6.2z"/>
+    <path fill="#F1BF00" d="M6.7 6.8h2v1h-2z"/>
+    <path fill="#fff" d="M6.7 8.3h2v.9h-2z"/>
+    <path fill="#F1BF00" d="M6.7 9.7h2v.9h-2z"/>
+    <path fill="#7B3F00" d="M5.5 6.1h.4v5.6h-.4zm4 0h.4v5.6h-.4z"/>
+  </g>
+  <rect x=".5" y=".5" width="23" height="17" rx="2.5" fill="none" stroke="#D8DEE8"/>
+</svg>

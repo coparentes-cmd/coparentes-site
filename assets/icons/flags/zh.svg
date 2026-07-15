@@ -1,1 +1,15 @@
-<svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="18" rx="3" fill="#DE2910"/><path d="M6 3l.9 2.4H9.5L7.4 6.8l.8 2.4L6 7.7 3.8 9.2l.8-2.4-2.1-1.4h2.6L6 3Z" fill="#FFDE00"/><rect x="0.5" y="0.5" width="23" height="17" rx="2.5" stroke="rgba(17,17,17,0.08)"/></svg>
+<svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="中国">
+  <defs>
+    <clipPath id="flag-zh-clip"><rect width="24" height="18" rx="3"/></clipPath>
+    <path id="flag-zh-star" d="m0-1.2.35.73.8.12-.58.56.14.79L0 .62-.71 1l.14-.79-.58-.56.8-.12z"/>
+  </defs>
+  <g clip-path="url(#flag-zh-clip)">
+    <path fill="#DE2910" d="M0 0h24v18H0z"/>
+    <use href="#flag-zh-star" fill="#FFDE00" transform="translate(5 4.6) scale(2)"/>
+    <use href="#flag-zh-star" fill="#FFDE00" transform="translate(9.4 2.7) rotate(23)"/>
+    <use href="#flag-zh-star" fill="#FFDE00" transform="translate(11.2 4.7) rotate(45)"/>
+    <use href="#flag-zh-star" fill="#FFDE00" transform="translate(11 7.4) rotate(69)"/>
+    <use href="#flag-zh-star" fill="#FFDE00" transform="translate(9.3 9.5) rotate(20)"/>
+  </g>
+  <rect x=".5" y=".5" width="23" height="17" rx="2.5" fill="none" stroke="#D8DEE8"/>
+</svg>
