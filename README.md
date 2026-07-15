@@ -87,10 +87,12 @@ README.md
 | Ścieżka | Opis |
 |---------|------|
 | `/` (index.html) | Główna strona landing page |
-| `#jak-dziala` | Sekcja Features |
-| `#dla-kogo` | Sekcja Emotional |
-| `#opinie` | Sekcja Recenzji |
-| `#pobierz` | Final CTA / download |
+| `#features` | Funkcje aplikacji |
+| `#how-it-works` | Jak działa Coparentes |
+| `#follow-up` | Następne kroki po rozmowach, terminach i zadaniach |
+| `#audience` | Dla kogo jest Coparentes |
+| `#testimonials` | Opinie rodziców |
+| `#download` | Final CTA / download |
 
 ---
 
