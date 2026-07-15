@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const cookieConsent = document.getElementById('cookieConsent');
-  const cookieFab = document.getElementById('cookieFab');
   const cookieFooterTriggers = document.querySelectorAll('[data-open-cookie-settings]');
 
   if (cookieConsent) {
@@ -271,14 +270,12 @@ document.addEventListener('DOMContentLoaded', () => {
       cookieConsent.hidden = false;
       cookieConsent.classList.add('is-visible');
       setDetailsVisibility(expanded);
-      if (cookieFab) cookieFab.hidden = true;
     };
 
     const hideBanner = () => {
       cookieConsent.classList.remove('is-visible');
       cookieConsent.hidden = true;
       setDetailsVisibility(false);
-      if (cookieFab) cookieFab.hidden = false;
     };
 
     const saveAndApply = (value) => {
@@ -329,12 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openSettings();
       });
     });
-
-    if (cookieFab) {
-      cookieFab.addEventListener('click', () => {
-        openSettings();
-      });
-    }
 
     const storedConsent = loadStoredConsent();
     if (storedConsent) {

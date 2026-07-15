@@ -1215,31 +1215,8 @@ blockquote {
   justify-content: flex-end;
 }
 
-.cookie-fab {
-  position: fixed;
-  left: 18px;
-  bottom: 18px;
-  z-index: 1380;
-  min-height: 50px;
-  padding: 0 20px;
-  border: 1px solid rgba(17,17,17,0.08);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.96);
-  color: var(--text);
-  box-shadow: 0 16px 40px rgba(15,25,61,0.14);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.cookie-fab:hover {
-  transform: translateY(-2px);
-}
-
 .cookie-consent[hidden],
-.cookie-consent__details[hidden],
-.cookie-fab[hidden] {
+.cookie-consent__details[hidden] {
   display: none !important;
 }
 
