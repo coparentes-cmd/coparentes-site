@@ -425,6 +425,29 @@
   .lang-switcher.is-open .lang-dropdown {
     display: block;
   }
+
+  .lang-dropdown .lang-option {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .lang-dropdown .lf,
+  .lang-dropdown .lf img {
+    width: 28px;
+    height: 21px;
+    border-radius: 4px;
+  }
+
+  .lang-dropdown .lf {
+    justify-self: start;
+    flex-basis: 28px;
+  }
+
+  .lang-dropdown .lc {
+    justify-self: end;
+    margin-left: 12px;
+  }
 }
 
 
