@@ -112,6 +112,17 @@ button { font: inherit; }
 .nav-list a:hover,
 .nav-list a.is-active { color: var(--text); }
 
+.nav-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-cta .btn {
+  text-align: center;
+  white-space: nowrap;
+}
+
 .nav-list a:not(.btn)::after {
   content: '';
   position: absolute;

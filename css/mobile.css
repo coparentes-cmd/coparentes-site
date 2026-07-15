@@ -125,11 +125,17 @@
   }
 
   .nav-cta {
+    display: flex;
+    justify-content: center;
     padding-top: 8px;
   }
 
   .nav-cta .btn {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero {
