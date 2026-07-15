@@ -173,6 +173,7 @@ button { font: inherit; }
 
 .btn:hover,
 .store-badge:hover,
+.store-logo-link:hover,
 .footer-social a:hover { transform: translateY(-2px); }
 
 .btn-primary {
@@ -291,6 +292,26 @@ button { font: inherit; }
 }
 
 .store-row.center { justify-content: center; }
+
+.store-logo-link {
+  min-width: 188px;
+  min-height: 68px;
+  padding: 9px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: 0 16px 32px rgba(17,18,33,0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.store-logo-image {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+}
 
 .store-badge {
   min-width: 172px;

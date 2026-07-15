@@ -227,12 +227,17 @@
   }
 
   .btn,
-  .store-badge {
+  .store-badge,
+  .store-logo-link {
     width: 100%;
   }
 
   .store-row {
     width: 100%;
+  }
+
+  .store-logo-image {
+    max-width: 100%;
   }
 
   .hero {
