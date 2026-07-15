@@ -256,6 +256,7 @@ button { font: inherit; }
 .hero-copy h1,
 .section-title h2,
 .how-copy h2,
+.follow-up-copy h2,
 .cta-content h2 {
   margin: 0;
   letter-spacing: -0.055em;
@@ -508,6 +509,7 @@ button { font: inherit; }
 .section-title { text-align: center; }
 .section-title h2,
 .how-copy h2,
+.follow-up-copy h2,
 .cta-content h2 { font-size: clamp(2.3rem, 4vw, 3.8rem); }
 
 .cards {
@@ -546,6 +548,7 @@ button { font: inherit; }
 
 .soft-card h3,
 .feature-card h3,
+.follow-up-card h3,
 .step-item h3 {
   margin: 0;
   font-size: 1.42rem;
@@ -554,6 +557,8 @@ button { font: inherit; }
 
 .soft-card p,
 .feature-card p,
+.follow-up-copy p,
+.follow-up-card p,
 .step-item p,
 .family-card p,
 .cta-content p {
@@ -688,6 +693,56 @@ button { font: inherit; }
   width: 116px;
   height: 54px;
   object-fit: contain;
+}
+
+.follow-up {
+  position: relative;
+  padding-top: 68px;
+  padding-bottom: 72px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(0, 200, 150, 0.12), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(0, 128, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,128,255,0.05) 100%);
+}
+
+.follow-up-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.follow-up-copy {
+  padding: 36px;
+  border-radius: var(--radius-xl);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.follow-up-copy .eyebrow {
+  margin-bottom: 18px;
+}
+
+.follow-up-list {
+  display: grid;
+  gap: 18px;
+}
+
+.follow-up-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 24px;
+  border: 1px solid rgba(17,17,17,0.06);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.94);
+  box-shadow: var(--shadow-card);
+}
+
+.follow-up-card .feature-icon {
+  margin: 0;
+  flex: 0 0 auto;
 }
 
 

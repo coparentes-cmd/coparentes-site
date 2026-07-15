@@ -22,7 +22,8 @@ Landing page aplikacji mobilnej **coparentes** — pomagającej rodzicom po rozs
 | 8 | **Delikatne AI** – wsparcie przy pisaniu | ✅ |
 | 9 | **Opinie** – 3 karty z recenzjami | ✅ |
 | 10 | **App Preview** – Dla mamy / taty / dziecka | ✅ |
-| 11 | **Final CTA** – pobierz aplikację | ✅ |
+| 11 | **Follow-up** – następne kroki po rozmowach, terminach i zadaniach | ✅ |
+| 12 | **Final CTA** – pobierz aplikację | ✅ |
 | – | **Navbar** – logo + linki + mobile toggle | ✅ |
 | – | **Footer** – linki, social, prawne | ✅ |
 

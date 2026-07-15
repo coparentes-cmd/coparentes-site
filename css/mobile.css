@@ -1,11 +1,13 @@
 @media (max-width: 1180px) {
   .hero-grid,
-  .how-grid {
+  .how-grid,
+  .follow-up-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-copy,
   .how-copy,
+  .follow-up-copy,
   .section-title {
     text-align: center;
   }
@@ -34,6 +36,11 @@
 
   .how-visual {
     margin-top: 8px;
+  }
+
+  .follow-up-copy {
+    max-width: 760px;
+    margin-inline: auto;
   }
 }
 
@@ -235,6 +242,7 @@
   .hero-copy h1,
   .section-title h2,
   .how-copy h2,
+  .follow-up-copy h2,
   .cta-content h2 {
     line-height: 1.02;
   }
@@ -299,6 +307,25 @@
 
   .how-visual {
     flex-direction: column;
+  }
+
+  .follow-up {
+    padding-top: 52px;
+    padding-bottom: 56px;
+  }
+
+  .follow-up-copy,
+  .follow-up-card {
+    padding: 24px 20px;
+  }
+
+  .follow-up-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .follow-up-card .feature-icon {
+    margin-inline: auto;
   }
 
   .mini-phone-frame {
