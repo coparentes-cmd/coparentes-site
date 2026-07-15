@@ -51,6 +51,35 @@
     position: sticky;
   }
 
+  .legal-header {
+    height: auto;
+    min-height: var(--header-h);
+  }
+
+  .legal-header .header-inner {
+    flex-wrap: wrap;
+    padding-block: 10px 12px;
+  }
+
+  .legal-header .main-nav,
+  .legal-header .legal-nav-inline {
+    width: 100%;
+  }
+
+  .legal-header .legal-nav-inline {
+    justify-content: flex-start;
+  }
+
+  .legal-header .nav-lang-item {
+    width: auto;
+    padding: 0;
+  }
+
+  .legal-header .lang-switcher,
+  .legal-header .lang-btn {
+    width: auto;
+  }
+
   .menu-toggle {
     display: inline-flex;
     position: relative;
