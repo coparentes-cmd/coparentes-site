@@ -3,675 +3,375 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>coparentes – spokojne rodzicielstwo po rozstaniu</title>
-  <meta name="description" content="Pomagamy rodzicom po rozstaniu spokojnie ogarniać życie dziecka — bez niepotrzebnych konfliktów. Pobierz aplikację coparentes na iOS i Android." />
+  <title>Coparentes — spokojne rodzicielstwo po rozstaniu</title>
+  <meta name="description" content="Coparentes pomaga rodzicom po rozstaniu spokojnie organizować życie dziecka w dwóch domach — komunikację, harmonogram i finanse w jednej aplikacji." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/lang.css" />
-  <link rel="stylesheet" href="css/mobile.css" />
-  <link rel="stylesheet" href="css/editorial.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css?v=cookiebanner-1" />
+  <link rel="stylesheet" href="css/mobile.css?v=cookiebanner-1" />
 </head>
 <body>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo logo-lockup" aria-label="Coparentes"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#funkcje">Funkcje</a></li>
-        <li><a href="#jak-dziala">Jak działa?</a></li>
-        <li><a href="#dla-kogo">Dla kogo?</a></li>
-        <li><a href="#opinie">Opinie</a></li>
-        <li>
-          <div class="lang-switcher" id="langSwitcher">
-            <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Zmień język">
-              <span class="lang-flag flag-pl" aria-hidden="true">PL</span>
-              <span class="lang-label">PL</span>
-              <i class="fas fa-chevron-down lang-arrow" aria-hidden="true"></i>
-            </button>
-            <div class="lang-dropdown">
-              <a class="lang-option active" href="index.html"><span class="lf flag-pl" aria-hidden="true">PL</span><span class="ln">Polski</span><span class="lc">PL</span></a>
-              <a class="lang-option" href="en/index.html"><span class="lf flag-en" aria-hidden="true">EN</span><span class="ln">English</span><span class="lc">EN</span></a>
-              <a class="lang-option" href="de/index.html"><span class="lf flag-de" aria-hidden="true">DE</span><span class="ln">Deutsch</span><span class="lc">DE</span></a>
-              <a class="lang-option" href="es/index.html"><span class="lf flag-es" aria-hidden="true">ES</span><span class="ln">Español</span><span class="lc">ES</span></a>
-              <a class="lang-option" href="fr/index.html"><span class="lf flag-fr" aria-hidden="true">FR</span><span class="ln">Français</span><span class="lc">FR</span></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href="#pobierz" class="btn btn-primary btn-sm">Pobierz</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ========== SECTION 1 – HERO ========== -->
-  <section class="hero" id="hero">
-    <div class="container hero-inner">
-      <div class="hero-text fade-in">
-        <div class="badge">🌱 Spokojne rodzicielstwo</div>
-        <h1 class="headline">
-          To trudne.<br />
-          Dlatego to<br />
-          <span class="highlight">upraszczamy.</span>
-        </h1>
-        <p class="subheadline">
-          Pomagamy rodzicom po rozstaniu spokojnie ogarniać życie dziecka — bez niepotrzebnych konfliktów.
-        </p>
-        <div class="hero-cta">
-          <a href="#pobierz" class="btn btn-primary btn-lg">
-            <i class="fas fa-heart"></i>
-            Zacznij od dziś
-          </a>
-          <div class="store-buttons">
-            <a href="#" class="store-btn">
-              <span class="store-icon store-icon-apple" aria-hidden="true"></span>
-              <span>
-                <small>Pobierz z</small>
-                App Store
-              </span>
-            </a>
-            <a href="#" class="store-btn">
-              <span class="store-icon store-icon-play" aria-hidden="true"></span>
-              <span>
-                <small>Pobierz z</small>
-                Google Play
-              </span>
-            </a>
-          </div>
-        </div>
-        <p class="hero-note">
-          <i class="fas fa-shield-alt"></i>
-          Bezpłatne. Bez rejestracji kart.
-        </p>
-      </div>
-      <div class="hero-visual fade-in-delay">
-        <div class="phone-mockups">
-          <div class="phone phone-left">
-            <div class="phone-screen screen-chat">
-              <div class="screen-header">
-                <div class="screen-avatar">A</div>
-                <span>Anna</span>
-              </div>
-              <div class="chat-messages">
-                <div class="msg msg-in">Kiedy odbierasz Zosię?</div>
-                <div class="msg msg-out">W piątek o 16:00 👍</div>
-                <div class="msg msg-in">Ok, dzięki 😊</div>
-                <div class="msg calm-suggestion">
-                  <i class="fas fa-leaf"></i>
-                  Spokojny ton zachowany
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="phone phone-center">
-            <div class="phone-screen screen-calendar">
-              <div class="screen-title">Kwiecień 2025</div>
-              <div class="cal-grid">
-                <div class="cal-day">Pn</div>
-                <div class="cal-day">Wt</div>
-                <div class="cal-day">Śr</div>
-                <div class="cal-day">Cz</div>
-                <div class="cal-day">Pt</div>
-                <div class="cal-day">So</div>
-                <div class="cal-day">Nd</div>
-                <div class="cal-num">1</div>
-                <div class="cal-num">2</div>
-                <div class="cal-num cal-mom">3</div>
-                <div class="cal-num cal-mom">4</div>
-                <div class="cal-num cal-dad">5</div>
-                <div class="cal-num cal-dad">6</div>
-                <div class="cal-num">7</div>
-                <div class="cal-num cal-event">8<span>🏥</span></div>
-                <div class="cal-num">9</div>
-                <div class="cal-num cal-mom">10</div>
-                <div class="cal-num cal-mom">11</div>
-                <div class="cal-num cal-dad">12</div>
-                <div class="cal-num cal-dad">13</div>
-                <div class="cal-num">14</div>
-              </div>
-              <div class="cal-legend">
-                <span class="leg-mom">Mama</span>
-                <span class="leg-dad">Tata</span>
-              </div>
-            </div>
-          </div>
-          <div class="phone phone-right">
-            <div class="phone-screen screen-finance">
-              <div class="screen-title">Rozliczenia</div>
-              <div class="finance-item">
-                <div class="fi-icon">🏫</div>
-                <div class="fi-info">
-                  <span>Zajęcia Zosi</span>
-                  <small>15 kwi</small>
-                </div>
-                <div class="fi-amount green">+120 zł</div>
-              </div>
-              <div class="finance-item">
-                <div class="fi-icon">💊</div>
-                <div class="fi-info">
-                  <span>Lekarz</span>
-                  <small>18 kwi</small>
-                </div>
-                <div class="fi-amount green">+80 zł</div>
-              </div>
-              <div class="finance-divider"></div>
-              <div class="balance-row">
-                <span>Bilans</span>
-                <strong class="balance-num">200 zł</strong>
-              </div>
-              <div class="balance-note">Wszystko jasne ✓</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F9FAFB"/></svg>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 3 – CO ROBI COPARENTES ========== -->
-  <section class="features" id="funkcje">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label">Funkcje</p>
-        <h2>Trzy rzeczy, które<br /><span class="highlight">naprawdę pomagają</span></h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <div class="feat-icon feat-icon-green">
-            <i class="fas fa-comments"></i>
-          </div>
-          <h3>Spokojniejsze rozmowy</h3>
-          <p>Pomaga Wam mówić tak, żeby się rozumieć.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feat-icon feat-icon-blue">
-            <i class="fas fa-calendar-check"></i>
-          </div>
-          <h3>Jasny plan</h3>
-          <p>Każdy wie, co i kiedy — bez chaosu.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feat-icon feat-icon-green">
-            <i class="fas fa-balance-scale"></i>
-          </div>
-          <h3>Uczciwe rozliczenia</h3>
-          <p>Bez liczenia i bez pretensji.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 4 – KOMUNIKACJA ========== -->
-  <section class="comm-section" id="jak-dziala">
-    <div class="container comm-inner">
-      <div class="comm-text fade-in">
-        <p class="section-label">Komunikacja</p>
-        <h2>Czasem najtrudniejsze<br />jest <span class="highlight">jedno zdanie.</span></h2>
-        <p class="body-text">
-          Dlatego pomagamy je napisać spokojniej.
-        </p>
-        <div class="comm-points">
-          <div class="comm-point">
-            <span class="cp-arrow">→</span>
-            <span>Zamiast eskalacji — rozmowa.</span>
-          </div>
-          <div class="comm-point">
-            <span class="cp-arrow">→</span>
-            <span>Zamiast emocji — zrozumienie.</span>
-          </div>
-        </div>
-      </div>
-      <div class="comm-mockup fade-in-delay">
-        <div class="message-comparison">
-          <div class="msg-card msg-sharp">
-            <div class="msg-label">
-              <i class="fas fa-exclamation-triangle"></i>
-              Przed
-            </div>
-            <div class="msg-bubble bubble-sharp">
-              Znowu się spóźniasz! Zawsze to samo, nie możesz się ogarnąć?!
-            </div>
-          </div>
-          <div class="msg-transform">
-            <div class="transform-arrow">
-              <i class="fas fa-leaf"></i>
-              coparentes podpowiada
-            </div>
-          </div>
-          <div class="msg-card msg-calm">
-            <div class="msg-label">
-              <i class="fas fa-check-circle"></i>
-              Po
-            </div>
-            <div class="msg-bubble bubble-calm">
-              Hej, czy możesz mi powiedzieć, o której planowo odbierzesz Zosię? Chciałbym dobrze zaplanować jej czas.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 5 – PLAN DNIA ========== -->
-  <section class="calendar-section" id="plan">
-    <div class="container cal-inner">
-      <div class="cal-mockup fade-in">
-        <div class="big-calendar">
-          <div class="bc-header">
-            <div class="bc-month">Kwiecień 2025</div>
-            <div class="bc-nav">
-              <button><i class="fas fa-chevron-left"></i></button>
-              <button><i class="fas fa-chevron-right"></i></button>
-            </div>
-          </div>
-          <div class="bc-grid">
-            <div class="bc-weekday">Pon</div>
-            <div class="bc-weekday">Wt</div>
-            <div class="bc-weekday">Śr</div>
-            <div class="bc-weekday">Czw</div>
-            <div class="bc-weekday">Pt</div>
-            <div class="bc-weekday">Sob</div>
-            <div class="bc-weekday">Nd</div>
-            <div class="bc-day"></div>
-            <div class="bc-day bc-mom">1<div class="bc-tag">Mama</div></div>
-            <div class="bc-day bc-mom">2</div>
-            <div class="bc-day bc-dad">3<div class="bc-tag">Tata</div></div>
-            <div class="bc-day bc-dad">4</div>
-            <div class="bc-day bc-dad">5</div>
-            <div class="bc-day bc-event">6<div class="bc-tag bc-tag-event">🏫 Szkoła</div></div>
-            <div class="bc-day bc-mom">7</div>
-            <div class="bc-day bc-mom">8</div>
-            <div class="bc-day bc-event">9<div class="bc-tag bc-tag-event">🏥 Lekarz</div></div>
-            <div class="bc-day bc-dad">10</div>
-            <div class="bc-day bc-dad">11</div>
-            <div class="bc-day bc-dad">12</div>
-            <div class="bc-day bc-mom">13</div>
-            <div class="bc-day bc-mom">14</div>
-            <div class="bc-day bc-mom">15</div>
-            <div class="bc-day bc-event">16<div class="bc-tag bc-tag-event">🎂 Urodziny</div></div>
-            <div class="bc-day bc-dad">17</div>
-            <div class="bc-day bc-dad">18</div>
-            <div class="bc-day bc-dad">19</div>
-          </div>
-          <div class="bc-legend">
-            <span class="bcl-mom"><span></span> Mama</span>
-            <span class="bcl-dad"><span></span> Tata</span>
-            <span class="bcl-event"><span></span> Wydarzenie</span>
-          </div>
-        </div>
-      </div>
-      <div class="cal-text fade-in-delay">
-        <p class="section-label">Planowanie</p>
-        <h2>Każdy wie,<br /><span class="highlight">co i kiedy.</span></h2>
-        <p class="body-text">
-          Szkoła, lekarz, weekendy — wszystko jasne dla obu stron.
-        </p>
-        <p class="body-text mt-sm">
-          Bez dzwonienia. Bez chaosu.
-        </p>
-        <div class="cal-benefits">
-          <div class="cb-item">
-            <i class="fas fa-check"></i>
-            <span>Wspólny kalendarz dla całej rodziny</span>
-          </div>
-          <div class="cb-item">
-            <i class="fas fa-check"></i>
-            <span>Powiadomienia o zmianach</span>
-          </div>
-          <div class="cb-item">
-            <i class="fas fa-check"></i>
-            <span>Wszystko w jednym miejscu</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 6 – FINANSE ========== -->
-  <section class="finance-section" id="finanse">
-    <div class="container fin-inner">
-      <div class="fin-text fade-in">
-        <p class="section-label">Rozliczenia</p>
-        <h2>Pieniądze nie muszą<br />być powodem <span class="highlight">kłótni.</span></h2>
-        <p class="body-text">
-          Dodajesz wydatek.<br />
-          Widzicie wszystko jasno.
-        </p>
-        <p class="body-text mt-sm fin-accent">
-          Bez pretensji.
-        </p>
-      </div>
-      <div class="fin-mockup fade-in-delay">
-        <div class="fin-card">
-          <div class="fin-card-header">
-            <span>📋 Wydatki — Kwiecień</span>
-            <span class="fin-month">2025</span>
-          </div>
-          <div class="fin-list">
-            <div class="fin-row">
-              <div class="fin-icon-wrap">🏫</div>
-              <div class="fin-details">
-                <span class="fin-name">Zajęcia plastyczne</span>
-                <span class="fin-date">10 kwi · Mama</span>
-              </div>
-              <div class="fin-val green">+120 zł</div>
-            </div>
-            <div class="fin-row">
-              <div class="fin-icon-wrap">💊</div>
-              <div class="fin-details">
-                <span class="fin-name">Wizyta u lekarza</span>
-                <span class="fin-date">15 kwi · Tata</span>
-              </div>
-              <div class="fin-val green">+80 zł</div>
-            </div>
-            <div class="fin-row">
-              <div class="fin-icon-wrap">📚</div>
-              <div class="fin-details">
-                <span class="fin-name">Książki szkolne</span>
-                <span class="fin-date">18 kwi · Mama</span>
-              </div>
-              <div class="fin-val green">+65 zł</div>
-            </div>
-            <div class="fin-row">
-              <div class="fin-icon-wrap">🏊</div>
-              <div class="fin-details">
-                <span class="fin-name">Basen</span>
-                <span class="fin-date">22 kwi · Tata</span>
-              </div>
-              <div class="fin-val green">+45 zł</div>
-            </div>
-          </div>
-          <div class="fin-total">
-            <div class="fin-total-row">
-              <span>Razem wydatki</span>
-              <strong>310 zł</strong>
-            </div>
-            <div class="fin-split">
-              <div class="fin-split-item">
-                <span class="split-dot dot-mom"></span>
-                <span>Mama wpłaciła</span>
-                <strong>185 zł</strong>
-              </div>
-              <div class="fin-split-item">
-                <span class="split-dot dot-dad"></span>
-                <span>Tata wpłacił</span>
-                <strong>125 zł</strong>
-              </div>
-            </div>
-            <div class="fin-status">✅ Wszystko widoczne. Bez pretensji.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 7 – DZIECKO ========== -->
-  <section class="child-section" id="dziecko">
-    <div class="container child-inner fade-in">
-      <div class="child-icon">🌱</div>
-      <h2 class="child-headline">Dziecko<br />potrzebuje <span class="highlight">spokoju.</span></h2>
-      <div class="child-text-blocks">
-        <p>Nie musi widzieć konfliktu.</p>
-        <p>Nie musi być pośrodku.</p>
-        <div class="child-divider"></div>
-        <p class="child-closing">
-          Może mieć dwa domy —<br />
-          i <strong>jeden spokojny świat.</strong>
-        </p>
-      </div>
-      <div class="child-homes">
-        <div class="home-card">
-          <div class="home-emoji">🏡</div>
-          <span>Dom Mamy</span>
-        </div>
-        <div class="home-heart">
-          <i class="fas fa-heart"></i>
-        </div>
-        <div class="home-child">
-          <div class="child-avatar">👧</div>
-          <span>Zosia</span>
-        </div>
-        <div class="home-heart">
-          <i class="fas fa-heart"></i>
-        </div>
-        <div class="home-card">
-          <div class="home-emoji">🏠</div>
-          <span>Dom Taty</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 8 – DELIKATNE AI ========== -->
-  <section class="ai-section" id="ai">
-    <div class="container ai-inner fade-in">
-      <div class="ai-badge">
-        <i class="fas fa-leaf"></i>
-        Inteligentne wsparcie
-      </div>
-      <h2>coparentes podpowiada,<br />kiedy warto napisać <span class="highlight">inaczej.</span></h2>
-      <p class="ai-body">
-        Pomaga spojrzeć spokojniej.
-      </p>
-      <div class="ai-feature-row">
-        <div class="ai-feat">
-          <div class="ai-feat-icon">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <p>Czasem wystarczy mała zmiana,<br />żeby uniknąć dużej kłótni.</p>
-        </div>
-        <div class="ai-feat">
-          <div class="ai-feat-icon">
-            <i class="fas fa-eye"></i>
-          </div>
-          <p>Widzisz, jak Twoje słowa<br />mogą zostać odebrane.</p>
-        </div>
-        <div class="ai-feat">
-          <div class="ai-feat-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <p>Propozycje, które łagodzą<br />zamiast zaostrzać.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 2 – EMOTIONAL ========== -->
-  <section class="emotional" id="dla-kogo">
-    <div class="container emotional-inner fade-in">
-      <div class="emotional-quote">
-        <p class="eq-large">Rozstanie zmienia wszystko.</p>
-        <p class="eq-large eq-accent">Ale nie zmienia tego, że nadal jesteście rodzicami.</p>
-        <div class="eq-divider"></div>
-        <p class="eq-medium">I to właśnie jest najtrudniejsze.</p>
-        <p class="eq-regular">
-          Nie chodzi o to, żeby było idealnie.<br />
-          Chodzi o to, żeby było <strong>spokojniej.</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========== SECTION 9 – OPINIE ========== -->
-  <section class="reviews-section" id="opinie">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label">Opinie użytkowników</p>
-        <h2>Co mówią<br /><span class="highlight">rodzice?</span></h2>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card fade-in">
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">„W końcu przestaliśmy się kłócić o drobiazgi. Aplikacja zmusiła nas do mówienia po ludzku."</p>
-          <div class="review-author">
-            <div class="author-avatar av-a">A</div>
-            <div class="author-info">
-              <strong>Anna</strong>
-              <span>mama, Warszawa</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card review-card-featured fade-in">
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">„To pierwszy raz, kiedy coś naprawdę działa. Mamy spokój, a dzieci widzą, że działamy razem."</p>
-          <div class="review-author">
-            <div class="author-avatar av-m">M</div>
-            <div class="author-info">
-              <strong>Michał</strong>
-              <span>tata, Kraków</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card fade-in">
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">„Kalendarz uratował nam weekendy. Każdy wie, co i kiedy. Koniec z chaosem i ostatnią chwilą."</p>
-          <div class="review-author">
-            <div class="author-avatar av-k">K</div>
-            <div class="author-info">
-              <strong>Karolina</strong>
-              <span>mama, Gdańsk</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 10 – APP PREVIEW ========== -->
-  <section class="preview-section" id="preview">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label">Jedna aplikacja</p>
-        <h2>Dla całej<br /><span class="highlight">rodziny</span></h2>
-      </div>
-      <div class="preview-grid">
-        <div class="preview-card fade-in">
-          <div class="preview-emoji">👩</div>
-          <h3>Dla mamy</h3>
-          <p>Masz wszystko pod ręką. Wydatki, kalendarz, wiadomości — w jednym miejscu.</p>
-          <ul class="preview-list">
-            <li><i class="fas fa-check"></i> Wspólny kalendarz</li>
-            <li><i class="fas fa-check"></i> Rozliczenia wydatków</li>
-            <li><i class="fas fa-check"></i> Spokojna komunikacja</li>
-          </ul>
-        </div>
-        <div class="preview-card preview-card-center fade-in">
-          <div class="preview-emoji">👨</div>
-          <h3>Dla taty</h3>
-          <p>Wiesz, co jest ważne. Masz pełen obraz sytuacji bez pytania o wszystko.</p>
-          <ul class="preview-list">
-            <li><i class="fas fa-check"></i> Plan opieki</li>
-            <li><i class="fas fa-check"></i> Ważne informacje</li>
-            <li><i class="fas fa-check"></i> Bez niedomówień</li>
-          </ul>
-        </div>
-        <div class="preview-card fade-in">
-          <div class="preview-emoji">👧</div>
-          <h3>Dla dziecka</h3>
-          <p>Wie, co się dzieje. Ma spokój i poczucie bezpieczeństwa w obu domach.</p>
-          <ul class="preview-list">
-            <li><i class="fas fa-check"></i> Spokojni rodzice</li>
-            <li><i class="fas fa-check"></i> Jasny plan</li>
-            <li><i class="fas fa-check"></i> Jeden spokojny świat</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION 11 – FINAL CTA ========== -->
-  <section class="final-cta" id="pobierz">
-    <div class="container final-inner fade-in">
-      <p class="final-eyebrow">Pobierz aplikację</p>
-      <h2 class="final-headline">
-        Nie musi być łatwo.<br />
-        Może być <span class="highlight-white">spokojniej.</span>
-      </h2>
-      <p class="final-sub">
-        Dołącz do tysięcy rodziców, którzy już wybrali spokój.
-      </p>
-      <a href="#" class="btn btn-white btn-xl">
-        <i class="fas fa-heart"></i>
-        Zacznij od dziś
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" aria-label="Coparentes">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/logo/header-logo-brand.svg?v=fulllegal-logos-1" alt="" /></span>
+        <span class="brand-text">Coparentes</span>
       </a>
-      <div class="final-stores">
-        <a href="#" class="store-btn store-btn-dark">
-          <span class="store-icon store-icon-apple" aria-hidden="true"></span>
-          <span>
-            <small>Pobierz z</small>
-            App Store
-          </span>
-        </a>
-        <a href="#" class="store-btn store-btn-dark">
-          <span class="store-icon store-icon-play" aria-hidden="true"></span>
-          <span>
-            <small>Pobierz z</small>
-            Google Play
-          </span>
-        </a>
-      </div>
-      <p class="final-note">Bezpłatne. Bez reklam. Bez kompromisów.</p>
-    </div>
-  </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#" class="logo logo-light logo-lockup"><img src="assets/logo-full.svg" alt="Coparentes logo" class="logo-image" /></a>
-          <p>Spokojne rodzicielstwo po rozstaniu.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <nav class="main-nav" aria-label="Główna nawigacja">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Otwórz menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="menu-backdrop" id="menuBackdrop"></div>
+        <ul class="nav-list" id="mobileNav">
+          <li><a href="#features">Funkcje</a></li><li><a href="#audience">Dla kogo</a></li><li><a href="#how-it-works">Jak to działa</a></li><li><a href="#testimonials">Opinie</a></li><li class="nav-legal-item"><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li><li class="nav-legal-item"><a href="./regulamin.html">Regulamin</a></li><li><a href="#contact">Kontakt</a></li><li class="nav-lang-item">
+            <div class="lang-switcher" id="langSwitcher">
+              <button class="lang-btn" type="button" aria-label="Polski">
+                <span class="lang-flag"><img src="assets/icons/flags/pl.svg" alt="" aria-hidden="true" /></span>
+                <span class="lang-label">PL</span>
+                <img class="lang-arrow" src="assets/icons/chevron-down.svg" alt="" aria-hidden="true" />
+              </button>
+              <div class="lang-dropdown"><a class="lang-option active" href="./index.html"><span class="lf"><img src="assets/icons/flags/pl.svg" alt="" aria-hidden="true" /></span><span class="ln">Polski</span><span class="lc">PL</span></a><a class="lang-option" href="./en/index.html"><span class="lf"><img src="assets/icons/flags/en.svg" alt="" aria-hidden="true" /></span><span class="ln">English</span><span class="lc">EN</span></a><a class="lang-option" href="./de/index.html"><span class="lf"><img src="assets/icons/flags/de.svg" alt="" aria-hidden="true" /></span><span class="ln">Deutsch</span><span class="lc">DE</span></a><a class="lang-option" href="./es/index.html"><span class="lf"><img src="assets/icons/flags/es.svg" alt="" aria-hidden="true" /></span><span class="ln">Español</span><span class="lc">ES</span></a><a class="lang-option" href="./fr/index.html"><span class="lf"><img src="assets/icons/flags/fr.svg" alt="" aria-hidden="true" /></span><span class="ln">Français</span><span class="lc">FR</span></a><a class="lang-option" href="./zh/index.html"><span class="lf"><img src="assets/icons/flags/zh.svg" alt="" aria-hidden="true" /></span><span class="ln">中文</span><span class="lc">ZH</span></a></div>
+            </div>
+          </li><li class="nav-cta"><a href="#download" class="btn btn-primary btn-small">Pobierz aplikację</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-watermark left" aria-hidden="true"></div>
+      <div class="hero-watermark right" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Coparentes</span>
+          <h1>Spokojne rodzicielstwo po rozstaniu</h1>
+          <p>Wspólna organizacja życia dziecka w dwóch domach, bez stresu i konfliktów. Wszystko w jednej, prostej aplikacji.</p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary btn-large">Zacznij organizować za darmo</a>
+            <div class="store-row">
+              <a href="#download" class="store-badge" aria-label="App Store">
+                <img class="store-badge-icon" src="assets/icons/apple.svg" alt="" aria-hidden="true" />
+                <span><small>Pobierz w</small><strong>App Store</strong></span>
+              </a>
+              <a href="#download" class="store-badge" aria-label="Google Play">
+                <img class="store-badge-icon" src="assets/icons/google-play.svg" alt="" aria-hidden="true" />
+                <span><small>Pobierz z</small><strong>Google Play</strong></span>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="footer-links-group">
-          <h4>Aplikacja</h4>
-          <ul>
-                    <li><a href="#opinie">Opinie</a></li>
-            <li><a href="#pobierz">Pobierz</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4>Prawne</h4>
-          <ul>
-            <li><a href="#">RODO</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4>Kontakt</h4>
-          <ul>
-            <li><a href="mailto:hello@coparentes.pl">hello@coparentes.pl</a></li>
-            <li><a href="#">Pomoc</a></li>
-          </ul>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-artboard" aria-hidden="true"><img class="hero-art-image" src="assets/illustrations/hero-artboard.svg" alt="" /></div>
+
+          <div class="phone-shadow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-topbar">
+                <span>Coparentes</span>
+                <span><img class="app-topbar-icon" src="assets/icons/ellipsis.svg" alt="" aria-hidden="true" /></span>
+              </div>
+              <div class="calendar-strip">
+                <span class="active">20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+              </div>
+              <div class="chat-bubble incoming">Czy potwierdzasz odbiór Zosi o 17:00?</div>
+              <div class="chat-bubble outgoing">Tak, będę na czas ✅</div>
+              <div class="chat-bubble incoming">Dodałam też nowy wydatek za książki.</div>
+              <div class="mini-card finance-card">
+                <div>
+                  <strong>Wydatki dziecka</strong>
+                  <p>Szkoła • 120 zł</p>
+                </div>
+                <span>Opłać</span>
+              </div>
+              <div class="app-bottom-nav">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 coparentes. Wszelkie prawa zastrzeżone.</p>
-        <p>Zrobione z <i class="fas fa-heart" style="color:#5FBF8F"></i> dla rodzin.</p>
+    </section>
+
+    <section class="section benefits" id="benefits">
+      <div class="container section-title reveal">
+        <h2>Wspólne wychowanie nie musi być trudne</h2>
+      </div>
+      <div class="container cards cards-3"><article class="soft-card benefit-card reveal">
+          <div class="circle-icon blue-soft"><img src="assets/icons/comments.svg" alt="" aria-hidden="true" /></div>
+          <h3>Komunikacja</h3>
+          <p>Bezpieczny czat i archiwum rozmów, by unikać nieporozumień.</p>
+        </article><article class="soft-card benefit-card reveal delay-1">
+          <div class="circle-icon green-soft"><img src="assets/icons/calendar-days.svg" alt="" aria-hidden="true" /></div>
+          <h3>Organizacja</h3>
+          <p>Wspólny kalendarz i harmonogram opieki zawsze pod ręką.</p>
+        </article><article class="soft-card benefit-card reveal delay-2">
+          <div class="circle-icon coral-soft"><img src="assets/icons/wallet.svg" alt="" aria-hidden="true" /></div>
+          <h3>Finanse</h3>
+          <p>Jasne i przejrzyste rozliczenia wydatków związanych z dzieckiem.</p>
+        </article></div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container section-title reveal">
+        <h2>Wszystko, czego potrzebujesz<br />w jednym miejscu</h2>
+      </div>
+      <div class="container feature-grid"><article class="feature-card reveal border-teal">
+          <div class="feature-icon teal-bg"><img src="assets/icons/calendar-check.svg" alt="" aria-hidden="true" /></div>
+          <h3>Wspólny kalendarz</h3>
+          <p>Planuj wizyty, święta, szkołę i wydarzenia bez konfliktów terminów.</p>
+        </article><article class="feature-card reveal delay-1 border-blue">
+          <div class="feature-icon blue-bg"><img src="assets/icons/comment-dots.svg" alt="" aria-hidden="true" /></div>
+          <h3>Bezpieczny czat</h3>
+          <p>Rozmawiaj tylko o sprawach dziecka w jednym uporządkowanym miejscu.</p>
+        </article><article class="feature-card reveal delay-2 border-coral">
+          <div class="feature-icon coral-bg"><img src="assets/icons/receipt.svg" alt="" aria-hidden="true" /></div>
+          <h3>Rozliczenia wydatków</h3>
+          <p>Dodawaj paragony i łatwo rozliczaj koszty związane z wychowaniem.</p>
+        </article><article class="feature-card reveal border-yellow">
+          <div class="feature-icon yellow-bg"><img src="assets/icons/folder-open.svg" alt="" aria-hidden="true" /></div>
+          <h3>Dokumenty dziecka</h3>
+          <p>Przechowuj ważne pliki, notatki, zaświadczenia i terminy badań.</p>
+        </article><article class="feature-card reveal delay-1 border-purple">
+          <div class="feature-icon purple-bg"><img src="assets/icons/house-user.svg" alt="" aria-hidden="true" /></div>
+          <h3>Harmonogram opieki</h3>
+          <p>Ustalaj plan opieki i szybko sprawdzaj, kto odpowiada za dany dzień.</p>
+        </article><article class="feature-card reveal delay-2 border-teal">
+          <div class="feature-icon teal-bg"><img src="assets/icons/bell.svg" alt="" aria-hidden="true" /></div>
+          <h3>Powiadomienia</h3>
+          <p>Otrzymuj przypomnienia o ważnych wydarzeniach, płatnościach i zmianach.</p>
+        </article></div>
+    </section>
+
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container how-grid">
+        <div class="how-copy reveal">
+          <h2>Jak działa Coparentes?</h2>
+          <div class="step-list"><article class="step-item">
+              <span class="step-number teal-text">1</span>
+              <div>
+                <h3>Załóż konto i zaproś drugiego rodzica</h3>
+                <p>Szybkie uruchomienie i przejrzyste rozpoczęcie współpracy.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number blue-text">2</span>
+              <div>
+                <h3>Skonfiguruj profil dziecka</h3>
+                <p>Ustaw dane, harmonogram i najważniejsze informacje.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number coral-text">3</span>
+              <div>
+                <h3>Używaj narzędzi do organizacji</h3>
+                <p>Czat, kalendarz, wydatki i dokumenty działają razem.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number yellow-text">4</span>
+              <div>
+                <h3>Ciesz się spokojniejszym rodzicielstwem</h3>
+                <p>Mniej chaosu, więcej porządku i lepsza współpraca dla dobra dziecka.</p>
+              </div>
+            </article></div>
+        </div>
+
+        <div class="how-visual reveal delay-1">
+          <div class="mini-phone-frame">
+            <div class="mini-notch"></div>
+            <div class="mini-screen">
+              <img class="mini-logo" src="assets/illustrations/mini-logo.svg" alt="" aria-hidden="true" />
+              <div class="mini-line wide"></div>
+              <div class="mini-line"></div>
+              <div class="mini-pill"></div>
+              <div class="mini-content-card"></div>
+              <div class="mini-content-card short"></div>
+            </div>
+          </div>
+          <div class="family-card">
+            <div class="family-avatars"><img src="assets/illustrations/family-avatars.svg" alt="" aria-hidden="true" /></div>
+            <p>Łatwiej współpracować, gdy wszystko jest w jednym miejscu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience" id="audience">
+      <div class="container section-title reveal">
+        <h2>Dla kogo jest Coparentes?</h2>
+      </div>
+      <div class="container cards cards-3"><article class="soft-card audience-card reveal">
+          <img class="house-illustration" src="assets/illustrations/audience-mom.svg" alt="" aria-hidden="true" />
+          <h3>Dla mamy</h3>
+          <p>Zachowaj spokój i kontrolę nad harmonogramem dziecka.</p>
+        </article><article class="soft-card audience-card reveal delay-1">
+          <img class="house-illustration" src="assets/illustrations/audience-dad.svg" alt="" aria-hidden="true" />
+          <h3>Dla taty</h3>
+          <p>Bądź zawsze na bieżąco z życiem swojego dziecka.</p>
+        </article><article class="soft-card audience-card reveal delay-2">
+          <img class="house-illustration" src="assets/illustrations/audience-family.svg" alt="" aria-hidden="true" />
+          <h3>Dla całej rodziny</h3>
+          <p>Wspólna organizacja dla dobra dziecka.</p>
+        </article></div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container section-title reveal">
+        <h2>Co mówią rodzice?</h2>
+      </div>
+      <div class="container cards cards-3"><article class="soft-card testimonial-card reveal">
+          <img class="person-avatar" src="assets/illustrations/avatar-anna.svg" alt="Anna" />
+          <div class="stars"><img src="assets/icons/stars-rating.svg" alt="5/5" /></div>
+          <blockquote>„Coparentes uratował naszą komunikację. Teraz wszystko jest jasne i bez konfliktów.”</blockquote>
+          <p class="person-name">Anna, mama 7-letniej Zosi</p>
+        </article><article class="soft-card testimonial-card reveal delay-1">
+          <img class="person-avatar" src="assets/illustrations/avatar-marek.svg" alt="Marek" />
+          <div class="stars"><img src="assets/icons/stars-rating.svg" alt="5/5" /></div>
+          <blockquote>„Wreszcie mam wszystkie informacje o dziecku w jednym miejscu. Polecam!”</blockquote>
+          <p class="person-name">Marek, tata 5-letniego Kuby</p>
+        </article><article class="soft-card testimonial-card reveal delay-2">
+          <img class="person-avatar" src="assets/illustrations/avatar-kasia.svg" alt="Kasia" />
+          <div class="stars"><img src="assets/icons/stars-rating.svg" alt="5/5" /></div>
+          <blockquote>„Aplikacja pomogła nam lepiej współpracować dla dobra naszej córki.”</blockquote>
+          <p class="person-name">Kasia, mama 9-letniej Mai</p>
+        </article></div>
+    </section>
+
+    <section class="cta-section" id="download">
+      <div class="cta-watermark left" aria-hidden="true"></div>
+      <div class="cta-watermark right" aria-hidden="true"></div>
+      <div class="container cta-content reveal">
+        <h2>Zacznij organizować<br />życie spokojniej</h2>
+        <a href="#" class="btn btn-white btn-large">Pobierz za darmo</a>
+        <div class="store-row center">
+          <a href="#" class="store-badge light" aria-label="App Store">
+            <img class="store-badge-icon" src="assets/icons/apple.svg" alt="" aria-hidden="true" />
+            <span><small>Pobierz w</small><strong>App Store</strong></span>
+          </a>
+          <a href="#" class="store-badge light" aria-label="Google Play">
+            <img class="store-badge-icon" src="assets/icons/google-play.svg" alt="" aria-hidden="true" />
+            <span><small>Pobierz z</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p>Bezpłatne. Bez zobowiązań.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-top">
+      <div class="footer-brand-block">
+        <a href="#hero" class="brand footer-brand">
+          <span class="brand-mark footer-mark" aria-hidden="true"><img src="assets/logo/footer-logo-brand.svg?v=fulllegal-logos-1" alt="" /></span>
+          <span class="brand-text brand-text-light">Coparentes</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <a href="#hero">O nas</a>
+          <a href="#features">Funkcje</a>
+          <a href="#how-it-works">Pomoc</a>
+        </div>
+        <div>
+          <a href="./polityka-prywatnosci.html">Polityka prywatności</a>
+          <a href="./regulamin.html">Regulamin</a>
+          <a href="#contact">Kontakt</a>
+          <button type="button" class="footer-link-btn" data-open-cookie-settings>Ustawienia cookies</button>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61589611806475" target="_blank" rel="noopener noreferrer" aria-label="Facebook Coparentes"><img src="assets/icons/facebook.svg" alt="" aria-hidden="true" /></a>
+        <span class="social-icon is-disabled" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" aria-hidden="true" /></span>
+        <span class="social-icon is-disabled" aria-label="X"><img src="assets/icons/twitter-x.svg" alt="" aria-hidden="true" /></span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="pattern-row left-pattern"><img src="assets/illustrations/footer-pattern-left.svg" alt="" aria-hidden="true" /></div>
+        <p>© 2024 Coparentes. Wszelkie prawa zastrzeżone.</p>
+        <div class="pattern-row right-pattern"><img src="assets/illustrations/footer-pattern-right.svg" alt="" aria-hidden="true" /></div>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/lang.js"></script>
+
+  <div class="cookie-consent" id="cookieConsent" aria-live="polite" hidden>
+    <div class="cookie-consent__card" role="dialog" aria-labelledby="cookieConsentTitle">
+      <div class="cookie-consent__top">
+        <div class="cookie-consent__copy">
+          <h3 id="cookieConsentTitle">Szanujemy Twoją prywatność</h3>
+          <p>Używamy niezbędnych plików cookies, aby strona działała prawidłowo. Za Twoją zgodą możemy włączyć także cookies funkcjonalne, analityczne i marketingowe. Szczegóły znajdziesz w Polityce prywatności i cookies oraz Regulaminie.</p>
+          <div class="cookie-consent__links">
+            <a href="./polityka-prywatnosci.html">Polityka prywatności</a>
+            <a href="./regulamin.html">Regulamin</a>
+          </div>
+        </div>
+        <div class="cookie-consent__actions">
+          <button type="button" class="btn btn-small btn-primary" id="cookieAcceptAll">Akceptuję wszystkie</button>
+          <button type="button" class="btn btn-small btn-outline-soft" id="cookieRejectOptional">Odrzuć opcjonalne</button>
+          <button type="button" class="btn btn-small btn-ghost" id="cookieOpenSettings">Ustawienia</button>
+        </div>
+      </div>
+      <div class="cookie-consent__details" id="cookieConsentDetails" hidden>
+        <div class="cookie-consent__grid">
+          <article class="cookie-consent__option">
+            <div>
+              <strong>Niezbędne</strong>
+              <p>Zapewniają podstawowe działanie strony, bezpieczeństwo oraz zapis Twoich preferencji cookies.</p>
+            </div>
+            <span class="cookie-consent__badge">Zawsze aktywne</span>
+          </article>
+          <article class="cookie-consent__option">
+            <div>
+              <strong>Funkcjonalne</strong>
+              <p>Pozwalają zapamiętać ustawienia i ułatwiają korzystanie ze strony.</p>
+            </div>
+            <label class="cookie-switch" aria-label="Funkcjonalne">
+              <input type="checkbox" id="cookieFunctional" />
+              <span class="cookie-switch__slider"></span>
+            </label>
+          </article>
+          <article class="cookie-consent__option">
+            <div>
+              <strong>Analityczne</strong>
+              <p>Pomagają mierzyć ruch i ulepszać stronę na podstawie statystyk odwiedzin.</p>
+            </div>
+            <label class="cookie-switch" aria-label="Analityczne">
+              <input type="checkbox" id="cookieAnalytics" />
+              <span class="cookie-switch__slider"></span>
+            </label>
+          </article>
+          <article class="cookie-consent__option">
+            <div>
+              <strong>Marketingowe</strong>
+              <p>Mogą służyć do dopasowania treści promocyjnych i mierzenia skuteczności kampanii.</p>
+            </div>
+            <label class="cookie-switch" aria-label="Marketingowe">
+              <input type="checkbox" id="cookieMarketing" />
+              <span class="cookie-switch__slider"></span>
+            </label>
+          </article>
+        </div>
+        <div class="cookie-consent__save">
+          <button type="button" class="btn btn-small btn-primary" id="cookieSaveSelection" hidden>Zapisz wybór</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="cookie-fab" id="cookieFab" aria-label="Zamknij ustawienia cookies" hidden>Ustawienia cookies</button>
+
+  <script src="js/main.js?v=cookiebanner-1"></script>
 </body>
 </html>
