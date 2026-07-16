@@ -569,6 +569,7 @@ button { font: inherit; }
   gap: 26px;
 }
 .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 .soft-card,
 .feature-card {
@@ -932,6 +933,7 @@ blockquote {
 }
 .delay-1 { transition-delay: 0.12s; }
 .delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
 
 .body-lock { overflow: hidden; }
 
