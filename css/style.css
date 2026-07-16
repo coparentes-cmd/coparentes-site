@@ -1062,21 +1062,22 @@ blockquote {
   position: fixed;
   left: 18px;
   right: 18px;
-  bottom: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
   z-index: 1400;
-  display: none;
+  pointer-events: none;
 }
 
 .cookie-consent.is-visible {
-  display: block;
+  display: block !important;
+  pointer-events: auto;
 }
 
 .cookie-consent__card {
   position: relative;
   width: min(980px, calc(100vw - 36px));
   margin-inline: auto;
-  padding: 28px;
-  border-radius: 30px;
+  padding: 20px;
+  border-radius: 24px;
   background: rgba(255,255,255,0.96);
   border: 1px solid rgba(17,17,17,0.08);
   box-shadow: 0 28px 80px rgba(15, 25, 61, 0.22);
@@ -1095,8 +1096,8 @@ blockquote {
 
 .cookie-consent__top {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: start;
 }
 
@@ -1128,7 +1129,7 @@ blockquote {
 .cookie-consent__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: stretch;
   gap: 12px;
 }
 
@@ -1152,7 +1153,7 @@ blockquote {
 
 .cookie-consent__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 
@@ -1247,7 +1248,12 @@ blockquote {
 .cookie-consent__save {
   margin-top: 18px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: stretch;
+}
+
+.cookie-consent__actions .btn,
+.cookie-consent__save .btn {
+  width: 100%;
 }
 
 .cookie-consent[hidden],

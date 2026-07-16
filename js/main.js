@@ -267,14 +267,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const showBanner = (expanded = false) => {
-      cookieConsent.hidden = false;
+      cookieConsent.removeAttribute('hidden');
       cookieConsent.classList.add('is-visible');
+      cookieConsent.setAttribute('aria-hidden', 'false');
       setDetailsVisibility(expanded);
     };
 
     const hideBanner = () => {
       cookieConsent.classList.remove('is-visible');
-      cookieConsent.hidden = true;
+      cookieConsent.setAttribute('hidden', '');
+      cookieConsent.setAttribute('aria-hidden', 'true');
       setDetailsVisibility(false);
     };
 
