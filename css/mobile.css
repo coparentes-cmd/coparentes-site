@@ -383,6 +383,7 @@
 
   .how-visual {
     flex-direction: column;
+    transform: none;
   }
 
   .follow-up {
