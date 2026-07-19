@@ -206,8 +206,8 @@
     min-height: 580px;
   }
 
-  .hero-houses-bg img {
-    width: min(112%, 560px);
+  .hero-visual-watermark {
+    display: none;
   }
 
   .hero-phones-image {
@@ -326,10 +326,6 @@
   .hero-visual {
     min-height: 500px;
     padding-top: 14px;
-  }
-
-  .hero-houses-bg img {
-    width: min(108%, 420px);
   }
 
   .hero-phones-image {
