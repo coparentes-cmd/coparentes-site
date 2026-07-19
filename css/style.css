@@ -392,6 +392,7 @@ button { font: inherit; }
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  opacity: 0.26;
 }
 
 .hero-houses-bg img {

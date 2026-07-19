@@ -1,21 +1,26 @@
 <svg width="620" height="580" viewBox="0 0 620 580" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <defs>
-    <linearGradient id="house-green" x1="66" y1="24" x2="66" y2="142" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1DD6AE"/><stop offset="1" stop-color="#00C896"/>
-    </linearGradient>
-    <linearGradient id="house-blue" x1="66" y1="24" x2="66" y2="142" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2491FF"/><stop offset="1" stop-color="#0080FF"/>
-    </linearGradient>
-    <linearGradient id="house-yellow" x1="66" y1="24" x2="66" y2="142" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFE55E"/><stop offset="1" stop-color="#FDD835"/>
-    </linearGradient>
-  </defs>
-  <g transform="translate(8 18) scale(0.92)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-green)"/></g>
-  <g transform="translate(168 0) scale(0.88)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-blue)"/></g>
-  <g transform="translate(328 14) scale(0.9)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-yellow)"/></g>
-  <g transform="translate(468 36) scale(0.78)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-green)"/></g>
-  <g transform="translate(-6 360) scale(0.82)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-blue)"/></g>
-  <g transform="translate(120 390) scale(0.76)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-yellow)"/></g>
-  <g transform="translate(430 370) scale(0.84)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-blue)"/></g>
-  <g transform="translate(500 300) scale(0.72)"><path d="M10 62L66 24L122 62V142H10V62Z" fill="url(#house-green)"/></g>
+  <g transform="translate(8 18) scale(0.92)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,200,150,0.45)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(168 0) scale(0.88)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,128,255,0.35)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(328 14) scale(0.9)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,200,150,0.28)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(468 36) scale(0.78)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,128,255,0.35)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(-6 360) scale(0.82)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,128,255,0.35)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(120 390) scale(0.76)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,200,150,0.45)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(430 370) scale(0.84)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,128,255,0.35)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(500 300) scale(0.72)">
+    <path d="M10 62L66 24L122 62V142H10V62Z" stroke="rgba(0,200,150,0.28)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
 </svg>
