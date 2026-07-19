@@ -407,6 +407,7 @@ button { font: inherit; }
   width: min(100%, 520px);
   height: auto;
   display: block;
+  background: #fbfcff;
 }
 
 
