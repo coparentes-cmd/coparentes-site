@@ -719,6 +719,14 @@ button { font: inherit; }
   gap: 22px;
 }
 
+.how-phone-image {
+  width: 240px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  background: #fbfbfd;
+}
+
 .mini-phone-frame {
   width: 240px;
   height: 472px;

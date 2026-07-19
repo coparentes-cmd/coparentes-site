@@ -408,10 +408,11 @@
     margin-inline: auto;
   }
 
-  .mini-phone-frame {
+  .how-phone-image {
     width: 205px;
-    height: 410px;
   }
+
+  .mini-phone-frame {
 
   .footer-links {
     grid-template-columns: 1fr;
