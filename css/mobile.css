@@ -206,6 +206,10 @@
     min-height: 540px;
   }
 
+  .hero-phones-image {
+    width: min(100%, 460px);
+  }
+
   .phone-frame {
     width: 292px;
     height: 574px;
@@ -318,6 +322,10 @@
   .hero-visual {
     min-height: 470px;
     padding-top: 14px;
+  }
+
+  .hero-phones-image {
+    width: min(100%, 320px);
   }
 
   .phone-frame {
