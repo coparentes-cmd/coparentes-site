@@ -26,7 +26,7 @@
   }
 
   .hero-visual {
-    min-height: 620px;
+    min-height: 660px;
   }
 
   .cards-3,
@@ -203,11 +203,15 @@
   }
 
   .hero-visual {
-    min-height: 540px;
+    min-height: 580px;
+  }
+
+  .hero-houses-bg img {
+    width: min(112%, 560px);
   }
 
   .hero-phones-image {
-    width: min(100%, 460px);
+    width: min(100%, 520px);
   }
 
   .phone-frame {
@@ -320,12 +324,16 @@
   }
 
   .hero-visual {
-    min-height: 470px;
+    min-height: 500px;
     padding-top: 14px;
   }
 
+  .hero-houses-bg img {
+    width: min(108%, 420px);
+  }
+
   .hero-phones-image {
-    width: min(100%, 320px);
+    width: min(100%, 380px);
   }
 
   .phone-frame {

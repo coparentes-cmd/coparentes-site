@@ -378,10 +378,26 @@ button { font: inherit; }
 
 .hero-visual {
   position: relative;
-  min-height: 670px;
+  min-height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-houses-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-houses-bg img {
+  width: min(118%, 680px);
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -404,7 +420,7 @@ button { font: inherit; }
 .hero-phones-image {
   position: relative;
   z-index: 2;
-  width: min(100%, 520px);
+  width: min(100%, 600px);
   height: auto;
   display: block;
   background: #fbfcff;
