@@ -24,7 +24,7 @@ body.blog-page {
   position: relative;
   display: grid;
   width: 100%;
-  margin: 0 0 8px;
+  margin: clamp(-16px, -2.5vw, -28px) 0 8px;
   text-align: center;
   background-color: #fff;
 }
@@ -40,7 +40,7 @@ body.blog-page {
   width: 100%;
   height: auto;
   display: block;
-  transform: translateY(clamp(-36px, -8vw, -88px));
+  transform: translateY(clamp(-72px, -15vw, -160px));
   pointer-events: none;
   user-select: none;
 }
