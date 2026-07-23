@@ -29,15 +29,17 @@ body.blog-page {
   background-color: #fff;
 }
 
-.blog-hero__art {
+.blog-hero__art-frame {
   grid-area: 1 / 1;
-  display: block;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  max-height: clamp(240px, 36vw, 420px);
+  overflow: hidden;
+}
+
+.blog-hero__art {
+  width: 100%;
   height: auto;
-  max-height: clamp(210px, 51vw, 580px);
-  margin-inline: auto;
-  justify-self: center;
+  display: block;
   pointer-events: none;
   user-select: none;
 }

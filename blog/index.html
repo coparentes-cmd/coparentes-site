@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=blog-1" />
   <link rel="stylesheet" href="../css/mobile.css?v=blog-nav-1" />
-  <link rel="stylesheet" href="../css/blog.css?v=blog-6" />
+  <link rel="stylesheet" href="../css/blog.css?v=blog-7" />
 </head>
 <body class="blog-page">
   <header class="site-header" id="siteHeader">
@@ -49,15 +49,17 @@
 
   <main class="blog-page__main" id="blogPage">
     <header class="blog-hero reveal is-visible">
-      <img
-        class="blog-hero__art"
-        src="../assets/blog/blog-hero-bg.png"
-        alt=""
-        width="1536"
-        height="1024"
-        decoding="async"
-        fetchpriority="high"
-      />
+      <div class="blog-hero__art-frame" aria-hidden="true">
+        <img
+          class="blog-hero__art"
+          src="../assets/blog/blog-hero-bg.png"
+          alt=""
+          width="1536"
+          height="1024"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
       <div class="container blog-hero__inner">
         <h1 class="blog-hero__title">Blog</h1>
         <p class="blog-hero__subtitle">Spokojne wskazówki o rozwodzie, mediacji i wspólnym rodzicielstwie — bez oceniania, z myślą o dziecku i o Waszym dobrostanie.</p>
