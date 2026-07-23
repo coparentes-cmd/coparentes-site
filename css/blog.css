@@ -13,14 +13,30 @@ body.blog-page {
 }
 
 .blog-page__main {
-  padding: 48px 0 88px;
+  padding: 0 0 88px;
+}
+
+.blog-page__content {
+  padding-top: 40px;
 }
 
 .blog-hero {
+  position: relative;
+  width: 100%;
+  margin: 0 0 8px;
+  padding: clamp(72px, 14vw, 120px) 0 clamp(48px, 10vw, 88px);
   text-align: center;
+  background-color: #fff;
+  background-image: url('../assets/blog/blog-hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.blog-hero__inner {
+  position: relative;
+  z-index: 1;
   max-width: 720px;
-  margin: 0 auto 40px;
-  padding: 0 8px;
 }
 
 .blog-hero__title {
@@ -205,8 +221,8 @@ body.blog-page {
     gap: 24px;
   }
 
-  .blog-page__main {
-    padding-top: 56px;
+  .blog-page__content {
+    padding-top: 48px;
   }
 }
 
@@ -214,10 +230,6 @@ body.blog-page {
   .blog-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
-  }
-
-  .blog-hero {
-    margin-bottom: 48px;
   }
 
   .blog-filters {
