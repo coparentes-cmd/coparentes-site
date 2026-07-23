@@ -27,13 +27,16 @@ body.blog-page {
   margin: 0 0 8px;
   text-align: center;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .blog-hero__art {
   grid-area: 1 / 1;
   width: 100%;
-  height: auto;
+  height: clamp(220px, 34vw, 380px);
   display: block;
+  object-fit: cover;
+  object-position: center top;
   pointer-events: none;
   user-select: none;
 }
@@ -45,7 +48,7 @@ body.blog-page {
   justify-self: center;
   width: 100%;
   max-width: 720px;
-  padding: clamp(52px, 8vw, 80px) 20px clamp(40px, 8vw, 72px);
+  padding: clamp(40px, 6vw, 64px) 20px clamp(28px, 5vw, 48px);
 }
 
 .blog-hero__title {
