@@ -1,10 +1,8 @@
 @media (max-width: 1180px) {
-  .how-grid,
   .follow-up-grid {
     grid-template-columns: 1fr;
   }
 
-  .how-copy,
   .follow-up-copy,
   .section-title {
     text-align: center;
@@ -18,10 +16,6 @@
   .cards-4,
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .how-visual {
-    margin-top: 8px;
   }
 
   .follow-up-copy {
@@ -214,6 +208,25 @@
 
   .hero-visual-watermark {
     display: none;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .how-copy {
+    text-align: center;
+    justify-self: center;
+  }
+
+  .how-visual {
+    margin-top: 8px;
+    justify-content: center;
+    justify-self: center;
+    width: fit-content;
+    margin-inline: auto;
+    transform: none;
   }
 
   .hero-phones-image {

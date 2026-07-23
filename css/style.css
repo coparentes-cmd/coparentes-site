@@ -725,9 +725,14 @@ button { font: inherit; }
 .how-it-works { padding-top: 60px; }
 .how-grid {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: 42px;
   align-items: center;
+}
+
+.how-copy {
+  text-align: left;
+  justify-self: start;
 }
 
 .step-list {
@@ -757,11 +762,11 @@ button { font: inherit; }
 .how-visual {
   display: flex;
   align-items: end;
-  justify-content: center;
+  justify-content: flex-end;
+  justify-self: end;
   gap: 14px;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
-  margin-inline: auto;
   transform: translateX(-28px);
 }
 
