@@ -22,17 +22,16 @@ body.blog-page {
 
 .blog-hero {
   position: relative;
-  display: grid;
   width: 100%;
   margin: clamp(-16px, -2.5vw, -28px) 0 8px;
   text-align: center;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .blog-hero__art-frame {
-  grid-area: 1 / 1;
   width: 100%;
-  max-height: clamp(240px, 52vw, 680px);
+  height: clamp(240px, 52vw, 680px);
   overflow: hidden;
 }
 
@@ -46,13 +45,17 @@ body.blog-page {
 }
 
 .blog-hero__inner {
-  grid-area: 1 / 1;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  align-self: center;
-  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 720px;
+  max-width: none;
+  margin: 0;
   padding: 24px 20px;
+  box-sizing: border-box;
   text-align: center;
 }
 
