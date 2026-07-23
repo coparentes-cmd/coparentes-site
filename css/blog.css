@@ -40,7 +40,7 @@ body.blog-page {
   width: 100%;
   height: auto;
   display: block;
-  transform: translateY(clamp(-20px, -4vw, -48px));
+  transform: translateY(clamp(-36px, -8vw, -88px));
   pointer-events: none;
   user-select: none;
 }
@@ -56,20 +56,11 @@ body.blog-page {
   text-align: center;
 }
 
-.blog-hero__title {
-  margin: 0;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 1.02;
-  color: var(--text);
-  text-shadow: 0 1px 16px rgba(255, 255, 255, 0.9);
-}
-
 .blog-hero__subtitle {
-  margin: 18px auto 0;
+  margin: 0 auto;
   max-width: 58ch;
   font-size: 1.08rem;
+  font-weight: 400;
   line-height: 1.7;
   color: var(--muted);
   text-shadow: 0 1px 12px rgba(255, 255, 255, 0.88);
