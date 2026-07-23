@@ -222,7 +222,7 @@ button { font: inherit; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.02fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
   align-items: center;
   gap: 48px;
   min-height: 720px;
@@ -296,6 +296,11 @@ button { font: inherit; }
   font-size: 0.86rem;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+.hero-copy {
+  text-align: left;
+  justify-self: start;
 }
 
 .hero-copy h1,
@@ -411,7 +416,9 @@ button { font: inherit; }
   min-height: 720px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  justify-self: end;
+  width: 100%;
 }
 
 .hero-visual-watermark {

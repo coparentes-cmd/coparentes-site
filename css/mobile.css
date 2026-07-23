@@ -1,32 +1,17 @@
 @media (max-width: 1180px) {
-  .hero-grid,
   .how-grid,
   .follow-up-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-copy,
   .how-copy,
   .follow-up-copy,
   .section-title {
     text-align: center;
   }
 
-  .hero-copy h1,
   .cta-content h2 {
     max-width: none;
-  }
-
-  .hero-copy p {
-    margin-inline: auto;
-  }
-
-  .hero-actions {
-    align-items: center;
-  }
-
-  .hero-visual {
-    min-height: 660px;
   }
 
   .cards-3,
@@ -198,12 +183,33 @@
   }
 
   .hero-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
     min-height: auto;
   }
 
+  .hero-copy {
+    text-align: center;
+    justify-self: center;
+  }
+
+  .hero-copy h1,
+  .cta-content h2 {
+    max-width: none;
+  }
+
+  .hero-copy p {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    align-items: center;
+  }
+
   .hero-visual {
     min-height: 580px;
+    justify-content: center;
+    justify-self: center;
   }
 
   .hero-visual-watermark {
