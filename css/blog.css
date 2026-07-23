@@ -32,7 +32,7 @@ body.blog-page {
 .blog-hero__art-frame {
   grid-area: 1 / 1;
   width: 100%;
-  max-height: clamp(170px, 40vw, 500px);
+  max-height: clamp(220px, 48vw, 620px);
   overflow: hidden;
 }
 
