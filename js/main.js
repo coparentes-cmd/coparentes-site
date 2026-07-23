@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navMenuLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 920) closeMenu();
+        if (window.innerWidth <= 1080) closeMenu();
       });
     });
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 920) closeMenu();
+      if (window.innerWidth > 1080) closeMenu();
     }, { passive: true });
   }
 

@@ -12,18 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=blog-1" />
-  <link rel="stylesheet" href="../css/mobile.css?v=blog-1" />
+  <link rel="stylesheet" href="../css/mobile.css?v=blog-nav-1" />
   <link rel="stylesheet" href="../css/blog.css?v=blog-3" />
 </head>
 <body class="blog-page">
-  <header class="site-header legal-header" id="siteHeader">
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="../index.html#hero" class="brand" aria-label="Coparentes">
         <span class="brand-mark" aria-hidden="true"><img src="../assets/logo/header-logo-brand.svg?v=fulllegal-logos-1" alt="" /></span>
         <span class="brand-text">Coparentes</span>
       </a>
       <nav class="main-nav" aria-label="Główna nawigacja">
-        <ul class="nav-list legal-nav-inline">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Otwórz menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="menu-backdrop" id="menuBackdrop"></div>
+        <ul class="nav-list" id="mobileNav">
           <li><a href="../index.html#features">Funkcje</a></li>
           <li><a href="../index.html#how-it-works">Jak działa?</a></li>
           <li><a class="is-active" href="./index.html" aria-current="page">Blog</a></li>
@@ -37,6 +41,7 @@
               <div class="lang-dropdown"><a class="lang-option active" href="./index.html"><span class="lf"><img src="../assets/icons/flags/pl.svg" alt="" aria-hidden="true" /></span><span class="ln">Polski</span><span class="lc">PL</span></a><a class="lang-option" href="../en/index.html"><span class="lf"><img src="../assets/icons/flags/en.svg" alt="" aria-hidden="true" /></span><span class="ln">English</span><span class="lc">EN</span></a><a class="lang-option" href="../de/index.html"><span class="lf"><img src="../assets/icons/flags/de.svg" alt="" aria-hidden="true" /></span><span class="ln">Deutsch</span><span class="lc">DE</span></a><a class="lang-option" href="../es/index.html"><span class="lf"><img src="../assets/icons/flags/es.svg" alt="" aria-hidden="true" /></span><span class="ln">Español</span><span class="lc">ES</span></a><a class="lang-option" href="../fr/index.html"><span class="lf"><img src="../assets/icons/flags/fr.svg" alt="" aria-hidden="true" /></span><span class="ln">Français</span><span class="lc">FR</span></a><a class="lang-option" href="../zh/index.html"><span class="lf"><img src="../assets/icons/flags/zh.svg" alt="" aria-hidden="true" /></span><span class="ln">中文</span><span class="lc">ZH</span></a></div>
             </div>
           </li>
+          <li class="nav-cta"><a href="../index.html#download" class="btn btn-primary btn-small">Pobierz aplikację</a></li>
         </ul>
       </nav>
     </div>
@@ -162,7 +167,7 @@
     </div>
   </div>
 
-  <script src="../js/main.js?v=blog-1"></script>
+  <script src="../js/main.js?v=blog-nav-1"></script>
   <script type="module" src="../js/blog.js?v=blog-1"></script>
 </body>
 </html>
