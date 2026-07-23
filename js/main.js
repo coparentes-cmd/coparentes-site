@@ -31,15 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     body.style.width = '100%';
   };
 
-  const unlockBodyScroll = () => {
+  const unlockBodyScroll = (restoreScroll = true) => {
     if (!body.classList.contains('body-lock')) return;
+    const previousY = scrollState.y;
     body.classList.remove('body-lock');
     body.style.position = '';
     body.style.top = '';
     body.style.left = '';
     body.style.right = '';
     body.style.width = '';
-    window.scrollTo({ top: scrollState.y, left: 0, behavior: 'auto' });
+    if (restoreScroll) {
+      window.scrollTo({ top: previousY, left: 0, behavior: 'auto' });
+    }
   };
 
   const closeLangSwitcher = () => {
@@ -47,14 +50,32 @@ document.addEventListener('DOMContentLoaded', () => {
     langSwitcher.classList.remove('is-open');
   };
 
-  const closeMenu = () => {
+  const closeMenu = (restoreScroll = true) => {
     if (!menuToggle || !navList || !menuBackdrop) return;
     menuToggle.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
     navList.classList.remove('is-open');
     menuBackdrop.classList.remove('is-open');
     closeLangSwitcher();
-    unlockBodyScroll();
+    unlockBodyScroll(restoreScroll);
+  };
+
+  const isBlogLink = (href) => {
+    if (!href) return false;
+    const path = href.split('#')[0];
+    return /(^|\/)blog\/index\.html$/.test(path) || path === './index.html';
+  };
+
+  const leavesCurrentPage = (href) => {
+    if (!href || href.startsWith('#')) return false;
+    try {
+      const targetUrl = new URL(href, window.location.href);
+      const currentPath = window.location.pathname.replace(/\/$/, '');
+      const targetPath = targetUrl.pathname.replace(/\/$/, '');
+      return targetPath !== currentPath || !targetUrl.hash;
+    } catch (error) {
+      return true;
+    }
   };
 
   const openMenu = () => {
@@ -75,8 +96,31 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBackdrop.addEventListener('click', closeMenu);
 
     navMenuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 1080) closeMenu();
+      link.addEventListener('click', (event) => {
+        if (window.innerWidth > 1080) return;
+
+        const href = link.getAttribute('href') || '';
+
+        if (isBlogLink(href)) {
+          closeMenu(false);
+
+          try {
+            const targetUrl = new URL(href, window.location.href);
+            const currentPath = window.location.pathname.replace(/\/$/, '');
+            const targetPath = targetUrl.pathname.replace(/\/$/, '');
+
+            if (targetPath === currentPath) {
+              event.preventDefault();
+              window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            }
+          } catch (error) {
+            // Allow default navigation.
+          }
+
+          return;
+        }
+
+        closeMenu(!leavesCurrentPage(href));
       });
     });
 

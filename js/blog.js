@@ -1,6 +1,17 @@
 import { blogPosts, blogCategories } from './blogPosts.js';
 import { renderBlogCard } from './BlogCard.js';
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+const scrollBlogToTop = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+};
+
+scrollBlogToTop();
+window.addEventListener('pageshow', scrollBlogToTop);
+
 const gridEl = document.getElementById('blogGrid');
 const filtersEl = document.getElementById('blogFilters');
 const emptyEl = document.getElementById('blogEmpty');
@@ -62,6 +73,7 @@ function bindFilters() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  scrollBlogToTop();
   renderFilters();
   renderGrid();
   bindFilters();
