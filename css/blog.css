@@ -22,21 +22,30 @@ body.blog-page {
 
 .blog-hero {
   position: relative;
+  display: grid;
   width: 100%;
   margin: 0 0 8px;
-  padding: clamp(72px, 14vw, 120px) 0 clamp(48px, 10vw, 88px);
   text-align: center;
   background-color: #fff;
-  background-image: url('../assets/blog/blog-hero-bg.png');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+}
+
+.blog-hero__art {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
 }
 
 .blog-hero__inner {
-  position: relative;
+  grid-area: 1 / 1;
   z-index: 1;
+  align-self: start;
+  justify-self: center;
+  width: 100%;
   max-width: 720px;
+  padding: clamp(52px, 8vw, 80px) 20px clamp(40px, 8vw, 72px);
 }
 
 .blog-hero__title {
