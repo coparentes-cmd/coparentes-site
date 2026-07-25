@@ -13,8 +13,10 @@ try {
     handle_create_comment();
   }
   comments_json_error(405, 'Niedozwolona metoda.');
+} catch (PDOException $e) {
+  comments_json_error(500, 'Błąd połączenia z bazą danych. Sprawdź config.php (host, nazwa bazy, user, hasło).');
 } catch (Throwable $e) {
-  // Do not echo emails or request payloads.
+  // Do not echo emails, passwords, or request payloads.
   comments_json_error(500, 'Nie udało się obsłużyć żądania.');
 }
 
