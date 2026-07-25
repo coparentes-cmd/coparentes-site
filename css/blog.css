@@ -346,9 +346,39 @@ body.blog-article-page {
 }
 
 .blog-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
   margin: 0;
   font-size: 0.95rem;
   color: var(--muted);
+}
+
+.blog-article__meta-sep {
+  color: rgba(18, 23, 34, 0.28);
+}
+
+.blog-article__author {
+  color: var(--electric);
+  font-weight: 600;
+}
+
+.blog-article__author:hover {
+  text-decoration: underline;
+}
+
+.blog-author__eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+.blog-author__body {
+  font-size: 1.12rem;
 }
 
 .blog-article__body {
