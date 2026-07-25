@@ -66,9 +66,54 @@
     </header>
 
     <div class="container blog-page__content">
-      <div class="blog-filters" id="blogFilters" role="toolbar" aria-label="Filtruj artykuły po kategorii"></div>
+      <div class="blog-filters" id="blogFilters" role="toolbar" aria-label="Filtruj artykuły po kategorii">
+        <button type="button" class="blog-filter is-active" data-category="Wszystkie">Wszystkie</button>
+        <button type="button" class="blog-filter" data-category="Rozwód">Rozwód</button>
+        <button type="button" class="blog-filter" data-category="Dzieci">Dzieci</button>
+        <button type="button" class="blog-filter" data-category="Ugoda mediacyjna">Ugoda mediacyjna</button>
+      </div>
 
-      <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
+      <div class="blog-grid" id="blogGrid" aria-live="polite">
+        <article class="blog-card reveal is-visible">
+          <a class="blog-card__link" href="./jak-stworzyc-dobra-ugode-pomediacyjna.html">
+            <div class="blog-card__media">
+              <img src="../assets/blog/cover-mediacja-2.svg" alt="" loading="lazy" width="640" height="360" />
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__badges">
+                <span class="blog-card__badge blog-card__badge--ugoda-mediacyjna">Ugoda mediacyjna</span>
+                <span class="blog-card__badge blog-card__badge--rozwod">Rozwód</span>
+              </div>
+              <h3 class="blog-card__title">Jak stworzyć dobrą ugodę pomediacyjną?</h3>
+              <p class="blog-card__excerpt">Ugoda mediacyjna to nie tylko formalność – to dokument, który realnie decyduje o Waszej codzienności po rozstaniu. Na co zwrócić uwagę, żeby ugoda była konkretna, realistyczna i faktycznie działała.</p>
+              <div class="blog-card__footer">
+                <time class="blog-card__date" datetime="2026-07-25">25 lipca 2026</time>
+                <span class="blog-card__more" aria-hidden="true">Czytaj więcej →</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card reveal is-visible">
+          <a class="blog-card__link" href="./mediacja-okiem-mediatorki.html">
+            <div class="blog-card__media">
+              <img src="../assets/blog/cover-mediacja-1.svg" alt="" loading="lazy" width="640" height="360" />
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__badges">
+                <span class="blog-card__badge blog-card__badge--ugoda-mediacyjna">Ugoda mediacyjna</span>
+                <span class="blog-card__badge blog-card__badge--rozwod">Rozwód</span>
+              </div>
+              <h3 class="blog-card__title">Mediacja okiem mediatorki</h3>
+              <p class="blog-card__excerpt">Rozstanie to jeden z trudniejszych momentów w życiu, a mediacja może pomóc przejść przez niego z mniejszą ilością bólu i chaosu. Czym jest mediacja, jak znaleźć mediatora i czego spodziewać się na pierwszym spotkaniu.</p>
+              <div class="blog-card__footer">
+                <time class="blog-card__date" datetime="2026-07-25">25 lipca 2026</time>
+                <span class="blog-card__more" aria-hidden="true">Czytaj więcej →</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
 
       <p class="blog-empty" id="blogEmpty" hidden>Brak artykułów w tej kategorii. Wybierz inną zakładkę powyżej.</p>
     </div>
@@ -169,6 +214,6 @@
   </div>
 
   <script src="../js/main.js?v=blog-scroll-1"></script>
-  <script type="module" src="../js/blog.js?v=blog-multi-cat-1"></script>
+  <script src="../js/blog.js?v=blog-static-1"></script>
 </body>
 </html>
