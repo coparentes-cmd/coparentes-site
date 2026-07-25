@@ -31,7 +31,7 @@ body.blog-page {
 
 .blog-hero__art-frame {
   width: 100%;
-  height: clamp(88px, 11vw, 140px);
+  height: clamp(140px, 22vw, 260px);
   overflow: hidden;
   background: #fff;
   line-height: 0;
@@ -41,7 +41,7 @@ body.blog-page {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   pointer-events: none;
   user-select: none;
@@ -57,7 +57,7 @@ body.blog-page {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px;
   box-sizing: border-box;
   text-align: center;
   pointer-events: none;
@@ -75,11 +75,11 @@ body.blog-page {
 
 @media (max-width: 920px) {
   .blog-hero__art-frame {
-    height: clamp(80px, 22vw, 120px);
+    height: clamp(120px, 36vw, 200px);
   }
 
   .blog-hero__inner {
-    padding: 8px 16px;
+    padding: 10px 16px;
   }
 
   .blog-hero__subtitle {
@@ -95,7 +95,7 @@ body.blog-page {
 
 @media (max-width: 420px) {
   .blog-hero__art-frame {
-    height: clamp(72px, 26vw, 100px);
+    height: clamp(110px, 42vw, 160px);
   }
 
   .blog-hero__subtitle {
