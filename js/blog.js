@@ -4,7 +4,7 @@
       slug: 'dlaczego-warto-korzystac-z-mediacji-rozwodowej',
       title: 'Dlaczego warto korzystać z mediacji rozwodowej?',
       excerpt:
-        'W tym tekście pokazuję, ile realnie trwa droga sądowa w Polsce, ile możecie zaoszczędzić dzięki ugodzie i dlaczego mediacja bywa skuteczna nawet w 80% przypadków. Jeśli zastanawiacie się, czy jest dla Was sens – te liczby mogą Was zaskoczyć.',
+        'Rozstanie to i tak trudne. Na podstawie konkretnych danych pokażę, dlaczego mediacja naprawdę się opłaca – i to nie tylko finansowo.',
       date: '2026-07-25',
       categories: ['Rozwód', 'Ugoda mediacyjna'],
       imageUrl: '../assets/blog/cover-rozwod-1.svg',
