@@ -63,14 +63,14 @@ function handle_create_comment(): void
   if ($slug === '' || !comments_is_allowed_slug($slug)) {
     comments_json_error(400, 'Nieprawidłowy artykuł.');
   }
-  if ($name === '' || mb_strlen($name) > 80) {
+  if ($name === '' || strlen($name) > 80) {
     comments_json_error(400, 'Podaj imię (max 80 znaków).');
   }
-  if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 190) {
+  if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 190) {
     // Generic message — do not echo submitted email.
     comments_json_error(400, 'Podaj prawidłowy adres e-mail.');
   }
-  if ($body === '' || mb_strlen($body) > 4000) {
+  if ($body === '' || strlen($body) > 4000) {
     comments_json_error(400, 'Napisz komentarz (max 4000 znaków).');
   }
 
