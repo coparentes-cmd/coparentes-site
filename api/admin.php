@@ -30,6 +30,9 @@ try {
     if ($action === 'approve' || $action === 'reject' || $action === 'delete') {
       handle_admin_moderate($action, $data);
     }
+    if ($action === 'reply') {
+      handle_admin_reply($data);
+    }
 
     comments_json_error(400, 'Nieznana akcja.');
   }
@@ -49,7 +52,7 @@ try {
         $status = 'pending';
       }
       $stmt = comments_pdo()->prepare(
-        'SELECT id, article_slug, author_name, author_email, author_url, body, status, created_at
+        'SELECT id, parent_id, article_slug, author_name, author_email, author_url, body, status, is_staff, created_at
          FROM comments
          WHERE status = :status
          ORDER BY created_at DESC, id DESC
@@ -107,7 +110,7 @@ function handle_admin_moderate(string $action, array $data): void
   $pdo = comments_pdo();
 
   if ($action === 'delete') {
-    $stmt = $pdo->prepare('DELETE FROM comments WHERE id = :id');
+    $stmt = $pdo->prepare('DELETE FROM comments WHERE id = :id OR parent_id = :id');
     $stmt->execute([':id' => $id]);
     comments_json_ok(['deleted' => true]);
   }
@@ -116,6 +119,67 @@ function handle_admin_moderate(string $action, array $data): void
   $stmt = $pdo->prepare('UPDATE comments SET status = :status WHERE id = :id');
   $stmt->execute([':status' => $status, ':id' => $id]);
   comments_json_ok(['updated' => true, 'status' => $status]);
+}
+
+function handle_admin_reply(array $data): void
+{
+  $parentId = (int) ($data['parent_id'] ?? 0);
+  $body = trim((string) ($data['body'] ?? ''));
+
+  if ($parentId <= 0) {
+    comments_json_error(400, 'Nieprawidłowy komentarz nadrzędny.');
+  }
+  if ($body === '' || strlen($body) > 4000) {
+    comments_json_error(400, 'Napisz odpowiedź (max 4000 znaków).');
+  }
+
+  $cfg = comments_config();
+  $staffName = trim((string) ($cfg['staff_display_name'] ?? 'Coparentes'));
+  $staffEmail = trim((string) ($cfg['staff_email'] ?? ''));
+  if ($staffName === '') {
+    $staffName = 'Coparentes';
+  }
+  if ($staffEmail === '' || !filter_var($staffEmail, FILTER_VALIDATE_EMAIL)) {
+    comments_json_error(500, 'Uzupełnij staff_email w config.php.');
+  }
+
+  $pdo = comments_pdo();
+  $parentStmt = $pdo->prepare(
+    'SELECT id, parent_id, article_slug, status
+     FROM comments
+     WHERE id = :id
+     LIMIT 1'
+  );
+  $parentStmt->execute([':id' => $parentId]);
+  $parent = $parentStmt->fetch();
+
+  if (!$parent) {
+    comments_json_error(404, 'Komentarz nadrzędny nie istnieje.');
+  }
+  if (($parent['status'] ?? '') !== 'approved') {
+    comments_json_error(400, 'Można odpowiadać tylko na opublikowane komentarze.');
+  }
+  if ($parent['parent_id'] !== null && $parent['parent_id'] !== '') {
+    comments_json_error(400, 'Odpowiedzi mogą mieć tylko jeden poziom.');
+  }
+
+  $insert = $pdo->prepare(
+    'INSERT INTO comments (parent_id, article_slug, author_name, author_email, author_url, body, status, is_staff, ip_hash)
+     VALUES (:parent_id, :slug, :name, :email, NULL, :body, :status, 1, NULL)'
+  );
+  $insert->execute([
+    ':parent_id' => $parentId,
+    ':slug' => (string) $parent['article_slug'],
+    ':name' => $staffName,
+    ':email' => $staffEmail,
+    ':body' => $body,
+    ':status' => 'approved',
+  ]);
+
+  comments_json_ok([
+    'replied' => true,
+    'id' => (int) $pdo->lastInsertId(),
+  ]);
 }
 
 function h(string $value): string
@@ -162,7 +226,7 @@ function render_admin_dashboard(): void
   }
 
   $stmt = comments_pdo()->prepare(
-    'SELECT id, article_slug, author_name, author_email, author_url, body, status, created_at
+    'SELECT id, parent_id, article_slug, author_name, author_email, author_url, body, status, is_staff, created_at
      FROM comments
      WHERE status = :status
      ORDER BY created_at DESC, id DESC
@@ -180,13 +244,19 @@ function render_admin_dashboard(): void
   .tabs a{margin-right:10px;text-decoration:none;color:#0080FF;font-weight:600}
   .tabs a.active{text-decoration:underline}
   .card{background:#fff;border:1px solid rgba(18,23,34,.08);border-radius:16px;padding:16px 18px;margin:0 0 14px}
+  .card.staff{border-left:4px solid #0080FF}
   .meta{color:#5d6678;font-size:.92rem;margin:0 0 8px}
   .email{font-family:ui-monospace,monospace;font-size:.9rem;background:#f3f6fb;padding:2px 6px;border-radius:6px}
+  .badge{display:inline-block;background:#e8f3ff;color:#0066cc;font-size:.8rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px}
   .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .reply-box{margin-top:14px;padding-top:12px;border-top:1px solid rgba(18,23,34,.08)}
+  .reply-box textarea{width:100%;min-height:90px;box-sizing:border-box;padding:10px 12px;font:inherit;border:1px solid rgba(18,23,34,.15);border-radius:10px;resize:vertical}
+  .reply-box .reply-msg{min-height:1.2em;margin:8px 0 0;color:#d84f4c;font-size:.9rem}
+  .reply-box .reply-msg.ok{color:#0a9d7a}
   button{border:0;border-radius:10px;padding:10px 14px;font:inherit;cursor:pointer}
-  .approve{background:#00C896;color:#fff}.reject{background:#ff6b68;color:#fff}.delete{background:#121722;color:#fff}.logout{background:#e8eef7}
+  .approve{background:#00C896;color:#fff}.reject{background:#ff6b68;color:#fff}.delete{background:#121722;color:#fff}.reply{background:#0080FF;color:#fff}.logout{background:#e8eef7}
   </style></head><body>';
-  echo '<div class="top"><div><h1>Moderacja komentarzy</h1><p class="meta">E-maile są widoczne wyłącznie po zalogowaniu.</p></div>';
+  echo '<div class="top"><div><h1>Moderacja komentarzy</h1><p class="meta">E-maile są widoczne wyłącznie po zalogowaniu. Odpowiedzi Coparentes publikują się od razu.</p></div>';
   echo '<button class="logout" type="button" id="logoutBtn">Wyloguj</button></div>';
   echo '<div class="tabs">';
   foreach (['pending' => 'Oczekujące', 'approved' => 'Opublikowane', 'rejected' => 'Odrzucone'] as $key => $label) {
@@ -200,9 +270,20 @@ function render_admin_dashboard(): void
   }
 
   foreach ($rows as $row) {
-    echo '<article class="card" data-id="' . (int) $row['id'] . '">';
-    echo '<p class="meta">' . h((string) $row['created_at']) . ' · ' . h((string) $row['article_slug']) . ' · ' . h((string) $row['status']) . '</p>';
+    $isStaff = !empty($row['is_staff']);
+    $parentId = $row['parent_id'] ?? null;
+    $isTopLevel = ($parentId === null || $parentId === '');
+    $cardClass = 'card' . ($isStaff ? ' staff' : '');
+    echo '<article class="' . $cardClass . '" data-id="' . (int) $row['id'] . '">';
+    echo '<p class="meta">' . h((string) $row['created_at']) . ' · ' . h((string) $row['article_slug']) . ' · ' . h((string) $row['status']);
+    if (!$isTopLevel) {
+      echo ' · odpowiedź do #' . (int) $parentId;
+    }
+    echo '</p>';
     echo '<p><strong>' . h((string) $row['author_name']) . '</strong> ';
+    if ($isStaff) {
+      echo '<span class="badge">Coparentes</span> ';
+    }
     echo '<span class="email">' . h((string) $row['author_email']) . '</span></p>';
     if (!empty($row['author_url'])) {
       echo '<p><a href="' . h((string) $row['author_url']) . '" rel="noopener noreferrer nofollow" target="_blank">' . h((string) $row['author_url']) . '</a></p>';
@@ -216,30 +297,58 @@ function render_admin_dashboard(): void
       echo '<button class="reject" type="button" data-action="reject">Odrzuć</button>';
     }
     echo '<button class="delete" type="button" data-action="delete">Usuń</button>';
-    echo '</div></article>';
+    echo '</div>';
+
+    if ($status === 'approved' && $isTopLevel && !$isStaff) {
+      echo '<div class="reply-box">';
+      echo '<label><strong>Odpowiedź Coparentes</strong></label>';
+      echo '<textarea class="reply-body" maxlength="4000" placeholder="Napisz odpowiedź zespołu…"></textarea>';
+      echo '<div class="actions"><button class="reply" type="button" data-action="reply">Odpowiedz</button></div>';
+      echo '<p class="reply-msg" aria-live="polite"></p>';
+      echo '</div>';
+    }
+
+    echo '</article>';
   }
 
   echo '<script>
-  async function postAction(action, id) {
+  async function postJson(payload) {
     const res = await fetch(location.pathname, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({ action, id })
+      body: JSON.stringify(payload)
     });
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.error || "Błąd");
+    return data;
   }
   document.getElementById("logoutBtn").addEventListener("click", async () => {
-    await postAction("logout");
+    await postJson({ action: "logout" });
     location.reload();
   });
-  document.querySelectorAll(".card .actions button").forEach((btn) => {
+  document.querySelectorAll(".card .actions button[data-action]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const card = btn.closest(".card");
       const id = Number(card.dataset.id);
       const action = btn.dataset.action;
+      if (action === "reply") {
+        const box = card.querySelector(".reply-box");
+        const ta = box.querySelector(".reply-body");
+        const msg = box.querySelector(".reply-msg");
+        msg.textContent = "";
+        msg.classList.remove("ok");
+        try {
+          await postJson({ action: "reply", parent_id: id, body: ta.value });
+          msg.textContent = "Odpowiedź opublikowana.";
+          msg.classList.add("ok");
+          ta.value = "";
+        } catch (err) {
+          msg.textContent = err.message || "Błąd";
+        }
+        return;
+      }
       try {
-        await postAction(action, id);
+        await postJson({ action, id });
         card.remove();
       } catch (err) {
         alert(err.message || "Błąd");

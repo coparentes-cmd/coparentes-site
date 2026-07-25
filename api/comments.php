@@ -28,7 +28,7 @@ function handle_list_comments(): void
   }
 
   $stmt = comments_pdo()->prepare(
-    'SELECT id, author_name, author_url, body, created_at
+    'SELECT id, parent_id, author_name, author_url, body, is_staff, created_at
      FROM comments
      WHERE article_slug = :slug AND status = :status
      ORDER BY created_at ASC, id ASC'
@@ -96,9 +96,10 @@ function handle_create_comment(): void
     }
   }
 
+  // Public posts are always top-level reader comments — never accept parent_id / is_staff.
   $insert = $pdo->prepare(
-    'INSERT INTO comments (article_slug, author_name, author_email, author_url, body, status, ip_hash)
-     VALUES (:slug, :name, :email, :url, :body, :status, :ip)'
+    'INSERT INTO comments (parent_id, article_slug, author_name, author_email, author_url, body, status, is_staff, ip_hash)
+     VALUES (NULL, :slug, :name, :email, :url, :body, :status, 0, :ip)'
   );
   $insert->execute([
     ':slug' => $slug,

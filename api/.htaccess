@@ -1,11 +1,11 @@
 # Block direct access to sensitive files
-<FilesMatch "^(config\.php|config\.sample\.php|schema\.sql|lib\.php)$">
+<FilesMatch "^(config\.php|config\.sample\.php|schema\.sql|migration_.*\.sql|lib\.php)$">
   Require all denied
 </FilesMatch>
 
 # Fallback for older Apache
 <IfModule !mod_authz_core.c>
-  <FilesMatch "^(config\.php|config\.sample\.php|schema\.sql|lib\.php)$">
+  <FilesMatch "^(config\.php|config\.sample\.php|schema\.sql|migration_.*\.sql|lib\.php)$">
     Deny from all
   </FilesMatch>
 </IfModule>

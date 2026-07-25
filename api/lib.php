@@ -73,13 +73,16 @@ function comments_json_ok(array $payload = []): void
 /** Public DTO — NEVER includes author_email. */
 function public_comment_dto(array $row): array
 {
+  $parentId = $row['parent_id'] ?? null;
   return [
     'id' => (int) $row['id'],
+    'parent_id' => $parentId !== null && $parentId !== '' ? (int) $parentId : null,
     'author_name' => (string) $row['author_name'],
     'author_url' => $row['author_url'] !== null && $row['author_url'] !== ''
       ? (string) $row['author_url']
       : null,
     'body' => (string) $row['body'],
+    'is_staff' => !empty($row['is_staff']),
     'created_at' => (string) $row['created_at'],
   ];
 }
@@ -87,8 +90,10 @@ function public_comment_dto(array $row): array
 /** Admin DTO — email only for authenticated moderators. */
 function admin_comment_dto(array $row): array
 {
+  $parentId = $row['parent_id'] ?? null;
   return [
     'id' => (int) $row['id'],
+    'parent_id' => $parentId !== null && $parentId !== '' ? (int) $parentId : null,
     'article_slug' => (string) $row['article_slug'],
     'author_name' => (string) $row['author_name'],
     'author_email' => (string) $row['author_email'],
@@ -97,6 +102,7 @@ function admin_comment_dto(array $row): array
       : null,
     'body' => (string) $row['body'],
     'status' => (string) $row['status'],
+    'is_staff' => !empty($row['is_staff']),
     'created_at' => (string) $row['created_at'],
   ];
 }

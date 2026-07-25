@@ -445,7 +445,7 @@ body.blog-article-page {
 .blog-comments__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   margin: 0 0 32px;
 }
 
@@ -455,11 +455,35 @@ body.blog-article-page {
   font-size: 0.98rem;
 }
 
+.blog-comments__thread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .blog-comments__item {
   padding: 16px 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #fff;
+}
+
+.blog-comments__item--staff {
+  border-color: rgba(0, 128, 255, 0.28);
+  background: linear-gradient(180deg, #f7fbff 0%, #fff 100%);
+}
+
+.blog-comments__replies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 18px;
+  padding-left: 16px;
+  border-left: 3px solid rgba(0, 128, 255, 0.22);
+}
+
+.blog-comments__item--reply {
+  padding: 14px 16px;
 }
 
 .blog-comments__item-meta {
@@ -481,6 +505,17 @@ body.blog-article-page {
 .blog-comments__author-link:hover {
   color: var(--electric);
   text-decoration: underline;
+}
+
+.blog-comments__badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(0, 128, 255, 0.12);
+  color: #0066cc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .blog-comments__item-body {
@@ -575,5 +610,10 @@ body.blog-article-page {
 
   .blog-comments {
     margin-top: 36px;
+  }
+
+  .blog-comments__replies {
+    margin-left: 8px;
+    padding-left: 12px;
   }
 }

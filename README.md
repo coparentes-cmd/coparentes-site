@@ -150,13 +150,16 @@ This package includes an `assets/` directory with external SVG files for logos, 
 Komentarze wymagają MySQL + PHP na Hostingerze.
 
 1. W hPanel utwórz bazę MySQL i użytkownika.
-2. Zaimportuj [`api/schema.sql`](api/schema.sql).
+2. Zaimportuj [`api/schema.sql`](api/schema.sql) (nowe instalacje) albo, jeśli tabela już istnieje, uruchom [`api/migration_add_replies.sql`](api/migration_add_replies.sql).
 3. Skopiuj [`api/config.sample.php`](api/config.sample.php) → `api/config.php` na serwerze i uzupełnij:
    - dane bazy
    - `admin_password`
    - `ip_hash_salt`
+   - `staff_display_name` (np. `Coparentes`)
+   - `staff_email` (wewnętrzny adres tylko do bazy, nigdy publiczny)
 4. Redeploy z gałęzi `main`.
 5. Moderacja: `https://coparentes.ai/api/admin.php`
-6. Publiczne API nie zwraca adresów e-mail — widać je tylko po zalogowaniu w panelu admina.
+6. Odpowiedzi zespołu: zakładka **Opublikowane** → pole **Odpowiedź Coparentes** → **Odpowiedz** (publikacja od razu).
+7. Publiczne API nie zwraca adresów e-mail — widać je tylko po zalogowaniu w panelu admina.
 
 `api/config.php` jest w `.gitignore` i zablokowany przez `api/.htaccess`.

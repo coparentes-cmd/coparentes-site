@@ -43,26 +43,70 @@
   }
 
   /** Public fields only — ignore any unexpected email if API misbehaves. */
-  function renderComment(comment) {
+  function renderComment(comment, isReply) {
     const name = escapeHtml(comment.author_name || 'Anonim');
     const body = escapeHtml(comment.body || '').replace(/\n/g, '<br />');
     const created = escapeHtml(formatDate(comment.created_at || ''));
+    const isStaff = Boolean(comment.is_staff);
     let nameHtml = `<strong class="blog-comments__author">${name}</strong>`;
 
-    if (comment.author_url) {
+    if (comment.author_url && !isStaff) {
       const safeUrl = escapeHtml(comment.author_url);
       nameHtml = `<a class="blog-comments__author-link" href="${safeUrl}" rel="noopener noreferrer nofollow" target="_blank">${name}</a>`;
     }
 
+    const badge = isStaff
+      ? '<span class="blog-comments__badge">Coparentes</span>'
+      : '';
+
+    const classes = [
+      'blog-comments__item',
+      isReply ? 'blog-comments__item--reply' : '',
+      isStaff ? 'blog-comments__item--staff' : '',
+    ]
+      .filter(Boolean)
+      .join(' ');
+
     return `
-      <article class="blog-comments__item">
+      <article class="${classes}">
         <header class="blog-comments__item-meta">
           ${nameHtml}
+          ${badge}
           <time datetime="${escapeHtml(comment.created_at || '')}">${created}</time>
         </header>
         <div class="blog-comments__item-body">${body}</div>
       </article>
     `;
+  }
+
+  function buildThreadHtml(comments) {
+    const roots = [];
+    const repliesByParent = new Map();
+
+    comments.forEach((comment) => {
+      const parentId = comment.parent_id == null ? null : Number(comment.parent_id);
+      if (parentId) {
+        if (!repliesByParent.has(parentId)) {
+          repliesByParent.set(parentId, []);
+        }
+        repliesByParent.get(parentId).push(comment);
+      } else {
+        roots.push(comment);
+      }
+    });
+
+    return roots
+      .map((root) => {
+        const replies = repliesByParent.get(Number(root.id)) || [];
+        const repliesHtml = replies.map((reply) => renderComment(reply, true)).join('');
+        return `
+          <div class="blog-comments__thread">
+            ${renderComment(root, false)}
+            ${repliesHtml ? `<div class="blog-comments__replies">${repliesHtml}</div>` : ''}
+          </div>
+        `;
+      })
+      .join('');
   }
 
   function setStatus(message, type) {
@@ -92,7 +136,7 @@
       }
 
       if (emptyEl) emptyEl.hidden = true;
-      listEl.innerHTML = comments.map(renderComment).join('');
+      listEl.innerHTML = buildThreadHtml(comments);
     } catch (error) {
       listEl.innerHTML = '';
       if (emptyEl) {

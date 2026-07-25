@@ -13,6 +13,10 @@ return [
   // Password for /api/admin.php
   'admin_password' => 'CHANGE_ME_STRONG_PASSWORD',
 
+  // Staff replies from admin panel (email stays private — never in public API)
+  'staff_display_name' => 'Coparentes',
+  'staff_email' => 'noreply@coparentes.ai',
+
   // Optional salt for IP hashing (set a long random string)
   'ip_hash_salt' => 'CHANGE_ME_RANDOM_SALT',
 
