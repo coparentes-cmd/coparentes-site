@@ -280,7 +280,7 @@ body.blog-page {
   }
 
   .blog-page__content {
-    padding-top: 48px;
+    padding-top: 28px;
   }
 }
 
@@ -291,7 +291,7 @@ body.blog-page {
   }
 
   .blog-filters {
-    margin-bottom: 44px;
+    margin-bottom: 28px;
   }
 }
 
