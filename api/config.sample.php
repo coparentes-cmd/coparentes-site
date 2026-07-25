@@ -24,5 +24,6 @@ return [
   'allowed_slugs' => [
     'mediacja-okiem-mediatorki',
     'jak-stworzyc-dobra-ugode-pomediacyjna',
+    'dlaczego-warto-korzystac-z-mediacji-rozwodowej',
   ],
 ];
