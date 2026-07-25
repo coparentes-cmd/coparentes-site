@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=blog-1" />
   <link rel="stylesheet" href="../css/mobile.css?v=blog-nav-1" />
-  <link rel="stylesheet" href="../css/blog.css?v=blog-author-1" />
+  <link rel="stylesheet" href="../css/blog.css?v=blog-comments-1" />
 </head>
 <body class="blog-article-page">
   <header class="site-header" id="siteHeader">
@@ -84,6 +84,48 @@
 
           <p class="blog-article__closing">Trzymam za Was kciuki!</p>
         </div>
+
+        <section class="blog-comments" id="blogComments" data-article-slug="jak-stworzyc-dobra-ugode-pomediacyjna" aria-labelledby="blogCommentsTitle">
+          <h2 class="blog-comments__title" id="blogCommentsTitle">Komentarze</h2>
+          <p class="blog-comments__hint">Twój adres e-mail nie zostanie opublikowany. Wymagane pola są oznaczone *</p>
+
+          <div class="blog-comments__list" id="blogCommentsList" aria-live="polite"></div>
+          <p class="blog-comments__empty" id="blogCommentsEmpty">Brak komentarzy. Bądź pierwszą osobą, która doda wpis.</p>
+
+          <form class="blog-comments__form" id="blogCommentForm" novalidate>
+            <h3 class="blog-comments__form-title">Dodaj komentarz</h3>
+
+            <div class="blog-comments__field blog-comments__hp" aria-hidden="true">
+              <label for="commentWebsiteUgoda">Website</label>
+              <input type="text" id="commentWebsiteUgoda" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="blog-comments__field">
+              <label for="commentBodyUgoda">Komentarz *</label>
+              <textarea id="commentBodyUgoda" name="body" required maxlength="4000" placeholder="Napisz komentarz"></textarea>
+            </div>
+
+            <div class="blog-comments__field">
+              <label for="commentNameUgoda">Imię *</label>
+              <input id="commentNameUgoda" name="author_name" type="text" required maxlength="80" autocomplete="name" />
+            </div>
+
+            <div class="blog-comments__field">
+              <label for="commentEmailUgoda">E-mail *</label>
+              <input id="commentEmailUgoda" name="author_email" type="email" required maxlength="190" autocomplete="email" />
+            </div>
+
+            <div class="blog-comments__field">
+              <label for="commentUrlUgoda">URL</label>
+              <input id="commentUrlUgoda" name="author_url" type="url" maxlength="255" autocomplete="url" placeholder="https://" />
+            </div>
+
+            <div class="blog-comments__actions">
+              <button class="btn btn-primary btn-small" type="submit" id="blogCommentSubmit">Dodaj komentarz</button>
+              <p class="blog-comments__status" id="blogCommentStatus" hidden></p>
+            </div>
+          </form>
+        </section>
 
         <div class="blog-article__footer-nav">
           <a class="btn btn-outline-soft btn-small" href="./index.html">Wszystkie artykuły</a>
@@ -188,5 +230,6 @@
   </div>
 
   <script src="../js/main.js?v=blog-scroll-1"></script>
+  <script src="../js/comments.js?v=blog-comments-1"></script>
 </body>
 </html>

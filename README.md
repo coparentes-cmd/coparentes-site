@@ -142,3 +142,21 @@ Język chiński używa czcionki **Noto Sans SC** (Google Fonts).
 
 ## Assets version
 This package includes an `assets/` directory with external SVG files for logos, icons, decorative graphics and avatars, so you can replace visuals without editing HTML.
+
+---
+
+## Blog comments (Hostinger)
+
+Komentarze wymagają MySQL + PHP na Hostingerze.
+
+1. W hPanel utwórz bazę MySQL i użytkownika.
+2. Zaimportuj [`api/schema.sql`](api/schema.sql).
+3. Skopiuj [`api/config.sample.php`](api/config.sample.php) → `api/config.php` na serwerze i uzupełnij:
+   - dane bazy
+   - `admin_password`
+   - `ip_hash_salt`
+4. Redeploy z gałęzi `main`.
+5. Moderacja: `https://coparentes.ai/api/admin.php`
+6. Publiczne API nie zwraca adresów e-mail — widać je tylko po zalogowaniu w panelu admina.
+
+`api/config.php` jest w `.gitignore` i zablokowany przez `api/.htaccess`.
