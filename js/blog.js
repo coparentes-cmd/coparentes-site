@@ -1,4 +1,4 @@
-import { blogPosts, blogCategories } from './blogPosts.js';
+import { blogPosts, blogCategories, getPostCategories } from './blogPosts.js';
 import { renderBlogCard } from './BlogCard.js';
 
 if ('scrollRestoration' in history) {
@@ -20,7 +20,7 @@ let activeCategory = 'Wszystkie';
 
 function getFilteredPosts() {
   if (activeCategory === 'Wszystkie') return blogPosts;
-  return blogPosts.filter((post) => post.category === activeCategory);
+  return blogPosts.filter((post) => getPostCategories(post).includes(activeCategory));
 }
 
 function renderFilters() {

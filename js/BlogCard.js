@@ -1,6 +1,16 @@
+import { getPostCategories } from './blogPosts.js';
+
+function toCategoryClass(category) {
+  return category
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-');
+}
+
 /**
  * Renders a single blog article card.
- * @param {{ title: string, excerpt: string, date: string, category: string, imageUrl: string, slug: string }} post
+ * @param {{ title: string, excerpt: string, date: string, categories?: string[], category?: string, imageUrl: string, slug: string }} post
  * @returns {string}
  */
 export function renderBlogCard(post) {
@@ -10,11 +20,13 @@ export function renderBlogCard(post) {
     year: 'numeric',
   });
 
-  const categoryClass = post.category
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, '-');
+  const categories = getPostCategories(post);
+  const badges = categories
+    .map(
+      (category) =>
+        `<span class="blog-card__badge blog-card__badge--${toCategoryClass(category)}">${category}</span>`,
+    )
+    .join('');
 
   return `
     <article class="blog-card reveal">
@@ -23,7 +35,7 @@ export function renderBlogCard(post) {
           <img src="${post.imageUrl}" alt="" loading="lazy" width="640" height="360" />
         </div>
         <div class="blog-card__body">
-          <span class="blog-card__badge blog-card__badge--${categoryClass}">${post.category}</span>
+          <div class="blog-card__badges">${badges}</div>
           <h3 class="blog-card__title">${post.title}</h3>
           <p class="blog-card__excerpt">${post.excerpt}</p>
           <div class="blog-card__footer">
