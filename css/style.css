@@ -1136,14 +1136,21 @@ blockquote {
   padding: 0;
   border: 0;
   background: transparent;
-  color: rgba(255,255,255,0.74);
+  color: rgba(255,255,255,0.9);
+  font: inherit;
+  font-size: 1.03rem;
   text-align: left;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.footer-link-btn:hover {
+.footer-link-btn:hover,
+button.ml-onclick-form.footer-link-btn:hover {
   color: #ffffff;
+}
+
+button.ml-onclick-form.footer-link-btn {
+  display: inline;
 }
 
 .cookie-consent {
