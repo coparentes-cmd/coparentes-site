@@ -1,9 +1,17 @@
 /**
- * MailerLite universal loader for click-to-show forms.
- * Account ID comes from MailerLite → Forms → Overview → JavaScript snippet:
+ * MailerLite universal loader for click-to-show forms (footer newsletter).
+ *
+ * Paste your account ID from MailerLite → Forms → Overview → JavaScript:
  *   ml('account', 'YOUR_ACCOUNT_ID');
  */
 (function (w, d) {
+  // Queue-safe stub so footer onclick does not throw before/without account setup.
+  w.ml =
+    w.ml ||
+    function () {
+      (w.ml.q = w.ml.q || []).push(arguments);
+    };
+
   var ACCOUNT_ID = 'REPLACE_MAILERLITE_ACCOUNT_ID';
   if (!ACCOUNT_ID || ACCOUNT_ID.indexOf('REPLACE_') === 0) {
     return;
