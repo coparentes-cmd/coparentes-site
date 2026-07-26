@@ -46,7 +46,7 @@
       requiredName: 'Please enter your name.',
       requiredEmail: 'Please enter a valid email.',
       requiredMessage: 'Please enter a message.',
-      requiredConsent: 'Please accept the Terms and GDPR notice.',
+      requiredConsent: 'Please accept the Regulamin and RODO.',
       consentBefore: 'I accept the ',
       consentMid: ' and ',
       consentAfter: '.',
