@@ -4,7 +4,7 @@ export const blogPosts = [
     slug: 'dlaczego-warto-korzystac-z-mediacji-rozwodowej',
     title: 'Dlaczego warto korzystać z mediacji rozwodowej?',
     excerpt:
-      'Rozstanie to i tak trudne. Na podstawie konkretnych danych pokażę, dlaczego mediacja naprawdę się opłaca – i to nie tylko finansowo.',
+      'Rozstanie to i tak jedna z trudniejszych rzeczy, jakie Was w życiu spotkały. Smutek miesza się ze złością, ulga z poczuciem winy, a do tego dochodzi strach o dzieci, o pieniądze, o to, co będzie dalej.',
     date: '2026-07-25',
     categories: ['Rozwód', 'Ugoda mediacyjna'],
     imageUrl: '../assets/blog/cover-rozwod-1.svg',
@@ -13,7 +13,7 @@ export const blogPosts = [
     slug: 'jak-stworzyc-dobra-ugode-pomediacyjna',
     title: 'Jak stworzyć dobrą ugodę pomediacyjną?',
     excerpt:
-      'Ugoda mediacyjna to nie tylko formalność – to dokument, który realnie decyduje o Waszej codzienności po rozstaniu. Na co zwrócić uwagę, żeby ugoda była konkretna, realistyczna i faktycznie działała.',
+      'Dotarliście do etapu, w którym uda Wam się usiąść razem, porozmawiać i dojść do porozumienia. To ogromny krok.',
     date: '2026-07-25',
     categories: ['Ugoda mediacyjna', 'Rozwód'],
     imageUrl: '../assets/blog/cover-mediacja-2.svg',
@@ -22,7 +22,7 @@ export const blogPosts = [
     slug: 'mediacja-okiem-mediatorki',
     title: 'Mediacja okiem mediatorki',
     excerpt:
-      'Rozstanie to jeden z trudniejszych momentów w życiu, a mediacja może pomóc przejść przez niego z mniejszą ilością bólu i chaosu. Czym jest mediacja, jak znaleźć mediatora i czego spodziewać się na pierwszym spotkaniu.',
+      'Mediacja to dobrowolny, poufny sposób rozwiązywania sporów przy pomocy niezależnej, bezstronnej osoby – mediatora. Mediacja pozwala zwaśnionym stronom dojść do podłoża problemu.',
     date: '2026-07-25',
     categories: ['Ugoda mediacyjna', 'Rozwód'],
     imageUrl: '../assets/blog/cover-mediacja-1.svg',
