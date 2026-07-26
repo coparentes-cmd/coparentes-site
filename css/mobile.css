@@ -317,6 +317,18 @@
   .footer-links {
     width: 100%;
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-links div {
+    justify-items: center;
+    width: 100%;
+  }
+
+  .footer-link-btn {
+    text-align: center;
+    width: 100%;
   }
 
   .footer-bottom-inner {
@@ -465,10 +477,19 @@
     width: 205px;
   }
 
-  .mini-phone-frame {
-
   .footer-links {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-links div {
+    justify-items: center;
+  }
+
+  .footer-link-btn {
+    text-align: center;
+    width: 100%;
   }
 
   .pattern-row {
