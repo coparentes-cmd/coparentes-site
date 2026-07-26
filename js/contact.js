@@ -8,7 +8,6 @@
   const STRINGS = {
     pl: {
       title: 'Kontakt',
-      intro: 'Napisz do nas — odpowiemy na kontakt@coparentes.ai.',
       name: 'Imię *',
       email: 'E-mail *',
       message: 'Wiadomość *',
@@ -22,7 +21,6 @@
     },
     en: {
       title: 'Contact',
-      intro: 'Send us a message — we reply at kontakt@coparentes.ai.',
       name: 'Name *',
       email: 'Email *',
       message: 'Message *',
@@ -36,7 +34,6 @@
     },
     de: {
       title: 'Kontakt',
-      intro: 'Schreib uns — wir antworten unter kontakt@coparentes.ai.',
       name: 'Name *',
       email: 'E-Mail *',
       message: 'Nachricht *',
@@ -50,7 +47,6 @@
     },
     es: {
       title: 'Contacto',
-      intro: 'Escríbenos — respondemos en kontakt@coparentes.ai.',
       name: 'Nombre *',
       email: 'Correo *',
       message: 'Mensaje *',
@@ -64,7 +60,6 @@
     },
     fr: {
       title: 'Contact',
-      intro: 'Écrivez-nous — nous répondons à kontakt@coparentes.ai.',
       name: 'Prénom *',
       email: 'E-mail *',
       message: 'Message *',
@@ -78,7 +73,6 @@
     },
     zh: {
       title: '联系',
-      intro: '给我们留言 — 我们会回复 kontakt@coparentes.ai。',
       name: '姓名 *',
       email: '邮箱 *',
       message: '留言 *',
@@ -131,7 +125,6 @@
       <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
         <button type="button" class="contact-modal__close" data-contact-close aria-label="${t.close}">×</button>
         <h2 id="contactModalTitle" class="contact-modal__title">${t.title}</h2>
-        <p class="contact-modal__intro">${t.intro}</p>
         <form class="contact-modal__form" id="contactForm" novalidate>
           <div class="contact-modal__hp" aria-hidden="true">
             <label for="contactWebsite">Website</label>
