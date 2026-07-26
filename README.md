@@ -163,3 +163,18 @@ Komentarze wymagają MySQL + PHP na Hostingerze.
 7. Publiczne API nie zwraca adresów e-mail — widać je tylko po zalogowaniu w panelu admina.
 
 `api/config.php` jest w `.gitignore` i zablokowany przez `api/.htaccess`.
+
+---
+
+## Contact form (Hostinger)
+
+Klik **Kontakt** otwiera modal i wysyła wiadomość na skrzynkę firmową.
+
+1. Redeploy z gałęzi `main`.
+2. W `api/config.php` dopisz:
+   ```php
+   'contact_to_email' => 'kontakt@coparentes.ai',
+   'contact_from_email' => 'kontakt@coparentes.ai',
+   ```
+3. W hPanel utwórz skrzynkę (lub alias) **kontakt@coparentes.ai**.
+4. Test: stopka → Kontakt → wyślij → sprawdź skrzynkę.

@@ -17,6 +17,10 @@ return [
   'staff_display_name' => 'Coparentes',
   'staff_email' => 'noreply@coparentes.ai',
 
+  // Contact form — inbox for messages from the site modal
+  'contact_to_email' => 'kontakt@coparentes.ai',
+  'contact_from_email' => 'kontakt@coparentes.ai',
+
   // Optional salt for IP hashing (set a long random string)
   'ip_hash_salt' => 'CHANGE_ME_RANDOM_SALT',
 
