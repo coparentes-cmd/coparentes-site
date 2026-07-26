@@ -12,8 +12,8 @@
       (w.ml.q = w.ml.q || []).push(arguments);
     };
 
-  var ACCOUNT_ID = 'REPLACE_MAILERLITE_ACCOUNT_ID';
-  if (!ACCOUNT_ID || ACCOUNT_ID.indexOf('REPLACE_') === 0) {
+  var ACCOUNT_ID = '2534336';
+  if (!ACCOUNT_ID) {
     return;
   }
 
