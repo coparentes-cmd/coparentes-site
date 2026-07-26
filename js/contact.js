@@ -5,6 +5,15 @@
 (function () {
   const API_URL = '/api/contact.php';
 
+  const LEGAL = {
+    pl: { terms: '/regulamin.html', privacy: '/polityka-prywatnosci.html' },
+    en: { terms: '/en/terms-of-service.html', privacy: '/en/privacy-policy.html' },
+    de: { terms: '/de/nutzungsbedingungen.html', privacy: '/de/datenschutz.html' },
+    es: { terms: '/es/terminos-del-servicio.html', privacy: '/es/politica-de-privacidad.html' },
+    fr: { terms: '/fr/conditions-dutilisation.html', privacy: '/fr/politique-de-confidentialite.html' },
+    zh: { terms: '/zh/service-terms.html', privacy: '/zh/privacy-policy.html' },
+  };
+
   const STRINGS = {
     pl: {
       title: 'Kontakt',
@@ -18,6 +27,12 @@
       requiredName: 'Podaj imię.',
       requiredEmail: 'Podaj prawidłowy adres e-mail.',
       requiredMessage: 'Napisz wiadomość.',
+      requiredConsent: 'Zaznacz akceptację Regulaminu i RODO.',
+      consentBefore: 'Akceptuję ',
+      consentMid: ' i ',
+      consentAfter: '.',
+      termsLabel: 'Regulamin',
+      rodoLabel: 'RODO',
     },
     en: {
       title: 'Contact',
@@ -31,6 +46,12 @@
       requiredName: 'Please enter your name.',
       requiredEmail: 'Please enter a valid email.',
       requiredMessage: 'Please enter a message.',
+      requiredConsent: 'Please accept the Regulamin and RODO.',
+      consentBefore: 'I accept the ',
+      consentMid: ' and ',
+      consentAfter: '.',
+      termsLabel: 'Terms',
+      rodoLabel: 'GDPR / Privacy',
     },
     de: {
       title: 'Kontakt',
@@ -44,6 +65,12 @@
       requiredName: 'Bitte Namen eingeben.',
       requiredEmail: 'Bitte gültige E-Mail eingeben.',
       requiredMessage: 'Bitte Nachricht eingeben.',
+      requiredConsent: 'Bitte Nutzungsbedingungen und DSGVO akzeptieren.',
+      consentBefore: 'Ich akzeptiere die ',
+      consentMid: ' und ',
+      consentAfter: '.',
+      termsLabel: 'Nutzungsbedingungen',
+      rodoLabel: 'DSGVO',
     },
     es: {
       title: 'Contacto',
@@ -57,6 +84,12 @@
       requiredName: 'Introduce tu nombre.',
       requiredEmail: 'Introduce un correo válido.',
       requiredMessage: 'Escribe un mensaje.',
+      requiredConsent: 'Acepta los Términos y el RGPD.',
+      consentBefore: 'Acepto los ',
+      consentMid: ' y el ',
+      consentAfter: '.',
+      termsLabel: 'Términos',
+      rodoLabel: 'RGPD',
     },
     fr: {
       title: 'Contact',
@@ -70,6 +103,12 @@
       requiredName: 'Indiquez votre prénom.',
       requiredEmail: 'Indiquez un e-mail valide.',
       requiredMessage: 'Écrivez un message.',
+      requiredConsent: 'Veuillez accepter les Conditions et le RGPD.',
+      consentBefore: 'J’accepte les ',
+      consentMid: ' et le ',
+      consentAfter: '.',
+      termsLabel: 'Conditions',
+      rodoLabel: 'RGPD',
     },
     zh: {
       title: '联系',
@@ -83,6 +122,12 @@
       requiredName: '请填写姓名。',
       requiredEmail: '请填写有效邮箱。',
       requiredMessage: '请填写留言。',
+      requiredConsent: '请接受服务条款与隐私政策。',
+      consentBefore: '我接受',
+      consentMid: '和',
+      consentAfter: '。',
+      termsLabel: '服务条款',
+      rodoLabel: '隐私政策',
     },
   };
 
@@ -98,7 +143,9 @@
     return 'pl';
   }
 
-  const t = STRINGS[detectLang()] || STRINGS.pl;
+  const lang = detectLang();
+  const t = STRINGS[lang] || STRINGS.pl;
+  const legal = LEGAL[lang] || LEGAL.pl;
   let root = null;
   let previouslyFocused = null;
 
@@ -110,6 +157,13 @@
       return href === '#contact' || href.endsWith('#contact');
     }
     return false;
+  }
+
+  function syncSubmitEnabled() {
+    const submitBtn = document.getElementById('contactSubmit');
+    const consent = document.getElementById('contactConsent');
+    if (!submitBtn || !consent) return;
+    submitBtn.disabled = !consent.checked;
   }
 
   function ensureModal() {
@@ -142,8 +196,12 @@
             <label for="contactMessage">${t.message}</label>
             <textarea id="contactMessage" name="message" required maxlength="4000" rows="5"></textarea>
           </div>
+          <label class="contact-modal__consent" for="contactConsent">
+            <input id="contactConsent" name="consent" type="checkbox" value="1" required />
+            <span>${t.consentBefore}<a href="${legal.terms}" target="_blank" rel="noopener noreferrer">${t.termsLabel}</a>${t.consentMid}<a href="${legal.privacy}" target="_blank" rel="noopener noreferrer">${t.rodoLabel}</a>${t.consentAfter}</span>
+          </label>
           <div class="contact-modal__actions">
-            <button class="btn btn-primary btn-small" type="submit" id="contactSubmit">${t.submit}</button>
+            <button class="btn btn-primary btn-small" type="submit" id="contactSubmit" disabled>${t.submit}</button>
             <p class="contact-modal__status" id="contactStatus" hidden></p>
           </div>
         </form>
@@ -160,8 +218,12 @@
     });
 
     const form = root.querySelector('#contactForm');
+    const consent = root.querySelector('#contactConsent');
     if (form) {
       form.addEventListener('submit', onSubmit);
+    }
+    if (consent) {
+      consent.addEventListener('change', syncSubmitEnabled);
     }
 
     return root;
@@ -183,6 +245,7 @@
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('contact-modal-open');
     setStatus('', '');
+    syncSubmitEnabled();
     const nameInput = document.getElementById('contactName');
     if (nameInput) nameInput.focus();
   }
@@ -209,12 +272,14 @@
     if ((formData.get('website') || '').toString().trim()) {
       setStatus(t.success, 'success');
       form.reset();
+      syncSubmitEnabled();
       return;
     }
 
     const name = (formData.get('name') || '').toString().trim();
     const email = (formData.get('email') || '').toString().trim();
     const message = (formData.get('message') || '').toString().trim();
+    const consent = formData.get('consent') === '1';
 
     if (!name) {
       setStatus(t.requiredName, 'error');
@@ -228,8 +293,13 @@
       setStatus(t.requiredMessage, 'error');
       return;
     }
+    if (!consent) {
+      setStatus(t.requiredConsent, 'error');
+      syncSubmitEnabled();
+      return;
+    }
 
-    const payload = { name, email, message, website: '' };
+    const payload = { name, email, message, consent: true, website: '' };
     const submitBtn = document.getElementById('contactSubmit');
     if (submitBtn) submitBtn.disabled = true;
 
@@ -252,13 +322,15 @@
       setStatus(error.message || t.error, 'error');
     } finally {
       payload.email = '';
-      if (submitBtn) submitBtn.disabled = false;
+      syncSubmitEnabled();
     }
   }
 
   document.addEventListener('click', (event) => {
     const target = event.target;
     if (!(target instanceof Element)) return;
+    // Allow legal links inside the modal to work normally.
+    if (target.closest('.contact-modal__consent a')) return;
     const link = target.closest('a, button');
     if (!link || !isContactLink(link)) return;
     event.preventDefault();

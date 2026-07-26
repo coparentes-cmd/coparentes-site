@@ -38,6 +38,11 @@ function handle_contact_submit(): void
     comments_json_error(400, 'Napisz wiadomość (max 4000 znaków).');
   }
 
+  $consent = $data['consent'] ?? false;
+  if ($consent !== true && $consent !== 1 && $consent !== '1') {
+    comments_json_error(400, 'Wymagana akceptacja Regulaminu i RODO.');
+  }
+
   $cfg = comments_config();
   $to = trim((string) ($cfg['contact_to_email'] ?? ''));
   $from = trim((string) ($cfg['contact_from_email'] ?? $to));

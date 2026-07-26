@@ -1549,11 +1549,41 @@ body.contact-modal-open {
   overflow: hidden;
 }
 
+.contact-modal__consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #394152;
+  cursor: pointer;
+}
+
+.contact-modal__consent input {
+  margin-top: 3px;
+  flex: 0 0 auto;
+}
+
+.contact-modal__consent a {
+  color: #0080FF;
+  text-decoration: underline;
+}
+
+.contact-modal__consent a:hover {
+  color: #0066cc;
+}
+
 .contact-modal__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+}
+
+.contact-modal__actions .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .contact-modal__status {
