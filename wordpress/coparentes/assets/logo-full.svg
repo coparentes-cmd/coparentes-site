@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="72" viewBox="0 0 420 72" fill="none">
+  <path d="M6 31.5L26 14v28H6V31.5Z" fill="#00C896"/>
+  <path d="M26 14L46 31.5V42H26V14Z" fill="#35D4B0"/>
+  <path d="M24 22L44 6l20 18v32H24V22Z" fill="#0080FF"/>
+  <path d="M22 33.5L38 19l16 14.5V57H22V33.5Z" fill="#FF6B68"/>
+  <path d="M38 31c3.4-4.6 10.6-3.6 12.4 1.6 1.3 3.9-1.2 7.9-4.8 10.3L38 48l-7.6-5.1c-3.6-2.4-6.1-6.4-4.8-10.3 1.8-5.2 9-6.2 12.4-1.6Z" fill="#FDD835"/>
+  <text x="82" y="49" fill="#0B0B0F" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.04em">Coparentes</text>
+</svg>

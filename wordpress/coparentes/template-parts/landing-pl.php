@@ -1,0 +1,222 @@
+<section class="hero" id="hero">
+      <div class="hero-watermark left" aria-hidden="true"></div>
+      <div class="hero-watermark right" aria-hidden="true"></div>
+      <div class="hero-watermark extra near-phone-1" aria-hidden="true"></div>
+      <div class="hero-watermark extra near-phone-2" aria-hidden="true"></div>
+      <div class="hero-watermark extra near-phone-3" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Coparentes</span>
+          <h1>Spokojne rodzicielstwo po rozstaniu</h1>
+          <p>Wspólna organizacja życia dziecka w dwóch domach, bez stresu i konfliktów. Wszystko w jednej, prostej aplikacji.</p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary btn-large">Zacznij organizować za darmo</a>
+            <div class="store-row">
+              <a href="#download" class="store-logo-link" aria-label="Pobierz w App Store">
+                <img class="store-logo-image" src="<?php echo esc_url( get_template_directory_uri() . '/assets/store/app-store-logo.svg' ); ?>" alt="" aria-hidden="true" />
+              </a>
+              <a href="#download" class="store-logo-link" aria-label="Pobierz z Google Play">
+                <img class="store-logo-image" src="<?php echo esc_url( get_template_directory_uri() . '/assets/store/google-play-logo.svg' ); ?>" alt="" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-visual-watermark top-left" aria-hidden="true"></div>
+          <div class="hero-visual-watermark top-right" aria-hidden="true"></div>
+          <div class="hero-visual-watermark mid-right" aria-hidden="true"></div>
+          <div class="hero-visual-watermark bottom-right" aria-hidden="true"></div>
+          <img class="hero-phones-image" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/hero-phones-pl.png' ); ?>" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section benefits" id="benefits">
+      <div class="container section-title reveal">
+        <h2>Wspólna opieka nad dziećmi może być łatwiejsza</h2>
+      </div>
+      <div class="container cards cards-3"><article class="soft-card benefit-card reveal">
+          <div class="circle-icon blue-soft"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/comments.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Komunikacja</h3>
+          <p>Bezpieczny czat i archiwum rozmów, by unikać nieporozumień.</p>
+        </article><article class="soft-card benefit-card reveal delay-1">
+          <div class="circle-icon green-soft"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/calendar-days.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Organizacja</h3>
+          <p>Wspólny kalendarz i harmonogram opieki zawsze pod ręką.</p>
+        </article><article class="soft-card benefit-card reveal delay-2">
+          <div class="circle-icon coral-soft"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/wallet.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Finanse</h3>
+          <p>Jasne i przejrzyste rozliczenia wydatków związanych z dzieckiem.</p>
+        </article></div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container section-title reveal">
+        <h2>Wszystko, czego potrzebujesz<br />w jednym miejscu</h2>
+      </div>
+      <div class="container feature-grid"><article class="feature-card reveal border-teal">
+          <div class="feature-icon teal-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/calendar-check.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Wspólny kalendarz</h3>
+          <p>Planuj wizyty, święta, szkołę i wydarzenia bez konfliktów terminów.</p>
+        </article><article class="feature-card reveal delay-1 border-blue">
+          <div class="feature-icon blue-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/comment-dots.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Bezpieczny czat</h3>
+          <p>Rozmawiaj tylko o sprawach dziecka w jednym uporządkowanym miejscu.</p>
+        </article><article class="feature-card reveal delay-2 border-coral">
+          <div class="feature-icon coral-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/receipt.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Rozliczenia wydatków</h3>
+          <p>Dodawaj paragony i łatwo rozliczaj koszty związane z wychowaniem.</p>
+        </article><article class="feature-card reveal border-yellow">
+          <div class="feature-icon yellow-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/folder-open.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Dokumenty dziecka</h3>
+          <p>Przechowuj ważne pliki, notatki, zaświadczenia i terminy badań.</p>
+        </article><article class="feature-card reveal delay-1 border-purple">
+          <div class="feature-icon purple-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/house-user.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Harmonogram opieki</h3>
+          <p>Ustalaj plan opieki i szybko sprawdzaj, kto odpowiada za dany dzień.</p>
+        </article><article class="feature-card reveal delay-2 border-teal">
+          <div class="feature-icon teal-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/bell.svg' ); ?>" alt="" aria-hidden="true" /></div>
+          <h3>Powiadomienia</h3>
+          <p>Otrzymuj przypomnienia o ważnych wydarzeniach, płatnościach i zmianach.</p>
+        </article></div>
+    </section>
+
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container how-grid">
+        <div class="how-copy reveal">
+          <h2>Jak działa Coparentes?</h2>
+          <div class="step-list"><article class="step-item">
+              <span class="step-number teal-text">1</span>
+              <div>
+                <h3>Załóż konto i zaproś drugiego rodzica</h3>
+                <p>Szybkie uruchomienie i przejrzyste rozpoczęcie współpracy.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number blue-text">2</span>
+              <div>
+                <h3>Skonfiguruj profil dziecka</h3>
+                <p>Ustaw dane, harmonogram i najważniejsze informacje.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number coral-text">3</span>
+              <div>
+                <h3>Używaj narzędzi do organizacji</h3>
+                <p>Czat, kalendarz, wydatki i dokumenty działają razem.</p>
+              </div>
+            </article><article class="step-item">
+              <span class="step-number yellow-text">4</span>
+              <div>
+                <h3>Ciesz się spokojniejszym rodzicielstwem</h3>
+                <p>Mniej chaosu, więcej porządku i lepsza współpraca dla dobra dziecka.</p>
+              </div>
+            </article></div>
+        </div>
+
+        <div class="how-visual reveal delay-1">
+          <img class="how-phone-image" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/how-it-works-phone-pl.png' ); ?>" alt="" />
+          <div class="family-card">
+            <div class="family-avatars"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/family-avatars.svg' ); ?>" alt="" aria-hidden="true" /></div>
+            <p>Łatwiej współpracować, gdy wszystko jest w jednym miejscu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section follow-up" id="follow-up">
+      <div class="container follow-up-grid">
+        <div class="follow-up-copy reveal">
+          <span class="eyebrow">Follow-up</span>
+          <h2>Dopilnujcie każdego następnego kroku</h2>
+          <p>Po rozmowie, zmianie w kalendarzu lub nowym wydatku Coparentes pomaga zamienić ustalenia w konkretne działania.</p>
+        </div>
+        <div class="follow-up-list">
+          <article class="follow-up-card reveal delay-1">
+            <div class="feature-icon blue-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/comment-dots.svg' ); ?>" alt="" aria-hidden="true" /></div>
+            <div>
+              <h3>Ustalenia z rozmów</h3>
+              <p>Oznacz wiadomość jako zadanie i wróć do niej, gdy potrzebna jest decyzja lub odpowiedź.</p>
+            </div>
+          </article>
+          <article class="follow-up-card reveal delay-2">
+            <div class="feature-icon teal-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/calendar-check.svg' ); ?>" alt="" aria-hidden="true" /></div>
+            <div>
+              <h3>Przypomnienia o terminach</h3>
+              <p>Dodaj follow-up do odbioru, wizyty albo płatności, aby oboje rodzice widzieli, co jest następne.</p>
+            </div>
+          </article>
+          <article class="follow-up-card reveal delay-1">
+            <div class="feature-icon coral-bg"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/bell.svg' ); ?>" alt="" aria-hidden="true" /></div>
+            <div>
+              <h3>Spokojne domknięcie</h3>
+              <p>Po wykonaniu zadania zapisz status, żeby uniknąć kolejnych pytań i nieporozumień.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience" id="audience">
+      <div class="container section-title reveal">
+        <h2>Dla kogo jest Coparentes?</h2>
+      </div>
+      <div class="container cards cards-4"><article class="soft-card audience-card reveal">
+          <img class="house-illustration" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/audience-mom.svg' ); ?>" alt="" aria-hidden="true" />
+          <h3>Dla mamy</h3>
+          <p>Zachowaj spokój i kontrolę nad harmonogramem dziecka.</p>
+        </article><article class="soft-card audience-card reveal delay-1">
+          <img class="house-illustration" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/audience-dad.svg' ); ?>" alt="" aria-hidden="true" />
+          <h3>Dla taty</h3>
+          <p>Bądź zawsze na bieżąco z życiem swojego dziecka.</p>
+        </article><article class="soft-card audience-card reveal delay-2">
+          <img class="house-illustration" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/audience-child.svg' ); ?>" alt="" aria-hidden="true" />
+          <h3>Dla dziecka</h3>
+          <p>Więcej przewidywalności to więcej spokoju.</p>
+        </article><article class="soft-card audience-card reveal delay-3">
+          <img class="house-illustration" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/audience-family.svg' ); ?>" alt="" aria-hidden="true" />
+          <h3>Dla całej rodziny</h3>
+          <p>Wspólna organizacja dla dobra dziecka.</p>
+        </article></div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container section-title reveal">
+        <h2>Co mówią rodzice?</h2>
+      </div>
+      <div class="container cards cards-3"><article class="soft-card testimonial-card reveal">
+          <img class="person-avatar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/avatar-anna.svg' ); ?>" alt="Ewa" />
+          <div class="stars"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/stars-rating.svg' ); ?>" alt="5/5" /></div>
+          <blockquote>„Moje życie byłoby łatwiejsze gdyby taka aplikacja istniała w czasie mojego rozwodu”</blockquote>
+          <p class="person-name">Ewa</p>
+        </article><article class="soft-card testimonial-card reveal delay-1">
+          <img class="person-avatar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/avatar-marek.svg' ); ?>" alt="Andrzej" />
+          <div class="stars"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/stars-rating.svg' ); ?>" alt="5/5" /></div>
+          <blockquote>„Nie lubię uruchamiać wielu aplikacji, ale tę chętnie wypróbuję, bo czuję, że może realnie ułatwić mi życie.”</blockquote>
+          <p class="person-name">Andrzej</p>
+        </article><article class="soft-card testimonial-card reveal delay-2">
+          <img class="person-avatar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/illustrations/avatar-kasia.svg' ); ?>" alt="Agnieszka" />
+          <div class="stars"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/stars-rating.svg' ); ?>" alt="5/5" /></div>
+          <blockquote>„Jestem przekonana, że dzięki Coparentes łatwiej mi będzie dokumentować wydatki na dzieci”</blockquote>
+          <p class="person-name">Agnieszka</p>
+        </article></div>
+    </section>
+
+    <section class="cta-section" id="download">
+      <div class="cta-watermark left" aria-hidden="true"></div>
+      <div class="cta-watermark right" aria-hidden="true"></div>
+      <div class="container cta-content reveal">
+        <h2>Zacznij organizować<br />życie spokojniej</h2>
+        <a href="#" class="btn btn-white btn-large">Pobierz za darmo</a>
+        <div class="store-row center cta-store-row">
+          <a href="#" class="store-badge light" aria-label="App Store">
+            <img class="store-badge-icon" src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/apple.svg' ); ?>" alt="" aria-hidden="true" />
+            <span><small>Pobierz w</small><strong>App Store</strong></span>
+          </a>
+          <a href="#" class="store-badge light" aria-label="Google Play">
+            <img class="store-badge-icon" src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/google-play.svg' ); ?>" alt="" aria-hidden="true" />
+            <span><small>Pobierz z</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p>Bezpłatne. Bez zobowiązań.</p>
+      </div>
+    </section>

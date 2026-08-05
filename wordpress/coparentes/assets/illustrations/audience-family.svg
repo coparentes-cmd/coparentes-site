@@ -1,0 +1,16 @@
+<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Domy rodziny">
+  <defs>
+    <linearGradient id="family-left" x1="22" y1="18" x2="22" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1DD6AE"/>
+      <stop offset="1" stop-color="#00C896"/>
+    </linearGradient>
+    <linearGradient id="family-right" x1="70" y1="12" x2="70" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B239C9"/>
+      <stop offset="1" stop-color="#9C27B0"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 32L22 18L40 32V74H4V32Z" fill="url(#family-left)"/>
+  <path d="M12 74V62C12 58.7 14.7 56 18 56C21.3 56 24 58.7 24 62V74" fill="#fff" fill-opacity="0.95"/>
+  <path d="M52 28L70 12L88 28V74H52V28Z" fill="url(#family-right)"/>
+  <path d="M60 74V61C60 57.7 62.7 55 66 55C69.3 55 72 57.7 72 61V74" fill="#fff" fill-opacity="0.95"/>
+</svg>

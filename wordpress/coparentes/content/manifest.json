@@ -1,0 +1,76 @@
+[
+  {
+    "slug": "bozenka-stajniak",
+    "title": "Bożenka Stajniak",
+    "description": "Bożenka Stajniak — mediatorka rodzinna i cywilna z 12-letnim doświadczeniem, sekretarz Zarządu Stowarzyszenia Mediatorów Pactus Łódź, członek Zarządu Coparentes App.",
+    "categories": [],
+    "author_slug": "",
+    "author_label": "",
+    "date": "2026-07-25",
+    "is_author": true,
+    "type": "author",
+    "image": "",
+    "excerpt": "Bożenka Stajniak — mediatorka rodzinna i cywilna z 12-letnim doświadczeniem, sekretarz Zarządu Stowarzyszenia Mediatorów Pactus Łódź, członek Zarządu Coparentes App."
+  },
+  {
+    "slug": "dlaczego-warto-korzystac-z-mediacji-rozwodowej",
+    "title": "Dlaczego warto korzystać z mediacji rozwodowej?",
+    "description": "Rozstanie to i tak trudne. Na podstawie konkretnych danych — dlaczego mediacja rozwodowa naprawdę się opłaca, nie tylko finansowo.",
+    "categories": [
+      "Rozwód",
+      "Ugoda mediacyjna"
+    ],
+    "author_slug": "kinga-staszewska",
+    "author_label": "Autorka Kinga Staszewska",
+    "date": "2026-07-25",
+    "is_author": false,
+    "type": "post",
+    "image": "cover-rozwod-1.svg",
+    "excerpt": "Rozstanie to i tak jedna z trudniejszych rzeczy, jakie Was w życiu spotkały. Smutek miesza się ze złością, ulga z poczuciem winy, a do tego dochodzi strach o dzieci, o pieniądze, o to, co będzie dalej."
+  },
+  {
+    "slug": "jak-stworzyc-dobra-ugode-pomediacyjna",
+    "title": "Jak stworzyć dobrą ugodę pomediacyjną?",
+    "description": "Ugoda mediacyjna to nie tylko formalność. Na co zwrócić uwagę, żeby ustalenia dotyczące dzieci, finansów i elastyczności zapisów naprawdę działały na co dzień.",
+    "categories": [
+      "Ugoda mediacyjna",
+      "Rozwód"
+    ],
+    "author_slug": "bozenka-stajniak",
+    "author_label": "Autorka Bożenka Stajniak",
+    "date": "2026-07-25",
+    "is_author": false,
+    "type": "post",
+    "image": "cover-mediacja-2.svg",
+    "excerpt": "Dotarliście do etapu, w którym uda Wam się usiąść razem, porozmawiać i dojść do porozumienia. To ogromny krok."
+  },
+  {
+    "slug": "kinga-staszewska",
+    "title": "Kinga Staszewska",
+    "description": "Kinga Staszewska — menadżerka z doświadczeniem w HR i finansach, członek Zarządu Coparentes App.",
+    "categories": [],
+    "author_slug": "",
+    "author_label": "",
+    "date": "2026-07-25",
+    "is_author": true,
+    "type": "author",
+    "image": "",
+    "excerpt": "Kinga Staszewska — menadżerka z doświadczeniem w HR i finansach, członek Zarządu Coparentes App."
+  },
+  {
+    "slug": "mediacja-okiem-mediatorki",
+    "title": "Mediacja okiem mediatorki",
+    "description": "Czym naprawdę jest mediacja, jak znaleźć mediatora i czego spodziewać się na pierwszym spotkaniu — praktyczny przewodnik okiem mediatorki.",
+    "categories": [
+      "Ugoda mediacyjna",
+      "Rozwód"
+    ],
+    "author_slug": "bozenka-stajniak",
+    "author_label": "Autorka Bożenka Stajniak",
+    "date": "2026-07-25",
+    "is_author": false,
+    "type": "post",
+    "image": "cover-mediacja-1.svg",
+    "excerpt": "Mediacja to dobrowolny, poufny sposób rozwiązywania sporów przy pomocy niezależnej, bezstronnej osoby – mediatora. Mediacja pozwala zwaśnionym stronom dojść do podłoża problemu."
+  }
+]

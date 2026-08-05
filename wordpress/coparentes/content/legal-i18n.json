@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "privacy-policy",
+    "title": "Privacy policy",
+    "lang": "en",
+    "file": "page-privacy-policy.html",
+    "excerpt": "Privacy and cookies policy for Coparentes.ai."
+  },
+  {
+    "slug": "terms-of-service",
+    "title": "Terms of service",
+    "lang": "en",
+    "file": "page-terms-of-service.html",
+    "excerpt": "Website terms of service for Coparentes.ai."
+  },
+  {
+    "slug": "datenschutz",
+    "title": "Datenschutz",
+    "lang": "de",
+    "file": "page-datenschutz.html",
+    "excerpt": "Datenschutz- und Cookie-Richtlinie für Coparentes.ai."
+  },
+  {
+    "slug": "nutzungsbedingungen",
+    "title": "Nutzungsbedingungen",
+    "lang": "de",
+    "file": "page-nutzungsbedingungen.html",
+    "excerpt": "Nutzungsbedingungen der Website Coparentes.ai."
+  },
+  {
+    "slug": "politica-de-privacidad",
+    "title": "Política de privacidad",
+    "lang": "es",
+    "file": "page-politica-de-privacidad.html",
+    "excerpt": "Política de privacidad y cookies de Coparentes.ai."
+  },
+  {
+    "slug": "terminos-del-servicio",
+    "title": "Términos del servicio",
+    "lang": "es",
+    "file": "page-terminos-del-servicio.html",
+    "excerpt": "Términos del sitio web de Coparentes.ai."
+  },
+  {
+    "slug": "politique-de-confidentialite",
+    "title": "Politique de confidentialité",
+    "lang": "fr",
+    "file": "page-politique-de-confidentialite.html",
+    "excerpt": "Politique de confidentialité et cookies de Coparentes.ai."
+  },
+  {
+    "slug": "conditions-dutilisation",
+    "title": "Conditions d'utilisation",
+    "lang": "fr",
+    "file": "page-conditions-dutilisation.html",
+    "excerpt": "Conditions d’utilisation du site Coparentes.ai."
+  },
+  {
+    "slug": "zh-privacy-policy",
+    "title": "隐私政策",
+    "lang": "zh",
+    "file": "page-zh-privacy-policy.html",
+    "excerpt": "Coparentes.ai 网站隐私与 Cookies 政策。"
+  },
+  {
+    "slug": "zh-service-terms",
+    "title": "服务条款",
+    "lang": "zh",
+    "file": "page-zh-service-terms.html",
+    "excerpt": "Coparentes.ai 网站服务条款。"
+  }
+]

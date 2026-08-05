@@ -1,0 +1,147 @@
+{
+  "pl": {
+    "nav": {
+      "features": "Funkcje",
+      "how-it-works": "Jak działa?",
+      "audience": "Dla kogo?",
+      "testimonials": "Opinie",
+      "blog": "Blog",
+      "cta": "Pobierz aplikację"
+    },
+    "footer": {
+      "privacy": "Polityka prywatności",
+      "terms": "Regulamin",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "newsletter": "Zapisz się do newslettera",
+      "cookies": "Ustawienia cookies"
+    },
+    "cookie": {
+      "title": "Szanujemy Twoją prywatność",
+      "text": "Używamy niezbędnych plików cookies, aby strona działała prawidłowo. Za Twoją zgodą możemy włączyć także cookies funkcjonalne, analityczne i marketingowe. Szczegóły znajdziesz w Polityce prywatności i cookies oraz Regulaminie.",
+      "accept": "Akceptuję wszystkie",
+      "reject": "Odrzuć opcjonalne",
+      "settings": "Ustawienia"
+    }
+  },
+  "en": {
+    "nav": {
+      "features": "Features",
+      "how-it-works": "How it works?",
+      "audience": "Who it’s for?",
+      "testimonials": "Reviews",
+      "blog": null,
+      "cta": "Download app"
+    },
+    "footer": {
+      "privacy": "Privacy policy",
+      "terms": "Terms of service",
+      "contact": "Contact",
+      "newsletter": "Subscribe to the newsletter",
+      "cookies": "Cookie settings"
+    },
+    "cookie": {
+      "title": "We respect your privacy",
+      "text": "We use essential cookies so the website can work properly. With your consent, we may also enable functional, analytics and marketing cookies. More details are available in the Privacy and Cookies Policy and the Terms of Service.",
+      "accept": "Accept all",
+      "reject": "Reject optional",
+      "settings": "Settings"
+    }
+  },
+  "de": {
+    "nav": {
+      "features": "Funktionen",
+      "how-it-works": "Wie funktioniert es?",
+      "audience": "Für wen?",
+      "testimonials": "Bewertungen",
+      "blog": null,
+      "cta": "App herunterladen"
+    },
+    "footer": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "contact": "Kontakt",
+      "newsletter": "Zum Newsletter anmelden",
+      "cookies": "Cookie-Einstellungen"
+    },
+    "cookie": {
+      "title": "Wir respektieren deine Privatsphäre",
+      "text": "Wir verwenden notwendige Cookies, damit die Website korrekt funktioniert. Mit deiner Einwilligung können wir auch funktionale, analytische und Marketing-Cookies aktivieren. Mehr dazu findest du in der Datenschutz- und Cookie-Richtlinie sowie in den Nutzungsbedingungen.",
+      "accept": "Alle akzeptieren",
+      "reject": "Optionale ablehnen",
+      "settings": "Einstellungen"
+    }
+  },
+  "es": {
+    "nav": {
+      "features": "Funciones",
+      "how-it-works": "¿Cómo funciona?",
+      "audience": "¿Para quién?",
+      "testimonials": "Opiniones",
+      "blog": null,
+      "cta": "Descargar app"
+    },
+    "footer": {
+      "privacy": "Política de privacidad",
+      "contact": "Contacto",
+      "newsletter": "Suscríbete al boletín",
+      "cookies": "Configuración de cookies",
+      "terms": "Términos de uso"
+    },
+    "cookie": {
+      "title": "Respetamos tu privacidad",
+      "text": "Usamos cookies necesarias para que el sitio funcione correctamente. Con tu consentimiento, también podemos activar cookies funcionales, analíticas y de marketing. Encontrarás más detalles en la Política de privacidad y cookies y en los Términos del servicio.",
+      "accept": "Aceptar todas",
+      "reject": "Rechazar opcionales",
+      "settings": "Configuración"
+    }
+  },
+  "fr": {
+    "nav": {
+      "features": "Fonctionnalités",
+      "how-it-works": "Comment ça marche ?",
+      "audience": "Pour qui ?",
+      "testimonials": "Avis",
+      "blog": null,
+      "cta": "Télécharger l’app"
+    },
+    "footer": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "contact": "Contact",
+      "newsletter": "S’inscrire à la newsletter",
+      "cookies": "Paramètres des cookies"
+    },
+    "cookie": {
+      "title": "Nous respectons votre vie privée",
+      "text": "Nous utilisons des cookies nécessaires pour que le site fonctionne correctement. Avec votre consentement, nous pouvons aussi activer des cookies fonctionnels, analytiques et marketing. Plus d’informations figurent dans la Politique de confidentialité et cookies et dans les Conditions d’utilisation.",
+      "accept": "Tout accepter",
+      "reject": "Refuser les optionnels",
+      "settings": "Paramètres"
+    }
+  },
+  "zh": {
+    "nav": {
+      "features": "功能",
+      "how-it-works": "如何运作？",
+      "audience": "适合谁？",
+      "testimonials": "评价",
+      "blog": null,
+      "cta": "下载应用"
+    },
+    "footer": {
+      "privacy": "隐私政策",
+      "contact": "联系",
+      "newsletter": "订阅电子报",
+      "cookies": "Cookie 设置",
+      "terms": "使用条款"
+    },
+    "cookie": {
+      "title": "我们尊重你的隐私",
+      "text": "我们使用必要的 Cookies 以确保网站正常运行。在征得你的同意后，我们还可以启用功能性、分析性和营销性 Cookies。更多信息请参见《隐私与 Cookies 政策》和《服务条款》。",
+      "accept": "接受全部",
+      "reject": "拒绝可选项",
+      "settings": "设置"
+    }
+  }
+}
