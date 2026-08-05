@@ -136,7 +136,7 @@ add_action('admin_init', function () {
   if (!current_user_can('manage_options')) {
     return;
   }
-  if (get_option('coparentes_landing_synced_v2') === '1') {
+  if (get_option('coparentes_landing_synced_v111') === '1') {
     return;
   }
   if (function_exists('coparentes_sync_landing_pages')) {

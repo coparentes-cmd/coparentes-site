@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-define('COPARENTES_THEME_VERSION', '1.1.0');
+define('COPARENTES_THEME_VERSION', '1.1.1');
 
 require_once get_template_directory() . '/inc/setup.php';
 require_once get_template_directory() . '/inc/i18n.php';

@@ -148,17 +148,28 @@ function coparentes_sync_landing_pages(bool $force = true): void
       continue;
     }
 
-    $page = get_page_by_path($slug === 'start' ? 'start' : $slug);
+    $page = null;
     $template = ($slug === 'start') ? '' : 'page-templates/page-lang-' . $slug . '.php';
 
-    if (!$page instanceof WP_Post) {
-      // Front page might be under different slug — try page_on_front
-      if ($slug === 'start') {
-        $front_id = (int) get_option('page_on_front');
-        if ($front_id > 0) {
-          $page = get_post($front_id);
+    if ($slug === 'start') {
+      $front_id = (int) get_option('page_on_front');
+      if ($front_id > 0) {
+        $page = get_post($front_id);
+      }
+      if (!$page instanceof WP_Post) {
+        $page = get_page_by_path('start');
+      }
+      // Hostinger sometimes creates "Sample Page" / "Home"
+      if (!$page instanceof WP_Post) {
+        foreach (['home', 'strona-glowna', 'glowna'] as $alt) {
+          $page = get_page_by_path($alt);
+          if ($page instanceof WP_Post) {
+            break;
+          }
         }
       }
+    } else {
+      $page = get_page_by_path($slug);
     }
 
     if ($page instanceof WP_Post) {
@@ -166,32 +177,72 @@ function coparentes_sync_landing_pages(bool $force = true): void
         wp_update_post([
           'ID' => $page->ID,
           'post_content' => $html,
+          'post_title' => $titles[$slug] ?? $page->post_title,
         ]);
       }
       if ($template !== '') {
         update_post_meta($page->ID, '_wp_page_template', $template);
       }
+      if ($slug === 'start') {
+        update_option('show_on_front', 'page');
+        update_option('page_on_front', $page->ID);
+      }
       continue;
     }
 
-    coparentes_ensure_page([
+    $new_id = coparentes_ensure_page([
       'slug' => $slug,
       'title' => $titles[$slug] ?? $slug,
       'content' => $html,
       'template' => $template,
     ]);
+    if ($slug === 'start' && $new_id > 0) {
+      update_option('show_on_front', 'page');
+      update_option('page_on_front', $new_id);
+    }
   }
 
-  // Ensure reading settings still point to start + blog
-  $start = get_page_by_path('start');
   $blog = get_page_by_path('blog');
-  if ($start instanceof WP_Post) {
-    update_option('show_on_front', 'page');
-    update_option('page_on_front', $start->ID);
-  }
   if ($blog instanceof WP_Post) {
     update_option('page_for_posts', $blog->ID);
   }
 
   update_option('coparentes_landing_synced_v2', '1');
+  update_option('coparentes_landing_synced_v111', '1');
 }
+
+/**
+ * Admin bar shortcut: edit homepage.
+ */
+add_action('admin_bar_menu', function ($bar) {
+  if (!current_user_can('edit_pages') || !is_admin_bar_showing()) {
+    return;
+  }
+  $front_id = (int) get_option('page_on_front');
+  if ($front_id <= 0) {
+    return;
+  }
+  $bar->add_node([
+    'id' => 'coparentes-edit-landing',
+    'title' => 'Edytuj stronę główną',
+    'href' => get_edit_post_link($front_id, 'raw'),
+    'meta' => ['title' => 'Edytuj teksty landingu Coparentes'],
+  ]);
+}, 80);
+
+/**
+ * Dashboard widget with clear next steps.
+ */
+add_action('wp_dashboard_setup', function () {
+  wp_add_dashboard_widget('coparentes_how_to_edit', 'Coparentes — jak edytować stronę', function () {
+    $front_id = (int) get_option('page_on_front');
+    $edit = $front_id ? get_edit_post_link($front_id, 'raw') : admin_url('edit.php?post_type=page');
+    echo '<ol style="margin-left:1.2em;">';
+    echo '<li><a href="' . esc_url($edit) . '"><strong>Edytuj stronę główną</strong></a> — zmień teksty → Aktualizuj</li>';
+    echo '<li><a href="' . esc_url(admin_url('edit.php')) . '">Wpisy</a> — blog</li>';
+    echo '<li><a href="' . esc_url(admin_url('edit.php?post_type=page')) . '">Strony</a> — polityka, regulamin, języki</li>';
+    echo '<li><a href="' . esc_url(admin_url('tools.php?page=coparentes-seed')) . '">Narzędzia → Coparentes seed</a> — przywróć teksty landingu</li>';
+    echo '</ol>';
+    echo '<p>Po zapisie odśwież <a href="' . esc_url(home_url('/')) . '" target="_blank" rel="noopener">coparentes.ai</a>.</p>';
+  });
+});
