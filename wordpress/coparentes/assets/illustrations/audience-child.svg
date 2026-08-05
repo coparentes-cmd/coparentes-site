@@ -1,0 +1,16 @@
+<svg width="92" height="84" viewBox="0 0 92 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dom dziecka">
+  <defs>
+    <linearGradient id="child-fill" x1="46" y1="6" x2="46" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE55E"/>
+      <stop offset="1" stop-color="#FDD835"/>
+    </linearGradient>
+    <linearGradient id="child-window" x1="58" y1="46" x2="68" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1DD6AE"/>
+      <stop offset="1" stop-color="#00C896"/>
+    </linearGradient>
+  </defs>
+  <path d="M14 28L46 6L78 28V76H14V28Z" fill="url(#child-fill)"/>
+  <path d="M34 76V58C34 51.4 39.4 46 46 46C52.6 46 58 51.4 58 58V76" fill="#fff" fill-opacity="0.95"/>
+  <rect x="56" y="44" width="14" height="14" rx="4" fill="#fff" fill-opacity="0.95"/>
+  <circle cx="63" cy="51" r="4.5" fill="url(#child-window)"/>
+</svg>
