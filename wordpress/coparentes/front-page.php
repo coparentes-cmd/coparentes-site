@@ -1,6 +1,6 @@
 <?php
 /**
- * Front page — PL landing, exact markup from index.html.
+ * Front page — content editable in WP: Strony → Start.
  *
  * @package Coparentes
  */
@@ -8,7 +8,12 @@
 get_header();
 ?>
   <main>
-    <?php get_template_part('template-parts/landing', 'pl'); ?>
+    <?php
+    while (have_posts()) :
+      the_post();
+      the_content();
+    endwhile;
+    ?>
   </main>
 <?php
 get_footer();

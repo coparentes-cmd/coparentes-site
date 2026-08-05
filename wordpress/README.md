@@ -35,7 +35,14 @@ Motyw WP leży w `wordpress/coparentes/` — te same CSS, JS, grafiki i treści.
 
 **Komentarze** w panelu WP (jak wcześniej `api/admin.php`).
 
-## Ważne
+## Edycja tekstów (cała strona)
 
-- Stary kod HTML w root repo = kopia / źródło — **nie usuwamy**.
-- Po migracji domeny na WP ustaw przekierowania 301 ze starych `.html` (opcjonalnie, SEO).
+1. **Strona główna (landing PL):** **Strony → Start** → zmień teksty → **Aktualizuj**
+2. **Landingi EN/DE/ES/FR/ZH:** **Strony → en / de / …**
+3. **Blog:** **Wpisy**
+4. **Polityka / regulamin:** **Strony**
+
+Landing jest w klasycznym edytorze (cały HTML strony). Zmieniaj napisy między znacznikami; nie usuwaj klas CSS ani `{{THEME_URI}}` przy obrazkach.
+
+Po aktualizacji motywu do 1.1.0 wejdź raz w panel admina — treści landingu zsynchronizują się do stron automatycznie.  
+Albo: **Narzędzia → Coparentes seed → Wgraj ponownie teksty landingu do stron**.

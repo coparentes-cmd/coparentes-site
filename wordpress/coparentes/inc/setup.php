@@ -124,4 +124,22 @@ add_action('after_switch_theme', function () {
   if (function_exists('coparentes_seed_content')) {
     coparentes_seed_content();
   }
+  if (function_exists('coparentes_sync_landing_pages')) {
+    coparentes_sync_landing_pages(true);
+  }
+});
+
+/**
+ * One-time sync of editable landing HTML for sites that already activated v1.
+ */
+add_action('admin_init', function () {
+  if (!current_user_can('manage_options')) {
+    return;
+  }
+  if (get_option('coparentes_landing_synced_v2') === '1') {
+    return;
+  }
+  if (function_exists('coparentes_sync_landing_pages')) {
+    coparentes_sync_landing_pages(true);
+  }
 });

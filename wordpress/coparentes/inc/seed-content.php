@@ -21,7 +21,7 @@ function coparentes_seed_content(): void
   $home_id = coparentes_ensure_page([
     'slug' => 'start',
     'title' => 'Coparentes — spokojne rodzicielstwo po rozstaniu',
-    'content' => '',
+    'content' => coparentes_read_content_file('landing-pl.html'),
     'template' => '',
   ]);
 
@@ -77,9 +77,13 @@ function coparentes_seed_content(): void
     coparentes_ensure_page([
       'slug' => $lang,
       'title' => $titles[$lang],
-      'content' => '',
+      'content' => coparentes_read_content_file("landing-{$lang}.html"),
       'template' => "page-templates/page-lang-{$lang}.php",
     ]);
+  }
+
+  if (function_exists('coparentes_sync_landing_pages')) {
+    coparentes_sync_landing_pages(true);
   }
 
   // Translated legal pages (exact copy from static HTML)
@@ -267,14 +271,26 @@ add_action('admin_menu', function () {
       }
       if (isset($_POST['coparentes_reseed']) && check_admin_referer('coparentes_reseed')) {
         delete_option('coparentes_seeded_v1');
+        delete_option('coparentes_landing_synced_v2');
         coparentes_seed_content();
-        echo '<div class="updated"><p>Seed uruchomiony (pomija istniejące wpisy o tych samych slugach).</p></div>';
+        if (function_exists('coparentes_sync_landing_pages')) {
+          coparentes_sync_landing_pages(true);
+        }
+        echo '<div class="updated"><p>Seed uruchomiony. Landingi zsynchronizowane do Stron (możesz je edytować).</p></div>';
+      }
+      if (isset($_POST['coparentes_sync_landing']) && check_admin_referer('coparentes_reseed')) {
+        if (function_exists('coparentes_sync_landing_pages')) {
+          coparentes_sync_landing_pages(true);
+        }
+        echo '<div class="updated"><p>Zsynchronizowano treści landingu do stron WP (nadpisano zawartość Start / en / de / es / fr / zh).</p></div>';
       }
       echo '<div class="wrap"><h1>Coparentes — seed treści</h1>';
-      echo '<p>Przy aktywacji motywu treści z HTML są wgrywane automatycznie. Tu możesz uruchomić ponownie.</p>';
+      echo '<p>Przy aktywacji motywu treści z HTML są wgrywane automatycznie.</p>';
+      echo '<p><strong>Edycja strony głównej:</strong> Strony → Start — tam jest cała treść landingu.</p>';
       echo '<form method="post">';
       wp_nonce_field('coparentes_reseed');
-      echo '<p><button class="button button-primary" name="coparentes_reseed" value="1">Uruchom seed</button></p>';
+      echo '<p><button class="button button-primary" name="coparentes_reseed" value="1">Uruchom seed</button> ';
+      echo '<button class="button" name="coparentes_sync_landing" value="1">Wgraj ponownie teksty landingu do stron</button></p>';
       echo '</form></div>';
     }
   );
