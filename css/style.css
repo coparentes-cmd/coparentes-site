@@ -1435,6 +1435,39 @@ button.ml-onclick-form.footer-link-btn {
   padding: 0;
 }
 
+.legal-table-wrap {
+  margin-top: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.legal-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  color: #394152;
+  line-height: 1.5;
+}
+
+.legal-table th {
+  background: rgba(95, 191, 143, 0.12);
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.legal-table tbody tr:nth-child(even) {
+  background: rgba(17, 17, 17, 0.02);
+}
+
 .footer-mark img,
 .brand-mark img {
   width: 100%;
