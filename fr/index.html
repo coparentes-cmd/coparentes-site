@@ -37,7 +37,7 @@
         </button>
         <div class="menu-backdrop" id="menuBackdrop"></div>
         <ul class="nav-list" id="mobileNav">
-          <li><a href="#features">Fonctionnalités</a></li><li><a href="#how-it-works">Comment ça marche ?</a></li><li><a href="#audience">Pour qui ?</a></li><li><a href="#testimonials">Avis</a></li><li class="nav-lang-item">
+          <li><a href="#features">Fonctionnalités</a></li><li><a href="how-it-works.html">Comment ça marche ?</a></li><li><a href="#audience">Pour qui ?</a></li><li><a href="#testimonials">Avis</a></li><li class="nav-lang-item">
             <div class="lang-switcher" id="langSwitcher">
               <button class="lang-btn" type="button" aria-label="Français">
                 <span class="lang-flag"><img src="../assets/icons/flags/fr.svg" alt="" aria-hidden="true" /></span>
@@ -135,47 +135,6 @@
           <h3>Notifications</h3>
           <p>Recevez des rappels sur les événements, paiements et changements importants.</p>
         </article></div>
-    </section>
-
-    <section class="section how-it-works" id="how-it-works">
-      <div class="container how-grid">
-        <div class="how-copy reveal">
-          <h2>Comment fonctionne Coparentes ?</h2>
-          <div class="step-list"><article class="step-item">
-              <span class="step-number teal-text">1</span>
-              <div>
-                <h3>Créez un compte et invitez l’autre parent</h3>
-                <p>Un démarrage rapide et une collaboration claire dès le départ.</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number blue-text">2</span>
-              <div>
-                <h3>Configurez le profil de l’enfant</h3>
-                <p>Ajoutez les informations, le planning et les données essentielles.</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number coral-text">3</span>
-              <div>
-                <h3>Utilisez les outils d’organisation</h3>
-                <p>Chat, calendrier, dépenses et documents fonctionnent ensemble.</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number yellow-text">4</span>
-              <div>
-                <h3>Profitez d’une parentalité plus sereine</h3>
-                <p>Moins de chaos, plus de clarté et une meilleure coopération pour votre enfant.</p>
-              </div>
-            </article></div>
-        </div>
-
-        <div class="how-visual reveal delay-1">
-          <img class="how-phone-image" src="../assets/illustrations/how-it-works-phone-pl.png" alt="" />
-          <div class="family-card">
-            <div class="family-avatars"><img src="../assets/illustrations/family-avatars.svg" alt="" aria-hidden="true" /></div>
-            <p>Il est plus facile de coopérer quand tout est au même endroit.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="section follow-up" id="follow-up">
@@ -375,6 +334,9 @@
     </div>
   </div>
 
+  <script>
+    if (location.hash === '#how-it-works') location.replace('how-it-works.html');
+  </script>
   <script src="../js/main.js?v=cookiebanner-1"></script>
   <script src="../js/contact.js?v=contact-3"></script>
 </body>

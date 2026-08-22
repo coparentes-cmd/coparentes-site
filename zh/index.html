@@ -38,7 +38,7 @@
         </button>
         <div class="menu-backdrop" id="menuBackdrop"></div>
         <ul class="nav-list" id="mobileNav">
-          <li><a href="#features">功能</a></li><li><a href="#how-it-works">如何运作？</a></li><li><a href="#audience">适合谁？</a></li><li><a href="#testimonials">评价</a></li><li class="nav-lang-item">
+          <li><a href="#features">功能</a></li><li><a href="how-it-works.html">如何运作？</a></li><li><a href="#audience">适合谁？</a></li><li><a href="#testimonials">评价</a></li><li class="nav-lang-item">
             <div class="lang-switcher" id="langSwitcher">
               <button class="lang-btn" type="button" aria-label="中文">
                 <span class="lang-flag"><img src="../assets/icons/flags/zh.svg" alt="" aria-hidden="true" /></span>
@@ -136,47 +136,6 @@
           <h3>通知提醒</h3>
           <p>及时收到重要事件、付款和变更提醒。</p>
         </article></div>
-    </section>
-
-    <section class="section how-it-works" id="how-it-works">
-      <div class="container how-grid">
-        <div class="how-copy reveal">
-          <h2>Coparentes 如何运作？</h2>
-          <div class="step-list"><article class="step-item">
-              <span class="step-number teal-text">1</span>
-              <div>
-                <h3>创建账户并邀请另一位家长</h3>
-                <p>快速开始，让协作从一开始就更清晰。</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number blue-text">2</span>
-              <div>
-                <h3>设置孩子档案</h3>
-                <p>填写孩子信息、日程和重要资料。</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number coral-text">3</span>
-              <div>
-                <h3>使用组织工具</h3>
-                <p>聊天、日历、费用和文件协同工作。</p>
-              </div>
-            </article><article class="step-item">
-              <span class="step-number yellow-text">4</span>
-              <div>
-                <h3>享受更平静的育儿协作</h3>
-                <p>更少混乱，更多清晰，为孩子带来更好的合作体验。</p>
-              </div>
-            </article></div>
-        </div>
-
-        <div class="how-visual reveal delay-1">
-          <img class="how-phone-image" src="../assets/illustrations/how-it-works-phone-pl.png" alt="" />
-          <div class="family-card">
-            <div class="family-avatars"><img src="../assets/illustrations/family-avatars.svg" alt="" aria-hidden="true" /></div>
-            <p>当一切都在同一个地方时，合作会更容易。</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="section follow-up" id="follow-up">
@@ -376,6 +335,9 @@
     </div>
   </div>
 
+  <script>
+    if (location.hash === '#how-it-works') location.replace('how-it-works.html');
+  </script>
   <script src="../js/main.js?v=cookiebanner-1"></script>
   <script src="../js/contact.js?v=contact-3"></script>
 </body>
