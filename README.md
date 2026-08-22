@@ -88,7 +88,7 @@ README.md
 |---------|------|
 | `/` (index.html) | Główna strona landing page |
 | `#features` | Funkcje aplikacji |
-| `#how-it-works` | Jak działa Coparentes |
+| `/jak-dziala.html` | Jak działa Coparentes (podstrona) |
 | `#follow-up` | Następne kroki po rozmowach, terminach i zadaniach |
 | `#audience` | Dla kogo jest Coparentes |
 | `#testimonials` | Opinie rodziców |

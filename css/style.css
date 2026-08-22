@@ -723,6 +723,15 @@ button { font: inherit; }
 .purple-bg { background: linear-gradient(180deg, #b43cca, #9c27b0); }
 
 .how-it-works { padding-top: 60px; }
+.how-page .how-it-works {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.how-page .how-copy h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
 .how-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
