@@ -1,0 +1,170 @@
+<style>
+/* Nagłówek: tytuł + obrazek w dwóch kolumnach, potem podtytuł na pełną szerokość */
+.how-it-works-page .hero-header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.how-it-works-page .header-main-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  width: 100%;
+}
+
+.how-it-works-page .header-main-row h1 {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.how-it-works-page .header-image-wrapper {
+  flex: 0 1 420px;
+  max-width: min(420px, 46%);
+  min-width: 0;
+}
+
+.how-it-works-page .header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.how-it-works-page .header-subtitle {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: #5f6673;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+/* Kroki — pełna szerokość, bez zapadania się kolumny tekstu */
+.how-it-works-page .container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.how-it-works-page .step-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 26px;
+  width: 100%;
+}
+
+.how-it-works-page .step-item {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  width: 100%;
+}
+
+.how-it-works-page .step-number {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 0.86;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.how-it-works-page .step-content {
+  min-width: 0;
+}
+
+.how-it-works-page .step-title {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.how-it-works-page .step-description {
+  margin: 12px 0 0;
+  color: #5f6673;
+  line-height: 1.7;
+}
+
+.how-it-works-page .gold-text,
+.how-it-works-page .yellow-text {
+  color: #efc400;
+}
+
+@media (max-width: 768px) {
+  .how-it-works-page .header-main-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .how-it-works-page .header-image-wrapper {
+    max-width: 100%;
+    flex-basis: auto;
+  }
+
+  .how-it-works-page .step-item {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+</style>
+
+<section id="how-it-works" class="section how-it-works how-it-works-page">
+  <div class="container">
+    <div class="hero-header">
+      <div class="header-main-row">
+        <h1>Jak działa Coparentes?</h1>
+        <div class="header-image-wrapper">
+          <img
+            class="header-image"
+            src="https://coparentes.ai/wp-content/uploads/2026/08/Zrzut-ekranu-2026-08-23-o-19.15.20.png"
+            alt="Aplikacja Coparentes w użyciu"
+            width="1106"
+            height="571"
+          />
+        </div>
+      </div>
+      <p class="header-subtitle">Proste kroki, które pomogą Ci zorganizować opiekę nad dzieckiem w spójny i spokojny sposób. Coparentes to prosta aplikacja, która w jednym miejscu przechowa wszystkie wątki związane z opieką nad dzieckiem: wiadomości, ustalenia, podział budżetu oraz zarządzanie kalendarzem. Z aplikacji skorzystasz w tej chwili poprzez przeglądarkę, ale spokojnie – pracujemy nad wersją mobilną.</p>
+    </div>
+
+    <div class="step-list">
+      <article class="step-item">
+        <span class="step-number teal-text">1</span>
+        <div class="step-content">
+          <h3 class="step-title">Załóż konto i zaproś drugiego rodzica</h3>
+          <p class="step-description">Możesz najpierw skorzystać z demo i zobaczyć, jak wygląda podgląd panelu. Do zalogowania wystarczy Ci adres e-mail. Zaproszenie drugiego rodzica jest proste – aplikacja wygeneruje link, który możesz skopiować i wysłać smsem lub mailem. Wystarczy wówczas kliknąć w link – pojawi się ekran z panelem logowania drugiej osoby do utworzonej przez Ciebie przestrzeni.</p>
+        </div>
+      </article>
+
+      <article class="step-item">
+        <span class="step-number blue-text">2</span>
+        <div class="step-content">
+          <h3 class="step-title">Skonfiguruj profil dziecka</h3>
+          <p class="step-description">Wprowadź podstawowe dane dziecka, a następnie skopiuj kod zaproszenia, który wygeneruje aplikacja. Wszystko znajdziesz w panelu ustawień. Kod możesz wysłać smsem. W swoim panelu dziecko zobaczy przejrzysty kalendarz z podziałem opieki, listę niezbędnych rzeczy do zabrania oraz chat z obojgiem rodziców.</p>
+        </div>
+      </article>
+
+      <article class="step-item">
+        <span class="step-number coral-text">3</span>
+        <div class="step-content">
+          <h3 class="step-title">Używaj narzędzi do organizacji</h3>
+          <p class="step-description">Na stronie głównej znajdziesz dostęp do ostatnich nieprzeczytanych wiadomości, zbliżających się powiadomień z kalendarza, statusu wydatków pozaalimentacyjnych i dostęp do dokumentów, które chcesz mieć w aplikacji. Każdy moduł możesz wykorzystać wedle swoich potrzeb – wiadomości podziel na wątki tematyczne, finanse na rodzaje, które dzielisz najczęściej, kalendarz dopasuj do sposobu podziału opieki nad dzieckiem.</p>
+        </div>
+      </article>
+
+      <article class="step-item">
+        <span class="step-number gold-text">4</span>
+        <div class="step-content">
+          <h3 class="step-title">Ciesz się spokojniejszym rodzicielstwem</h3>
+          <p class="step-description">Mniej chaosu, więcej porządku i lepsza współpraca dla dobra dziecka. Pamiętaj, że dzięki porządkowi w aplikacji masz szansę odciążyć dziecko od przekazywania drugiej osobie Twoich komunikatów, dać mu jasny obraz planu na dany tydzień, a Ty uzyskasz jasny obraz sytuacji w jednym miejscu. Spróbuj tak działać chociaż przez miesiąc i sprawdź, co się zmieniło w tym, jak wygląda codzienna logistyka życiowa.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
