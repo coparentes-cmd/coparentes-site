@@ -690,7 +690,7 @@ button { font: inherit; }
 .feature-grid {
   margin-top: 34px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -698,6 +698,13 @@ button { font: inherit; }
   padding: 28px 24px 24px;
   border: 2px solid transparent;
   transition: transform 0.22s ease;
+}
+.feature-card--phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 22px;
 }
 .feature-card:hover { transform: translateY(-3px); }
 .border-teal { border-color: rgba(0,200,150,0.36); }
@@ -716,6 +723,41 @@ button { font: inherit; }
   color: #fff;
 }
 .feature-icon img { width: 28px; height: 28px; object-fit: contain; }
+
+.feature-phone {
+  width: min(100%, 168px);
+  margin: 0 auto 18px;
+}
+.feature-phone-frame {
+  position: relative;
+  border-radius: 28px;
+  background: #101216;
+  padding: 9px;
+  box-shadow:
+    0 14px 36px rgba(16, 24, 40, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.feature-phone-frame::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 8px;
+  border-radius: 999px;
+  background: #101216;
+  z-index: 2;
+}
+.feature-phone-frame img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 844;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 20px;
+  background: #f5f6f8;
+}
 .teal-bg { background: linear-gradient(180deg, #17d4aa, #00c896); }
 .blue-bg { background: linear-gradient(180deg, #2795ff, #0080ff); }
 .coral-bg { background: linear-gradient(180deg, #ff8078, #ff6b68); }
