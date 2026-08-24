@@ -723,16 +723,31 @@ button { font: inherit; }
 .purple-bg { background: linear-gradient(180deg, #b43cca, #9c27b0); }
 
 .how-it-works { padding-top: 60px; }
+
+/* Osobna podstrona „Jak działa?” (WordPress: .content-page) */
+.content-page .how-it-works .container {
+  width: min(calc(100% - 32px), 760px);
+}
+
+.content-page .how-it-works .step-list {
+  margin-top: 34px;
+}
 .how-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(min(100%, 520px), 1.08fr) minmax(0, 0.92fr);
   gap: 42px;
   align-items: center;
+}
+
+/* Podstrona / edytor WP bez grafiki po prawej — pełna szerokość treści */
+.how-grid:not(:has(.how-visual)) {
+  grid-template-columns: 1fr;
 }
 
 .how-copy {
   text-align: left;
   justify-self: start;
+  min-width: 0;
 }
 
 .step-list {
@@ -767,6 +782,7 @@ button { font: inherit; }
   gap: 14px;
   width: 100%;
   max-width: 100%;
+  min-width: 0;
   transform: translateX(-28px);
 }
 

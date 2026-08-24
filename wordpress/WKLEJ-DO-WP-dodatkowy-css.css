@@ -1,0 +1,51 @@
+/*
+  Wklej poniższe reguły w WordPress:
+  Wygląd → Dostosuj → Dodatkowy CSS
+  (albo dopisz na końcu istniejącego Custom CSS)
+
+  Potem wyczyść cache LiteSpeed / Hostinger.
+  GitHub NIE aktualizuje WP — ten plik to tylko wzór do skopiowania.
+*/
+
+/* ===== Fix: zawężanie wpisów „Jak działa” ===== */
+
+/* Kolumna tekstu nie może się zapadać poniżej ~520px (winowajca: minmax(0, fr) + stała szerokość grafiki) */
+.how-grid {
+  grid-template-columns: minmax(min(100%, 520px), 1.08fr) minmax(0, 0.92fr) !important;
+}
+
+.how-grid:not(:has(.how-visual)) {
+  grid-template-columns: 1fr !important;
+}
+
+.how-copy,
+.how-visual,
+.step-list,
+.step-item {
+  min-width: 0 !important;
+}
+
+.step-item {
+  grid-template-columns: 72px minmax(0, 1fr) !important;
+}
+
+/* Osobna podstrona WP (bez how-grid / bez grafiki) — pełna czytelna szerokość */
+.content-page .how-it-works .container,
+.how-it-works > .container:not(.how-grid) {
+  width: min(calc(100% - 32px), 760px) !important;
+  max-width: 760px !important;
+}
+
+.content-page .how-copy,
+.content-page .step-list,
+.how-it-works .how-copy,
+.how-it-works .step-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+@media (max-width: 920px) {
+  .how-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
