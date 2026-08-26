@@ -145,6 +145,19 @@ This package includes an `assets/` directory with external SVG files for logos, 
 
 ---
 
+## Homepage: WordPress vs stary `index.html`
+
+Na produkcji `https://coparentes.ai/` serwuje **WordPress**.
+Stary plik `public_html/index.html` nadal istnieje jako
+`https://coparentes.ai/index.html` i może pokazać starą wersję
+landing page (np. po kliknięciu logo z bloga).
+
+Linki w blogu / stopkach wskazują na `/` (WordPress), nie na `index.html`.
+Na Hostingerze usuń lub zmień nazwę starego `index.html` i wyczyść cache
+(LiteSpeed). Szczegóły: [`wordpress/HOSTINGER-stary-index.html.txt`](wordpress/HOSTINGER-stary-index.html.txt).
+
+---
+
 ## Blog comments (Hostinger)
 
 Komentarze wymagają MySQL + PHP na Hostingerze.
