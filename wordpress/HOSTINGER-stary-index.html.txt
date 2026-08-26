@@ -1,0 +1,25 @@
+Problem
+=======
+Na Hostingerze działają DWIE strony główne:
+
+  https://coparentes.ai/            → nowa (WordPress)  ← poprawna
+  https://coparentes.ai/index.html  → stary plik statyczny
+
+Blog linkował do ../index.html, więc po powrocie z bloga
+ładowała się stara wersja.
+
+Co zrobić w hPanel (od razu)
+============================
+1. File Manager → public_html/
+2. Plik index.html (stary, obok wp-config.php / katalogów WP):
+   - usuń ALBO zmień nazwę na index.html.bak
+   NIE zastępuj go redirectem typu "idź na /" — może zapętlić DirectoryIndex.
+3. Opcjonalnie w .htaccess WordPressa (na górze, przed regułami WP) dodaj:
+
+   Redirect 301 /index.html https://coparentes.ai/
+
+4. LiteSpeed Cache / cache Hostinger → Purge All
+5. W Safari: twardy reload albo okno prywatne
+
+Po deployu poprawionych plików bloga linki idą już na / (WordPress),
+a nie na /index.html.
