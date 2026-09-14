@@ -1437,6 +1437,8 @@ button.ml-onclick-form.footer-link-btn {
 .legal-card h2 {
   margin: 0 0 12px;
   font-size: 1.35rem;
+  text-align: center;
+  line-height: 1.35;
 }
 
 .legal-card p,
@@ -1449,6 +1451,11 @@ button.ml-onclick-form.footer-link-btn {
 .legal-card ol {
   margin: 10px 0 0 20px;
   padding: 0;
+}
+
+.legal-card ol ol {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .footer-mark img,
