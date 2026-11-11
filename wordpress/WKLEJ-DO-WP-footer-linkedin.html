@@ -1,0 +1,15 @@
+<!--
+  Hostinger → File Manager → wp-content/themes/coparentes-4/footer.php
+  W bloku <div class="footer-social"> znajdź ikonę LinkedIn.
+
+  1) Jeśli ikona już jest — zmień tylko href na:
+     https://www.linkedin.com/company/coparentes-app/
+     (zamień też stary URL z /posts/?feedView=all)
+
+  2) Jeśli ikony nie ma — wgraj assets/icons/linkedin.svg do motywu
+     i wklej poniższą linię po Instagramie / Facebooku.
+
+  Potem Save + wyczyść cache LiteSpeed.
+  GitHub NIE aktualizuje WP — ten plik to tylko wzór do skopiowania.
+-->
+<a href="https://www.linkedin.com/company/coparentes-app/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Coparentes"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/linkedin.svg' ); ?>" alt="" aria-hidden="true" /></a>
